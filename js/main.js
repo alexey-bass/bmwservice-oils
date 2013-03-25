@@ -221,6 +221,8 @@ function App() {
             }
         }
         
+        $('#notes').html('&nbsp;Нашлось: '+ fDb.length);
+        
         filteredDb = fDb;
     };
     
