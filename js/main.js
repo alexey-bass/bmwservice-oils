@@ -2,19 +2,18 @@
     
 function App() {
 
+    var debug = false;
+
     var App = {};
     
-//    Array.prototype.unique = Array.prototype.unique || function() {
-//        
-//    };
-
     App.init = function() {
         loadDb();
     };
 
     var db
     ,   filterBrands = [], filterSaes = [], filterTags = []
-    ,   debug = false;
+    ,   filteredDb, filteredCounters
+    ,   allBrandCounters, allSaeCounters, allTagCounters;
 
     loadDb = function() {
         $.ajax({
@@ -23,6 +22,7 @@ function App() {
         ,   success: function(data) {
                 db = data;
                 populateSelectors(data);
+                postInit();
             }
         });
     };
@@ -37,7 +37,7 @@ function App() {
         }
         
         brands = unique(brands).sort();
-        saes = unique(saes).sort();
+        saes = unique(saes).sort(alphanum);
         tags = unique(tags).sort();
         
         populateDiv('brand', brands);
@@ -46,6 +46,15 @@ function App() {
         
         attachHandlers();
     };
+    
+    postInit = function() {
+        allBrandCounters = $('input.type-brand[type=checkbox] ~ span.counter');
+        allSaeCounters    = $('input.type-sae[type=checkbox] ~ span.counter');
+        allTagCounters   = $('input.type-tag[type=checkbox] ~ span.counter');
+        
+        makeDbUsingFilters();
+        App.updateCounters();
+    }
     
     populateDiv = function(id, data) {
         var i, h = '';
@@ -56,16 +65,15 @@ function App() {
 //        h+= '</p>';
         
         h+= '<p class="control">';
-//        h+= '<span class="link select-all">Все</span>';
-        h+= ' <span class="link select-none" title="Снять все галочки">Очистить</span>';
+        h+= '<span class="link select-none" title="Снять все галочки">Очистить</span>';
         h+= '</p>';
         
         h+= '<ul>';
         for (i in data) {
             h+= '<li>';
             h+= '<label>';
-            h+= '<input type="checkbox" class="filter type-'+ id +'" value="'+ data[i] +'"> ';
-            h+= '<span class="color-'+ id +'">';
+            h+= '<input type="checkbox" class="filter type-'+ id +'" value="'+ data[i] +'">';
+            h+= ' <span class="color-'+ id +'">';
             switch (id) {
                 case 'sae':
                     h+= data[i].replace('w', 'w-');
@@ -75,6 +83,7 @@ function App() {
                     h+= data[i];
             }
             h+= '</span>';
+            h+= ' <span class="counter" value="'+ data[i] +'"></span>';
             h+= '</label>';
             h+= '</li>';
         }
@@ -118,7 +127,9 @@ function App() {
             console.log(filterTags);
         }
 
+        makeDbUsingFilters();
         App.rebuildResults();
+        App.updateCounters();
         
         if (debug) {
             console.log(((new Date()).getTime() - timer) +' ms');
@@ -126,23 +137,54 @@ function App() {
     };
     
     App.rebuildResults = function() {
+        
         // nothing selected
-        if (!filterBrands.length && !filterSaes.length && !filterTags.length) {
+        var isNothing = (!filterBrands.length && !filterSaes.length && !filterTags.length) ? true : false;
+        
+        if (isNothing) {
             $('#results').html('');
+        }
+        
+        if (isNothing) {
             return;
         }
         
-        var i, h = '', filteredData = getDbAfterFilters();
+        var i, h = '';
         
-        for (i in filteredData) {
-            h+= makeResultItem(filteredData[i]);
+        for (i in filteredDb) {
+            h+= makeResultItem(filteredDb[i]);
         }
         
         $('#results').html(h);
     };
     
-    getDbAfterFilters = function() {
-        var i, filteredDb = [], common;
+    App.updateCounters = function() {
+        var i;
+        
+        allBrandCounters.html('');
+        for (i in filteredCounters['brand']) {
+            allBrandCounters.filter('[value="'+ i +'"]').html(filteredCounters['brand'][i].counter);
+        }
+        
+        allSaeCounters.html('');
+        for (i in filteredCounters['sae']) {
+            allSaeCounters.filter('[value="'+ i +'"]').html(filteredCounters['sae'][i].counter);
+        }
+        
+        allTagCounters.html('');
+        for (i in filteredCounters['tag']) {
+            allTagCounters.filter('[value="'+ i +'"]').html(filteredCounters['tag'][i].counter);
+        }
+    };
+    
+    makeDbUsingFilters = function() {
+        var i, j, fDb = [], common;
+        
+        filteredCounters = {
+            'brand': {}
+        ,   'sae': {}
+        ,   'tag': {}
+        }
         
         for (i in db) {
             
@@ -161,10 +203,16 @@ function App() {
                 }
             }
             
-            filteredDb.push(db[i]);
+            fDb.push(db[i]);
+            
+            filteredCounters['brand'][db[i].brand] ? filteredCounters['brand'][db[i].brand].counter++ : filteredCounters['brand'][db[i].brand] = {counter: 1};
+            filteredCounters['sae'][db[i].sae]     ? filteredCounters['sae'][db[i].sae].counter++     : filteredCounters['sae'][db[i].sae] = {counter: 1};
+            for (j in db[i].tags) {
+                filteredCounters['tag'][db[i].tags[j]] ? filteredCounters['tag'][db[i].tags[j]].counter++ : filteredCounters['tag'][db[i].tags[j]] = {counter: 1};
+            }
         }
         
-        return filteredDb;
+        filteredDb = fDb;
     };
     
     makeResultItem = function(item) {
@@ -178,6 +226,8 @@ function App() {
         
         return h;
     };
+    
+    
     
     
     
@@ -206,6 +256,41 @@ function App() {
         array.length = from < 0 ? array.length + from : from;
         return array.push.apply(array, rest);
     };
+    
+    // http://stackoverflow.com/a/14599441
+    naturalSort = function(a, b) {
+        return +/\d+/.exec(a)[0] > +/\d+/.exec(b)[0];
+    };
+    
+    // http://my.opera.com/GreyWyvern/blog/show.dml/1671288
+    function alphanum(a, b) {
+        function chunkify(t) {
+            var tz = [], x = 0, y = -1, n = 0, i, j;
+
+            while (i = (j = t.charAt(x++)).charCodeAt(0)) {
+                var m = (i == 46 || (i >=48 && i <= 57));
+                if (m !== n) {
+                    tz[++y] = "";
+                    n = m;
+                }
+                tz[y] += j;
+            }
+            return tz;
+        }
+
+        var aa = chunkify(a);
+        var bb = chunkify(b);
+
+        for (x = 0; aa[x] && bb[x]; x++) {
+            if (aa[x] !== bb[x]) {
+                var c = Number(aa[x]), d = Number(bb[x]);
+                if (c == aa[x] && d == bb[x]) {
+                    return c - d;
+                } else return (aa[x] > bb[x]) ? 1 : -1;
+            }
+        }
+        return aa.length - bb.length;
+    }
 
     return App;
 };

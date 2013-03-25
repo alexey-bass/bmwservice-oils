@@ -315,13 +315,13 @@ p, ul {
     position: fixed;
     left: 5px;
     top: 0px;
-    width: 270px;
 }
 #left .group {
     border: 1px solid gray;
     background-color: #eee;
-    margin: 10px 0;
+    margin: 5px 0;
     padding: 5px;
+    width: 140px;
 }
 #left .group ul li {
     list-style: none;
@@ -330,10 +330,13 @@ p, ul {
     font-size: 80%;
     margin-bottom: 5px;
 }
+ul li span.counter {
+    color: #999;
+}
 
 #main {
     position: absolute;
-    left: 280px;
+    left: 320px;
     top: 10px;
     right: 0;
     bottom: 25px;
@@ -354,13 +357,17 @@ p, ul {
 }
 
 .result-item {
-    border: 1px solid gray;
-    margin-bottom: 1em;
-    padding: 0 5px;
+    margin-bottom: 2em;
+    padding: 0 0px;
+    border-left: 1px solid #999;
 }
 .result-item h3 {
     margin: 0;
-    padding: 0;
+    padding-left: 5px;
+    border-bottom: 1px solid #999;
+}
+.result-item p {
+    padding-left: 5px;
 }
 
 .color-brand {
@@ -368,6 +375,9 @@ p, ul {
 }
 .color-sae {
     color: #006400;
+}
+.color-tag {
+    color: #0000cd;
 }
 
 #footer {
