@@ -65,7 +65,7 @@ function App() {
 //        h+= '</p>';
         
         h+= '<p class="control">';
-        h+= '<span class="link select-none" title="Снять все галочки">Очистить</span>';
+        h+= '<span class="link select-none type-'+ id +'" title="Снять все галочки">Очистить</span>';
         h+= '</p>';
         
         h+= '<ul>';
@@ -93,20 +93,24 @@ function App() {
     };
     
     attachHandlers = function() {
-        $('.filter').bind('change', function() {
+        $('input.filter').bind('change', function() {
             updateFilters($(this));
+        });
+        
+        $('span.select-none').bind('click', function() {
+            uncheckGroup($(this));
         });
     };
     
-    var timer;
-    
     updateFilters = function(selector) {
         if (debug) {
-            timer = (new Date()).getTime();
+            var timer = (new Date()).getTime();
         }
         
-        var isChecked = selector.is(':checked'), filter;
-            
+        var isCheckbox = selector.is('input') // can be 'select-none' trigger
+        ,   isChecked  = selector.is(':checked')
+        ,   filter; // will hold reference to normal array
+        
         if (       selector.hasClass('type-brand')) {
             filter = filterBrands;
         } else if (selector.hasClass('type-sae')) {
@@ -115,10 +119,15 @@ function App() {
             filter = filterTags;
         }
 
-        if (isChecked) {
-            filter.push(selector.val());
-        } else if (filter.indexOf(selector.val()) !== -1) {
-            remove(filter, filter.indexOf(selector.val()));
+        if (isCheckbox) {
+            if (isChecked) {
+                filter.push(selector.val());
+            } else if (filter.indexOf(selector.val()) !== -1) {
+                remove(filter, filter.indexOf(selector.val()));
+            }
+        } else {
+            // http://stackoverflow.com/a/1232046
+            filter.length = 0;
         }
 
         if (debug) {
@@ -225,6 +234,11 @@ function App() {
         h+= '</div>';
         
         return h;
+    };
+    
+    uncheckGroup = function(trigger) {
+        trigger.parents('div.group').find('input.filter:checked').prop('checked', false);
+        updateFilters(trigger);
     };
     
     

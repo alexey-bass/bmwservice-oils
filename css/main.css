@@ -303,7 +303,7 @@ textarea {
 
 
 html, body {
-    font-size: 10pt;
+    font-size: 9pt;
 }
 
 p, ul {
@@ -383,5 +383,5 @@ ul li span.counter {
 #footer {
     position: absolute;
     left: 10px;
-    bottom: 5px;
+    bottom: 0px;
 }
