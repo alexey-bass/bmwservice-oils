@@ -5,6 +5,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6513/16219540.4/0_8ee4d_73d71d9b_XXL",
     "text": "Отложения на фото - результат попытки использования катализаторов - кусочков металла.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -15,6 +16,7 @@
     "sae": "0w20",
     "img": "http://img-fotki.yandex.ru/get/6410/16219540.4/0_8ee4e_b2cd92f2_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -25,6 +27,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6607/16219540.3/0_8c844_816ba70f_orig",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -35,6 +38,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6600/16219540.1/0_8a7c8_42c95b94_XXL",
     "text": "Отложения. Загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -46,9 +50,8 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6503/16219540.2/0_8b50d_eda1da78_XXL",
     "text": "Полимеризация. Сравните с VISCO 7000 - предположительно, одно и то же масло.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "BARDAHL",
@@ -56,6 +59,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6600/16219540.1/0_8a64a_ddfbf525_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -66,6 +70,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6406/16219540.3/0_8c845_507ee83a_orig",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -76,9 +81,8 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6608/16219540.3/0_8c846_53bbc1a0_orig",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "BMW ORIGINAL",
@@ -86,6 +90,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6508/16219540.3/0_8c847_c123a5aa_orig",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -97,9 +102,8 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6404/16219540.1/0_8a7c9_30bc8c98_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "BMW ORIGINAL",
@@ -107,6 +111,7 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6603/16219540.1/0_8a633_979100a9_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -117,6 +122,7 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6405/16219540.1/0_8a630_888d2188_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -127,9 +133,8 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6603/16219540.1/0_8a632_57095ff5_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "BMW ORIGINAL",
@@ -137,6 +142,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6509/16219540.3/0_8c848_e9a95e5e_orig",
     "text": "",
+    "poly": 0,
     "tags": [
       "чисто"
     ]
@@ -147,6 +153,7 @@
     "sae": "15w40",
     "img": "http://img-fotki.yandex.ru/get/6602/16219540.2/0_8b753_fa8152db_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -157,6 +164,7 @@
     "sae": "10w40",
     "img": "http://img-fotki.yandex.ru/get/6405/16219540.1/0_8a64e_b1d255da_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -167,6 +175,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6403/16219540.1/0_8a64f_bd9b156f_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -177,9 +186,8 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6402/16219540.1/0_8a650_7ac2b28a_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Castrol",
@@ -187,6 +195,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6603/16219540.1/0_8a7cb_bd2a02c3_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -197,9 +206,8 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6403/16219540.1/0_8a7ca_af8a87f0_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Castrol",
@@ -207,9 +215,8 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6602/16219540.1/0_8a637_d67bf3a3_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Castrol",
@@ -217,9 +224,8 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6507/16219540.3/0_8c84a_e395874_orig",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Castrol",
@@ -227,6 +233,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6607/16219540.3/0_8cb6f_488622af_XXL",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -238,6 +245,7 @@
     "sae": "10w60",
     "img": "http://img-fotki.yandex.ru/get/6503/16219540.1/0_8a639_a97eadf6_XXL",
     "text": " Отложения. Загущение. Сравните с Pentosin Pento Super.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -250,6 +258,7 @@
     "acea": "A3/B4",
     "img": "http://img-fotki.yandex.ru/get/6405/16219540.1/0_8a636_99d130d8_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -260,6 +269,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6405/16219540.1/0_8a642_af32caa4_XXL",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -271,6 +281,7 @@
     "sae": "10w40",
     "img": "http://img-fotki.yandex.ru/get/6412/16219540.5/0_8ee54_a62b832c_XXL",
     "text": "",
+    "poly": 0,
     "tags": [
       "чисто"
     ]
@@ -281,6 +292,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6413/16219540.4/0_8ee51_3fa8f4f3_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -291,9 +303,8 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6513/16219540.5/0_8ee53_f4502307_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Castrol",
@@ -301,6 +312,7 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6508/16219540.3/0_8c85d_3e9e42a6_orig",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -311,6 +323,7 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6407/16219540.3/0_8c84b_4bea47b8_orig",
     "text": "Зола, загущение.",
+    "poly": 0,
     "tags": [
       "зола",
       "загущение"
@@ -322,9 +335,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6601/16219540.2/0_8b509_7e74a7a0_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "ENEOS",
@@ -332,19 +344,19 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6405/16219540.1/0_8a63b_6b2a21ae_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
   },
   {
     "brand": "ENI AGIP",
-    "product": "i-Sint ",
+    "product": "i-Sint",
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6400/16219540.1/0_8a62e_d69eb4b2_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "ERG",
@@ -352,6 +364,7 @@
     "sae": "15w40",
     "img": "http://img-fotki.yandex.ru/get/6600/16219540.2/0_8b508_f656586d_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -362,6 +375,7 @@
     "sae": "5w50",
     "img": "http://img-fotki.yandex.ru/get/6600/16219540.2/0_8b50e_af20b5ac_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -372,6 +386,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6608/16219540.3/0_8cb71_9f8724fa_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -382,6 +397,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6509/16219540.3/0_8c84c_fedf0d2e_orig",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -393,9 +409,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6407/16219540.2/0_8c830_cb37434b_orig",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "FUCHS",
@@ -403,6 +418,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6610/16219540.5/0_8ee5b_e04e781d_XXL",
     "text": "",
+    "poly": 0,
     "tags": [
       "чисто"
     ]
@@ -413,6 +429,7 @@
     "sae": "0w20",
     "img": "http://img-fotki.yandex.ru/get/6613/16219540.5/0_8ee5a_fb4db2f4_XXL",
     "text": "",
+    "poly": 0,
     "tags": [
       "чисто"
     ]
@@ -423,9 +440,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6613/16219540.5/0_8ee5c_23b2fd67_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "G-Energy",
@@ -433,9 +449,8 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6501/16219540.2/0_8b50b_13d8152f_XXL",
     "text": "Полимеризация",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "GM",
@@ -443,6 +458,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6604/16219540.3/0_8c849_518f9fa9_orig",
     "text": "Загущение.",
+    "poly": 0,
     "tags": [
       "загущение"
     ]
@@ -453,6 +469,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6502/16219540.2/0_8b74a_c40a3f58_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -463,6 +480,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6508/16219540.3/0_8c84e_7f1bd6c4_orig",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -473,6 +491,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6603/16219540.2/0_8b74d_127b3e2f_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -483,9 +502,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6503/16219540.1/0_8a63d_2d1f9310_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "IDEMITSU",
@@ -493,6 +511,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6608/16219540.3/0_8c850_50ac9bc3_orig",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -503,6 +522,7 @@
     "sae": "5w20",
     "img": "http://img-fotki.yandex.ru/get/6503/16219540.2/0_8b751_60f5010b_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -513,6 +533,7 @@
     "sae": "0w20",
     "img": "http://img-fotki.yandex.ru/get/6604/16219540.3/0_8c851_312b706d_orig",
     "text": "Отложения",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -523,6 +544,7 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6600/16219540.1/0_8a63f_df3f4696_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -533,6 +555,7 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6504/16219540.3/0_8c852_13ab2f13_orig",
     "text": "Отложения",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -543,6 +566,7 @@
     "sae": "5w50",
     "img": "http://img-fotki.yandex.ru/get/6602/16219540.1/0_8a640_40e44473_XXL",
     "text": "Отложения, загущение \"наполнителя\". Сравните с Xenum WRX, X1.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -554,6 +578,7 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6404/16219540.1/0_8a641_a7deae4_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -564,6 +589,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6613/16219540.5/0_8ee5e_7ca9a409_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -574,6 +600,7 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6411/16219540.5/0_8ee5d_bbdd5c02_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -584,6 +611,7 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6604/16219540.3/0_8cb70_657a3877_XXL",
     "text": "Отложения. Органолептика практически полностью аналогична XENUM WRX (что совсем неудивительно, учитывая одни корни обоих продуктов), за исключением того факта, что более жидкий ZENOX (0W40) стекает на дно колбы практически мгновенно и колба на фото \"чистая\" и прозрачная. Более густые масла при повороте колбы всегда оставляют пленку (см. результаты масел 10W60, 5W50). Изначально этот нюанс не учитывался при фотографировании, полного истечения масла никто не дожидался, лучше уточнять по каждому конкретному случаю. В прочем, изначально ориентиры были на полимеризацию, а не на визуальные артефакты. К слову говоря, масло заявлено как LowSAPS, с веером допусков.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -594,9 +622,8 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6505/16219540.3/0_8c855_c3e7614d_orig",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "MOTUL",
@@ -604,6 +631,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6503/16219540.2/0_8b506_7e90b311_XXL",
     "text": "Отложения, загущение. Сравните с Castrol 10W60, Pentosin Pento Super. Требует отдельного тестирования с дефлегматором - возвращающиеся в колбу капли провоцируют взрывы - вся колба в мелкой пыли по этой причине.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -615,6 +643,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6404/16219540.1/0_8a62d_daad6be8_XXL",
     "text": "Отложения, загущение. Сравните с Xenum, Liqui Moly Molygen.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -626,9 +655,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6603/16219540.1/0_8a63a_ede3fcef_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "MOTUL",
@@ -636,9 +664,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6400/16219540.1/0_8a651_85d63ff8_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "MOTUL",
@@ -646,9 +673,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6500/16219540.1/0_8a649_beede5be_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Mercedes Benz",
@@ -656,9 +682,8 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6403/16219540.1/0_8a643_9ef3524a_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Mobil 1",
@@ -666,6 +691,7 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6403/16219540.1/0_8a647_a56af106_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -676,6 +702,7 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6403/16219540.1/0_8a645_78cbc5b6_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -686,6 +713,7 @@
     "sae": "10w60",
     "img": "http://img-fotki.yandex.ru/get/6506/16219540.3/0_8c856_ed8cef53_orig",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -697,6 +725,7 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6502/16219540.1/0_8a646_404323e6_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -707,6 +736,7 @@
     "sae": "15w40",
     "img": "http://img-fotki.yandex.ru/get/6502/16219540.2/0_8b74f_ea4c7eb5_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -717,9 +747,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6401/16219540.1/0_8a648_e9363aeb_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "PENTOSIN",
@@ -727,6 +756,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6401/16219540.1/0_8a64d_9e6a8ce1_XXL",
     "text": "Отложения, загущение. Сравните с Castrol EDGE 10W60.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -738,6 +768,7 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6504/16219540.3/0_8c857_e891b353_orig",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -748,9 +779,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6404/16219540.1/0_8a64c_93f51ab3_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "RAVENOL",
@@ -758,6 +788,7 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6601/16219540.2/0_8b750_26d93582_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -768,9 +799,8 @@
     "sae": "50wt",
     "img": "http://img-fotki.yandex.ru/get/6604/16219540.3/0_8c859_22c78bf1_orig",
     "text": "Заявлено как \"масло на одну гонку\". Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "RED LINE",
@@ -778,6 +808,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6506/16219540.3/0_8cb73_5cab842d_XXL",
     "text": "Отложения, зола. Масло для \"повседневного использования\". Противоокислительные способности заявлены как \"превосходные\", сравните с \"очень хорошими\" у \"гоночного\" масла для одноразового использования - выше.",
+    "poly": 0,
     "tags": [
       "отложения",
       "зола"
@@ -789,6 +820,7 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6607/16219540.3/0_8cb74_8b2411d0_XXL",
     "text": "Отложения, зола.",
+    "poly": 0,
     "tags": [
       "отложения",
       "зола"
@@ -800,6 +832,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6504/16219540.3/0_8c85a_d04bba54_orig",
     "text": "Загущение.",
+    "poly": 0,
     "tags": [
       "загущение"
     ]
@@ -810,6 +843,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6608/16219540.3/0_8c84f_5546666a_orig",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -821,6 +855,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6411/16219540.4/0_8ee50_95e9ef52_XXL",
     "text": "Отложения. Загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -832,9 +867,8 @@
     "sae": "10w60",
     "img": "http://img-fotki.yandex.ru/get/6502/16219540.2/0_8b74c_ed194c7_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Shell",
@@ -842,9 +876,8 @@
     "sae": "0w40",
     "img": "http://img-fotki.yandex.ru/get/6507/16219540.3/0_8c85b_c35c6789_orig",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Shell",
@@ -852,9 +885,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6400/16219540.1/0_8a63e_e7fcfbea_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "TATNEFT",
@@ -862,6 +894,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6606/16219540.3/0_8c853_e1a727ae_orig",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -873,6 +906,7 @@
     "sae": "10w40",
     "img": "http://img-fotki.yandex.ru/get/6604/16219540.3/0_8c854_5ea1a7c2_orig",
     "text": "",
+    "poly": 0,
     "tags": [
       "чисто"
     ]
@@ -883,6 +917,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6503/16219540.2/0_8b752_de4d03be_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -893,6 +928,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6606/16219540.3/0_8c85e_afbb7dc2_XXL",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -904,6 +940,7 @@
     "sae": "10w40",
     "img": "http://img-fotki.yandex.ru/get/6406/16219540.3/0_8c858_373838b8_orig",
     "text": "",
+    "poly": 0,
     "tags": [
       "чисто"
     ]
@@ -914,9 +951,8 @@
     "sae": "0w30",
     "img": "http://img-fotki.yandex.ru/get/6609/16219540.3/0_8cb72_9a0dcf8_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Total",
@@ -924,9 +960,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6602/16219540.2/0_8b510_b38cb76a_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "Total",
@@ -934,6 +969,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6600/16219540.5/0_8f76e_44a6cbe8_XXL",
     "text": "Загущение. Отложения на фото - результат попытки использования катализаторов/мест концентрации отложений - кусочков металла.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -945,6 +981,7 @@
     "sae": "10w40",
     "img": "http://img-fotki.yandex.ru/get/6403/16219540.2/0_8aa0e_9b2f8e80_XXL",
     "text": "Отложения, загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -956,6 +993,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6404/16219540.1/0_8a63c_f4a52903_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -966,6 +1004,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6612/16219540.5/0_8ee55_3196212f_XXL",
     "text": "Отложения. Загущение.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -977,6 +1016,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6603/16219540.2/0_8b74b_6073cc9_XXL",
     "text": "Отложения, загущение. Сравните LM Molygen, Xenum WRX.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -988,6 +1028,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6511/16219540.5/0_8ee56_aa8b438f_XXL",
     "text": "",
+    "poly": 0,
     "tags": [
       "чисто"
     ]
@@ -998,6 +1039,7 @@
     "sae": "5w30",
     "img": "http://img-fotki.yandex.ru/get/6410/16219540.4/0_8ee4c_45a8830a_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -1008,6 +1050,7 @@
     "sae": "7.5w40",
     "img": "http://img-fotki.yandex.ru/get/6501/16219540.1/0_8a7cc_aec5d47c_XXL",
     "text": "Отложения. Коллоидный раствор загустился. Сравните с LM Molygen.",
+    "poly": 0,
     "tags": [
       "отложения",
       "загущение"
@@ -1019,6 +1062,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6611/16219540.5/0_8ee57_aa5ae797_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -1029,6 +1073,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6501/16219540.2/0_8b749_773c8b57_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -1039,6 +1084,7 @@
     "sae": "15w40",
     "img": "http://img-fotki.yandex.ru/get/6503/16219540.2/0_8b754_787cd69b_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -1049,6 +1095,7 @@
     "sae": "20",
     "img": "http://img-fotki.yandex.ru/get/6509/16219540.3/0_8c85f_67ac56c7_XXL",
     "text": "",
+    "poly": 0,
     "tags": [
       "чисто"
     ]
@@ -1059,9 +1106,8 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6600/16219540.2/0_8b74e_13c17e36_XXL",
     "text": "Полимеризация.",
-    "tags": [
-      "полимеризация"
-    ]
+    "poly": 1,
+    "tags": []
   },
   {
     "brand": "ЛУКОЙЛ",
@@ -1069,6 +1115,7 @@
     "sae": "10w40",
     "img": "http://img-fotki.yandex.ru/get/6601/16219540.1/0_8a644_6148cfb2_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -1079,6 +1126,7 @@
     "sae": "15w40",
     "img": "http://img-fotki.yandex.ru/get/6602/16219540.2/0_8b760_4b420ac1_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -1089,6 +1137,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6603/16219540.2/0_8b761_c7f368d1_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]
@@ -1099,6 +1148,7 @@
     "sae": "5w40",
     "img": "http://img-fotki.yandex.ru/get/6503/16219540.2/0_8b755_fad076d1_XXL",
     "text": "Отложения.",
+    "poly": 0,
     "tags": [
       "отложения"
     ]

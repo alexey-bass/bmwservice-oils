@@ -13,7 +13,7 @@ function App() {
     var db
     ,   filterBrands = [], filterSaes = [], filterTags = []
     ,   filteredDb, filteredCounters
-    ,   allBrandCounters, allSaeCounters, allTagCounters;
+    ,   allBrandCounters, allSaeCounters, allPolyCounters, allTagCounters;
 
     loadDb = function() {
         $.ajax({
@@ -48,13 +48,14 @@ function App() {
     };
     
     postInit = function() {
-        allBrandCounters = $('input.type-brand[type=checkbox] ~ span.counter');
-        allSaeCounters    = $('input.type-sae[type=checkbox] ~ span.counter');
-        allTagCounters   = $('input.type-tag[type=checkbox] ~ span.counter');
+        allBrandCounters = $('input.type-brand:checkbox ~ span.counter');
+        allSaeCounters   = $('input.type-sae:checkbox ~ span.counter');
+        allTagCounters   = $('input.type-tag:checkbox ~ span.counter');
+        allPolyCounters  = $('input.type-poly:radio ~ span.counter');
         
         makeDbUsingFilters();
         App.updateCounters();
-    }
+    };
     
     populateDiv = function(id, data) {
         var i, h = '';
@@ -69,6 +70,30 @@ function App() {
         h+= '</p>';
         
         h+= '<ul>';
+        
+        if (id === 'tag') {
+            h+= '<li>';
+            h+= '<label>';
+            h+= '<input type="checkbox" class="filter type-poly" value="">';
+            h+= ' <span class="color-'+ id +'">';
+            h+= 'полимеризация';
+            h+= '</span>';
+            h+= '</label>';
+            h+= '</li>';
+            
+            h+= '<li class="color-'+ id +' poly-row">';
+            h+= '<label>';
+            h+= '<input type="radio" name="poly" class="filter type-poly" value="1" disabled="disabled"> есть';
+            h+= ' <span class="counter" value="poly-1"></span>';
+            h+= '</label>';
+            h+= '&nbsp;&nbsp;';
+            h+= '<label>';
+            h+= '<input type="radio" name="poly" class="filter type-poly" value="0"  disabled="disabled" checked="checked"> нет';
+            h+= ' <span class="counter" value="poly-0"></span>';
+            h+= '</label>';
+            h+= '</li>';
+        }
+        
         for (i in data) {
             h+= '<li>';
             h+= '<label>';
@@ -117,6 +142,9 @@ function App() {
             filter = filterSaes;
         } else if (selector.hasClass('type-tag')) {
             filter = filterTags;
+        } else if (selector.hasClass('type-poly')) {
+            $('input[name=poly]:radio').prop('disabled', !$('input.type-poly:checkbox').prop('checked'));
+            filter = [];
         }
 
         if (isCheckbox) {
@@ -148,7 +176,7 @@ function App() {
     App.rebuildResults = function() {
         
         // nothing selected
-        var isNothing = (!filterBrands.length && !filterSaes.length && !filterTags.length) ? true : false;
+        var isNothing = (!filterBrands.length && !filterSaes.length && !filterTags.length && !$('input.type-poly:checkbox').prop('checked')) ? true : false;
         
         if (isNothing) {
             $('#results').html('');
@@ -180,6 +208,9 @@ function App() {
             allSaeCounters.filter('[value="'+ i +'"]').html(filteredCounters['sae'][i].counter);
         }
         
+        allPolyCounters.filter('[value=poly-1]').html(filteredCounters['poly'][1] || '');
+        allPolyCounters.filter('[value=poly-0]').html(filteredCounters['poly'][0] || '');
+        
         allTagCounters.html('');
         for (i in filteredCounters['tag']) {
             allTagCounters.filter('[value="'+ i +'"]').html(filteredCounters['tag'][i].counter);
@@ -193,9 +224,18 @@ function App() {
             'brand': {}
         ,   'sae': {}
         ,   'tag': {}
+        ,   'poly': {0: 0, 1: 0}
         }
         
+        var usePoly = $('input.type-poly:checkbox').prop('checked')
+        ,   polyValue = parseInt($('input[name=poly]:radio:checked').val());
+        
         for (i in db) {
+            
+            // quick filter, so will be first
+            if (usePoly && db[i].poly !== polyValue) {
+                continue;
+            }
             
             if (filterBrands.length && filterBrands.indexOf(db[i].brand) < 0) {
                 continue;
@@ -219,6 +259,7 @@ function App() {
             for (j in db[i].tags) {
                 filteredCounters['tag'][db[i].tags[j]] ? filteredCounters['tag'][db[i].tags[j]].counter++ : filteredCounters['tag'][db[i].tags[j]] = {counter: 1};
             }
+            filteredCounters['poly'][db[i].poly]++;
         }
         
         $('#notes').html('&nbsp;Нашлось: '+ fDb.length);

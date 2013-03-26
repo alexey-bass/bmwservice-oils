@@ -385,3 +385,8 @@ ul li span.counter {
     left: 10px;
     bottom: 0px;
 }
+
+li.poly-row {
+    padding-left: 17px;
+    margin-bottom: 10px;
+}
