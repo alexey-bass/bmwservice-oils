@@ -330,7 +330,7 @@ p, ul {
     font-size: 80%;
     margin-bottom: 5px;
 }
-ul li span.counter {
+span.counter, .disabled {
     color: #999;
 }
 

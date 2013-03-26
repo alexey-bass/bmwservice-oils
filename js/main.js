@@ -82,12 +82,12 @@ function App() {
             h+= '</li>';
             
             h+= '<li class="color-'+ id +' poly-row">';
-            h+= '<label>';
+            h+= '<label class="disabled">';
             h+= '<input type="radio" name="poly" class="filter type-poly" value="1" disabled="disabled"> есть';
             h+= ' <span class="counter" value="poly-1"></span>';
             h+= '</label>';
             h+= '&nbsp;&nbsp;';
-            h+= '<label>';
+            h+= '<label class="disabled">';
             h+= '<input type="radio" name="poly" class="filter type-poly" value="0"  disabled="disabled" checked="checked"> нет';
             h+= ' <span class="counter" value="poly-0"></span>';
             h+= '</label>';
@@ -143,7 +143,16 @@ function App() {
         } else if (selector.hasClass('type-tag')) {
             filter = filterTags;
         } else if (selector.hasClass('type-poly')) {
-            $('input[name=poly]:radio').prop('disabled', !$('input.type-poly:checkbox').prop('checked'));
+//            $('input[name=poly]:radio').prop('disabled', !$('input.type-poly:checkbox').prop('checked'));
+            
+            if ($('input.type-poly:checkbox').prop('checked')) {
+                $('input[name=poly]:radio').prop('disabled', false);
+                allPolyCounters.parent().removeClass('disabled');
+            } else {
+                $('input[name=poly]:radio').prop('disabled', true);
+                allPolyCounters.parent().addClass('disabled');
+            }
+            
             filter = [];
         }
 
