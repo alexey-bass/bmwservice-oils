@@ -20,11 +20,21 @@ function App() {
             dataType: "json"
         ,   url: "db.json"
         ,   success: function(data) {
-                db = data;
+                db = prepareDb(data);
                 populateSelectors(data);
                 postInit();
             }
         });
+    };
+    
+    prepareDb = function(data) {
+        var i;
+        
+        for (i in data) {
+            data[i].id = parseInt(i) + 1;
+        }
+        
+        return data;
     };
     
     populateSelectors = function(data) {
@@ -125,6 +135,35 @@ function App() {
         $('span.select-none').bind('click', function() {
             uncheckGroup($(this));
         });
+        
+        $(document).on('click', 'span.chemical', function() {
+            openChemical($(this))
+        });
+    };
+    
+    var chemicalHtmlTemplate = '<html>'
+        + '<head>'
+        + '<meta charset="utf-8">'
+        + '<title>%TITLE%</title>'
+        + '<link rel="stylesheet" href="css/normalize.css"><style>body{margin: 10px;font-size:10pt}</style></head>'
+        + '<body>'
+        + '<p>%TEXT%</p><img src="%IMG%" />'
+        + '</body></html>';
+    
+    openChemical = function(trigger) {
+        var id = trigger.attr('dbid'), item = getDbItemById(id);
+        var win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=840')
+        
+        var html = chemicalHtmlTemplate;
+        html = html.replace('%TITLE%', item.brand +' '+ item.product +' '+ item.sae.replace('w', 'W-'));
+        html = html.replace('%TEXT%', item.chemical.text);
+        html = html.replace('%IMG%', item.chemical.img);
+        
+        win.document.write(html);
+    };
+    
+    getDbItemById = function(id) {
+        return db[id - 1];
     };
     
     updateFilters = function(selector) {
@@ -280,9 +319,18 @@ function App() {
         var h = '';
         
         h+= '<div class="result-item">';
-        h+= '<h3><span class="color-brand">'+ item.brand +'</span> '+ item.product +' <span class="color-sae">'+ item.sae.replace('w', 'W-') +'</span></h3>';
+        
+        h+= '<h3>';
+        h+= '<span class="color-brand">'+ item.brand +'</span> '+ item.product +' <span class="color-sae">'+ item.sae.replace('w', 'W-') +'</span>';
+        if (item.chemical) {
+            h+= '&nbsp;&nbsp;&nbsp;<span class="link blue chemical" dbid="'+ item.id +'">Анализ</span>';
+        }
+        h+= '</h3>';
+        
         h+= '<p>'+ item.text +'</p>';
+        
         h+= '<img src="'+ item.img +'" />';
+        
         h+= '</div>';
         
         return h;
