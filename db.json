@@ -12,7 +12,7 @@
   },
   {
     "brand": "AMALIE",
-    "product": "ELIXIR",
+    "product": "Elixir",
     "sae": "0w20",
     "img": "//img-fotki.yandex.ru/get/6410/16219540.4/0_8ee4e_b2cd92f2_XXL",
     "text": "Отложения.",
@@ -23,7 +23,7 @@
   },
   {
     "brand": "AMALIE",
-    "product": "PRO HIGH PERFORMANCE SYNTHETIC",
+    "product": "PRO High Performance SYNTHETIC",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6607/16219540.3/0_8c844_816ba70f_orig",
     "text": "Отложения.",
@@ -77,7 +77,7 @@
   },
   {
     "brand": "BMW ORIGINAL",
-    "product": "HIGH PERFORMANCE MOTOR OIL",
+    "product": "High Performance Full Synthetic MOTOR OIL",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6608/16219540.3/0_8c846_53bbc1a0_orig",
     "text": "Полимеризация.",
@@ -86,7 +86,7 @@
   },
   {
     "brand": "BMW ORIGINAL",
-    "product": "LL-01",
+    "product": "Quality Longlife LL-01",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6508/16219540.3/0_8c847_c123a5aa_orig",
     "text": "Отложения, загущение.",
@@ -98,7 +98,7 @@
   },
   {
     "brand": "BMW ORIGINAL",
-    "product": "LL-04",
+    "product": "Quality Longlife LL-04",
     "sae": "0w40",
     "img": "//img-fotki.yandex.ru/get/6404/16219540.1/0_8a7c9_30bc8c98_XXL",
     "text": "Полимеризация.",
@@ -107,7 +107,7 @@
   },
   {
     "brand": "BMW ORIGINAL",
-    "product": "QUALITY LONGLIFE LL-01",
+    "product": "Quality Longlife LL-01",
     "sae": "0w40",
     "img": "//img-fotki.yandex.ru/get/6603/16219540.1/0_8a633_979100a9_XXL",
     "text": "Отложения.",
@@ -118,7 +118,7 @@
   },
   {
     "brand": "BMW ORIGINAL",
-    "product": "QUALITY LONGLIFE LL-01FE",
+    "product": "Quality Longlife LL-01FE",
     "sae": "0w30",
     "img": "//img-fotki.yandex.ru/get/6405/16219540.1/0_8a630_888d2188_XXL",
     "text": "Отложения.",
@@ -129,7 +129,7 @@
   },
   {
     "brand": "BMW ORIGINAL",
-    "product": "QUALITY LONGLIFE LL-04",
+    "product": "Quality Longlife LL-04",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6603/16219540.1/0_8a632_57095ff5_XXL",
     "text": "Полимеризация.",
@@ -138,7 +138,7 @@
   },
   {
     "brand": "BMW ORIGINAL",
-    "product": "SUPER POWER OIL",
+    "product": "SuperPower Oil",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6509/16219540.3/0_8c848_e9a95e5e_orig",
     "text": "",
@@ -202,7 +202,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "EDGE PROFESSIONAL 0E",
+    "product": "EDGE Professional 0E",
     "sae": "0w30",
     "img": "//img-fotki.yandex.ru/get/6403/16219540.1/0_8a7ca_af8a87f0_XXL",
     "text": "Полимеризация.",
@@ -211,7 +211,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "EDGE PROFESSIONAL 0E",
+    "product": "EDGE Professional 0E",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6602/16219540.1/0_8a637_d67bf3a3_XXL",
     "text": "Полимеризация.",
@@ -220,7 +220,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "EDGE PROFESSIONAL BMW LL01",
+    "product": "EDGE Professional BMW LL01",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6507/16219540.3/0_8c84a_e395874_orig",
     "text": "Полимеризация.",
@@ -229,7 +229,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "EDGE PROFESSIONAL LL-III",
+    "product": "EDGE Professional LL-III",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6607/16219540.3/0_8cb6f_488622af_XXL",
     "text": "Отложения, загущение.",
@@ -241,7 +241,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "EDGE SPORT",
+    "product": "EDGE Sport",
     "sae": "10w60",
     "img": "//img-fotki.yandex.ru/get/6503/16219540.1/0_8a639_a97eadf6_XXL",
     "text": " Отложения. Загущение. Сравните с Pentosin Pento Super.",
@@ -253,9 +253,8 @@
   },
   {
     "brand": "Castrol",
-    "product": "EDGE",
+    "product": "EDGE FST",
     "sae": "0w40",
-    "acea": "A3/B4",
     "img": "//img-fotki.yandex.ru/get/6405/16219540.1/0_8a636_99d130d8_XXL",
     "text": "Отложения.",
     "poly": 0,
@@ -265,7 +264,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "MAGNATEC A1 \"For Ford Engines\"",
+    "product": "Magnatec A1 \"For Ford Engines\"",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6405/16219540.1/0_8a642_af32caa4_XXL",
     "text": "Отложения, загущение.",
@@ -277,7 +276,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "MAGNATEC A3/B3",
+    "product": "Magnatec A3/B4",
     "sae": "10w40",
     "img": "//img-fotki.yandex.ru/get/6412/16219540.5/0_8ee54_a62b832c_XXL",
     "text": "",
@@ -288,7 +287,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "MAGNATEC A3/B4",
+    "product": "Magnatec A3/B4",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6413/16219540.4/0_8ee51_3fa8f4f3_XXL",
     "text": "Отложения.",
@@ -299,7 +298,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "MAGNATEC C3",
+    "product": "Magnatec C3",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6513/16219540.5/0_8ee53_f4502307_XXL",
     "text": "Полимеризация.",
@@ -308,7 +307,7 @@
   },
   {
     "brand": "Castrol",
-    "product": "SLX PROFESSIONAL LONGTEC",
+    "product": "SLX Professional Longtec",
     "sae": "0w30",
     "img": "//img-fotki.yandex.ru/get/6508/16219540.3/0_8c85d_3e9e42a6_orig",
     "text": "Отложения.",
@@ -360,7 +359,7 @@
   },
   {
     "brand": "ERG",
-    "product": "CAMPEROIL SINT",
+    "product": "Camperoil Sint",
     "sae": "15w40",
     "img": "//img-fotki.yandex.ru/get/6600/16219540.2/0_8b508_f656586d_XXL",
     "text": "Отложения.",
@@ -371,7 +370,7 @@
   },
   {
     "brand": "ERG",
-    "product": "OLIKRON FORMULA",
+    "product": "Olikron Formula SINTETICO",
     "sae": "5w50",
     "img": "//img-fotki.yandex.ru/get/6600/16219540.2/0_8b50e_af20b5ac_XXL",
     "text": "Отложения.",
@@ -382,7 +381,7 @@
   },
   {
     "brand": "ERG",
-    "product": "OLIKRON SYNTETICO",
+    "product": "Olikron SINTETICO",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6608/16219540.3/0_8cb71_9f8724fa_XXL",
     "text": "Отложения.",
@@ -393,7 +392,7 @@
   },
   {
     "brand": "ERG",
-    "product": "SUPER ONE SINTETICO",
+    "product": "Super One SINTETICO",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6509/16219540.3/0_8c84c_fedf0d2e_orig",
     "text": "Отложения, загущение.",
@@ -405,7 +404,7 @@
   },
   {
     "brand": "ESSO",
-    "product": "ULTRON",
+    "product": "Ultron",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6407/16219540.2/0_8c830_cb37434b_orig",
     "text": "Полимеризация.",
@@ -454,7 +453,7 @@
   },
   {
     "brand": "GM",
-    "product": "DEXOS2 MOTOR OIL",
+    "product": "dexos2 Motor Oil",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6604/16219540.3/0_8c849_518f9fa9_orig",
     "text": "Загущение.",
@@ -465,7 +464,7 @@
   },
   {
     "brand": "GM",
-    "product": "GENUINE MOTOR OIL",
+    "product": "Motor Oil",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6502/16219540.2/0_8b74a_c40a3f58_XXL",
     "text": "Отложения.",
@@ -476,7 +475,7 @@
   },
   {
     "brand": "Gulf",
-    "product": "FORMULA G",
+    "product": "Formula G",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6508/16219540.3/0_8c84e_7f1bd6c4_orig",
     "text": "Отложения.",
@@ -486,8 +485,8 @@
     ]
   },
   {
-    "brand": "HONDA GENUINE",
-    "product": "MOTOR OIL HG",
+    "brand": "Honda Genuine",
+    "product": "Motor Oil",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6603/16219540.2/0_8b74d_127b3e2f_XXL",
     "text": "Отложения.",
@@ -540,7 +539,7 @@
   },
   {
     "brand": "Kixx",
-    "product": "NEO",
+    "product": "Neo",
     "sae": "0w30",
     "img": "//img-fotki.yandex.ru/get/6600/16219540.1/0_8a63f_df3f4696_XXL",
     "text": "Отложения.",
@@ -607,7 +606,7 @@
   },
   {
     "brand": "MARLY ZENOX",
-    "product": "THE ULTIMATE MOTOR OIL",
+    "product": "The Ultimate Motor Oil",
     "sae": "0w40",
     "img": "//img-fotki.yandex.ru/get/6604/16219540.3/0_8cb70_657a3877_XXL",
     "text": "Отложения. Органолептика практически полностью аналогична XENUM WRX (что совсем неудивительно, учитывая одни корни обоих продуктов), за исключением того факта, что более жидкий ZENOX (0W40) стекает на дно колбы практически мгновенно и колба на фото \"чистая\" и прозрачная. Более густые масла при повороте колбы всегда оставляют пленку (см. результаты масел 10W60, 5W50). Изначально этот нюанс не учитывался при фотографировании, полного истечения масла никто не дожидался, лучше уточнять по каждому конкретному случаю. В прочем, изначально ориентиры были на полимеризацию, а не на визуальные артефакты. К слову говоря, масло заявлено как LowSAPS, с веером допусков.",
@@ -627,7 +626,7 @@
   },
   {
     "brand": "MOTUL",
-    "product": "300V POWER ESTER CORE",
+    "product": "300V POWER ESTER Core",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6503/16219540.2/0_8b506_7e90b311_XXL",
     "text": "Отложения, загущение. Сравните с Castrol 10W60, Pentosin Pento Super. Требует отдельного тестирования с дефлегматором - возвращающиеся в колбу капли провоцируют взрывы - вся колба в мелкой пыли по этой причине.",
@@ -651,7 +650,7 @@
   },
   {
     "brand": "MOTUL",
-    "product": "8100 X-CESS",
+    "product": "8100 X-cess",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6603/16219540.1/0_8a63a_ede3fcef_XXL",
     "text": "Полимеризация.",
@@ -660,7 +659,7 @@
   },
   {
     "brand": "MOTUL",
-    "product": "8100 X-CLEAN C3",
+    "product": "8100 X-clean C3",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6400/16219540.1/0_8a651_85d63ff8_XXL",
     "text": "Полимеризация.",
@@ -669,7 +668,7 @@
   },
   {
     "brand": "MOTUL",
-    "product": "SPECIFIC LL-04",
+    "product": "Specific LL-04",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6500/16219540.1/0_8a649_beede5be_XXL",
     "text": "Полимеризация.",
@@ -709,7 +708,7 @@
   },
   {
     "brand": "Mobil 1",
-    "product": "EXTENDED LIFE",
+    "product": "Extended Life",
     "sae": "10w60",
     "img": "//img-fotki.yandex.ru/get/6506/16219540.3/0_8c856_ed8cef53_orig",
     "text": "Отложения, загущение.",
@@ -732,7 +731,7 @@
   },
   {
     "brand": "Mobil",
-    "product": "SUPER 1000",
+    "product": "Super 1000",
     "sae": "15w40",
     "img": "//img-fotki.yandex.ru/get/6502/16219540.2/0_8b74f_ea4c7eb5_XXL",
     "text": "Отложения.",
@@ -775,7 +774,7 @@
   },
   {
     "brand": "PETRO-CANADA",
-    "product": "SYNTHETIC",
+    "product": "Synthetic",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6404/16219540.1/0_8a64c_93f51ab3_XXL",
     "text": "Полимеризация.",
@@ -816,7 +815,7 @@
   },
   {
     "brand": "Rheinoil",
-    "product": "PRIMUS",
+    "product": "Primus VS",
     "sae": "0w40",
     "img": "//img-fotki.yandex.ru/get/6607/16219540.3/0_8cb74_8b2411d0_XXL",
     "text": "Отложения, зола.",
@@ -828,7 +827,7 @@
   },
   {
     "brand": "SELENIA",
-    "product": "STAR ALFA ROMEO",
+    "product": "StAR ALFA ROMEO",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6504/16219540.3/0_8c85a_d04bba54_orig",
     "text": "Загущение.",
@@ -902,7 +901,7 @@
   },
   {
     "brand": "TATNEFT",
-    "product": "ЛЮКС-3 ПАО",
+    "product": "Люкс-3 ПАО",
     "sae": "10w40",
     "img": "//img-fotki.yandex.ru/get/6604/16219540.3/0_8c854_5ea1a7c2_orig",
     "text": "",
@@ -924,7 +923,7 @@
   },
   {
     "brand": "TOYOTA",
-    "product": "MOTOR OIL",
+    "product": "Motor Oil",
     "sae": "5w30",
     "img": "//img-fotki.yandex.ru/get/6606/16219540.3/0_8c85e_afbb7dc2_XXL",
     "text": "Отложения, загущение.",
@@ -1122,7 +1121,7 @@
   },
   {
     "brand": "ТНК",
-    "product": "MAGNUM MOTOR PLUS",
+    "product": "Magnum MOTOR PLUS",
     "sae": "15w40",
     "img": "//img-fotki.yandex.ru/get/6602/16219540.2/0_8b760_4b420ac1_XXL",
     "text": "Отложения.",
@@ -1133,7 +1132,7 @@
   },
   {
     "brand": "ТНК",
-    "product": "MAGNUM ULTRATEC",
+    "product": "Magnum ULTRATEC",
     "sae": "5w40",
     "img": "//img-fotki.yandex.ru/get/6603/16219540.2/0_8b761_c7f368d1_XXL",
     "text": "Отложения.",
