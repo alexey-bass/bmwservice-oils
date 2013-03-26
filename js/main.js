@@ -290,6 +290,13 @@ function App() {
     
     uncheckGroup = function(trigger) {
         trigger.parents('div.group').find('input.filter:checked').prop('checked', false);
+        
+        if (trigger.parents('div.group').attr('id') == 'tag') {
+            $('input:radio[name=poly][value=0]').prop('checked', true);
+            $('input[name=poly]:radio').prop('disabled', true);
+            allPolyCounters.parent().addClass('disabled');
+        }
+        
         updateFilters(trigger);
     };
     
