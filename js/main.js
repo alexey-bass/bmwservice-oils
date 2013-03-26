@@ -325,6 +325,11 @@ function App() {
         if (item.chemical) {
             h+= '&nbsp;&nbsp;&nbsp;<span class="link blue chemical" dbid="'+ item.id +'">Анализ</span>';
         }
+        if (item.links) {
+            for (var i in item.links) {
+                h+= '&nbsp;&nbsp;&nbsp;<a href="'+ item.links[i].href +'">'+ item.links[i].title +'</a>';
+            }
+        }
         h+= '</h3>';
         
         h+= '<p>'+ item.text +'</p>';
