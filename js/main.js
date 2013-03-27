@@ -141,18 +141,22 @@ function App() {
         });
     };
     
-    var chemicalHtmlTemplate = '<html>'
-        + '<head>'
-        + '<meta charset="utf-8">'
-        + '<title>%TITLE%</title>'
-        + '<link rel="stylesheet" href="css/normalize.css"><style>body{margin: 10px;font-size:10pt}</style></head>'
+    var chemicalHtmlTemplate = '<html><head>'
+        + '<meta charset="utf-8"><title>%TITLE%</title>'
+        + '<link rel="stylesheet" href="css/normalize.css"><style>body{margin:10px;font-size:10pt}</style></head>'
         + '<body>'
-        + '<p>%TEXT%</p><img src="%IMG%" />'
+        + '<p>%TEXT%</p>'
+        + '<p style="font-size:7pt">'
+        + 'Внимание: для определения щёлочности используется не ASTM-D2896, а более близкий к нашему ГОСТ - ASTM D4739, который дает около 15% занижения щелочного числа. Следовательно, показатели TBN несколько занижены относительно паспортных.'
+        + '<br/>Исследование в закрытом тигле обычно производится для легких нефтепродуктов - этот тест пропорционально занижает точку вспышки на величину около 20 градусов.'
+        + '<p>'
+        + '<div><img src="%IMG%" /></div>'
+        
         + '</body></html>';
     
     openChemical = function(trigger) {
-        var id = trigger.attr('dbid'), item = getDbItemById(id);
-        var win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=840')
+        var id = trigger.attr('dbid'), item = getDbItemById(id)
+        ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=840');
         
         var html = chemicalHtmlTemplate;
         html = html.replace('%TITLE%', item.brand +' '+ item.product +' '+ item.sae.replace('w', 'W-'));
@@ -327,7 +331,7 @@ function App() {
         }
         if (item.links) {
             for (var i in item.links) {
-                h+= '&nbsp;&nbsp;&nbsp;<a href="'+ item.links[i].href +'">'+ item.links[i].title +'</a>';
+                h+= '&nbsp;&nbsp;&nbsp;<a href="'+ item.links[i].href +'" onclick="window.open(this.href); return false;">'+ item.links[i].title +'</a>';
             }
         }
         h+= '</h3>';
