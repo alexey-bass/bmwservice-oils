@@ -160,8 +160,8 @@ function App() {
         
         var html = _chemicalHtmlTemplate;
         html = html.replace('%TITLE%', item.brand +' '+ item.product +' '+ item.sae.replace('w', 'W-'));
-        html = html.replace('%TEXT%', item.chemical.text);
-        html = html.replace('%IMG%', item.chemical.img);
+        html = html.replace('%TEXT%',  item.chemical.text);
+        html = html.replace('%IMG%',   item.chemical.img);
         
         win.document.write(html);
     };
@@ -361,12 +361,14 @@ function App() {
     
     
     
+    // http://stackoverflow.com/a/11455508
     unique = function(a) {
         return $.grep(a, function(el, index) {
             return index === $.inArray(el, a);
         });
     };
     
+    // http://www.falsepositives.com/index.php/2009/12/01/javascript-function-to-get-the-intersect-of-2-arrays/
     intersect = function(arr1, arr2) {
         var temp = [];
         for(var i = 0; i < arr1.length; i++){
@@ -411,7 +413,7 @@ function App() {
         var aa = chunkify(a);
         var bb = chunkify(b);
 
-        for (x = 0; aa[x] && bb[x]; x++) {
+        for (var x = 0; aa[x] && bb[x]; x++) {
             if (aa[x] !== bb[x]) {
                 var c = Number(aa[x]), d = Number(bb[x]);
                 if (c == aa[x] && d == bb[x]) {
