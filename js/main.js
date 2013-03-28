@@ -7,7 +7,7 @@ function App() {
     var App = {};
     
     App.init = function() {
-        loadDb();
+        _loadDb();
     };
 
     var db
@@ -15,19 +15,19 @@ function App() {
     ,   filteredDb, filteredCounters
     ,   allBrandCounters, allSaeCounters, allPolyCounters, allTagCounters;
 
-    loadDb = function() {
+    _loadDb = function() {
         $.ajax({
             dataType: "json"
         ,   url: "db.json"
         ,   success: function(data) {
-                db = prepareDb(data);
-                populateSelectors(data);
-                postInit();
+                db = _prepareDb(data);
+                _populateSelectors(data);
+                _postInit();
             }
         });
     };
     
-    prepareDb = function(data) {
+    _prepareDb = function(data) {
         var i;
         
         for (i in data) {
@@ -37,7 +37,7 @@ function App() {
         return data;
     };
     
-    populateSelectors = function(data) {
+    _populateSelectors = function(data) {
         var i, brands = [], saes = [], tags = [];
         
         for (i in data) {
@@ -50,24 +50,24 @@ function App() {
         saes = unique(saes).sort(alphanum);
         tags = unique(tags).sort();
         
-        populateDiv('brand', brands);
-        populateDiv('sae',   saes);
-        populateDiv('tag',   tags);
+        _populateDiv('brand', brands);
+        _populateDiv('sae',   saes);
+        _populateDiv('tag',   tags);
         
-        attachHandlers();
+        _attachHandlers();
     };
     
-    postInit = function() {
+    _postInit = function() {
         allBrandCounters = $('input.type-brand:checkbox ~ span.counter');
         allSaeCounters   = $('input.type-sae:checkbox ~ span.counter');
         allTagCounters   = $('input.type-tag:checkbox ~ span.counter');
         allPolyCounters  = $('input.type-poly:radio ~ span.counter');
         
-        makeDbUsingFilters();
+        _makeDbUsingFilters();
         App.updateCounters();
     };
     
-    populateDiv = function(id, data) {
+    _populateDiv = function(id, data) {
         var i, h = '';
         
 //        h+= '<p>';
@@ -127,21 +127,21 @@ function App() {
         $('#'+ id).html(h);
     };
     
-    attachHandlers = function() {
+    _attachHandlers = function() {
         $('input.filter').bind('change', function() {
-            updateFilters($(this));
+            _updateFilters($(this));
         });
         
         $('span.select-none').bind('click', function() {
-            uncheckGroup($(this));
+            _uncheckGroup($(this));
         });
         
         $(document).on('click', 'span.chemical', function() {
-            openChemical($(this))
+            _openChemicalWindow($(this))
         });
     };
     
-    var chemicalHtmlTemplate = '<html><head>'
+    var _chemicalHtmlTemplate = '<html><head>'
         + '<meta charset="utf-8"><title>%TITLE%</title>'
         + '<link rel="stylesheet" href="css/normalize.css"><style>body{margin:10px;font-size:10pt}</style></head>'
         + '<body>'
@@ -154,11 +154,11 @@ function App() {
         
         + '</body></html>';
     
-    openChemical = function(trigger) {
-        var id = trigger.attr('dbid'), item = getDbItemById(id)
+    _openChemicalWindow = function(trigger) {
+        var id = trigger.attr('dbid'), item = _getDbItemById(id)
         ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=840');
         
-        var html = chemicalHtmlTemplate;
+        var html = _chemicalHtmlTemplate;
         html = html.replace('%TITLE%', item.brand +' '+ item.product +' '+ item.sae.replace('w', 'W-'));
         html = html.replace('%TEXT%', item.chemical.text);
         html = html.replace('%IMG%', item.chemical.img);
@@ -166,11 +166,11 @@ function App() {
         win.document.write(html);
     };
     
-    getDbItemById = function(id) {
+    _getDbItemById = function(id) {
         return db[id - 1];
     };
     
-    updateFilters = function(selector) {
+    _updateFilters = function(selector) {
         if (debug) {
             var timer = (new Date()).getTime();
         }
@@ -216,7 +216,7 @@ function App() {
             console.log(filterTags);
         }
 
-        makeDbUsingFilters();
+        _makeDbUsingFilters();
         App.rebuildResults();
         App.updateCounters();
         
@@ -241,7 +241,7 @@ function App() {
         var i, h = '';
         
         for (i in filteredDb) {
-            h+= makeResultItem(filteredDb[i]);
+            h+= _makeResultItem(filteredDb[i]);
         }
         
         $('#results').html(h);
@@ -269,7 +269,7 @@ function App() {
         }
     };
     
-    makeDbUsingFilters = function() {
+    _makeDbUsingFilters = function() {
         var i, j, fDb = [], common;
         
         filteredCounters = {
@@ -319,7 +319,7 @@ function App() {
         filteredDb = fDb;
     };
     
-    makeResultItem = function(item) {
+    _makeResultItem = function(item) {
         var h = '';
         
         h+= '<div class="result-item">';
@@ -345,7 +345,7 @@ function App() {
         return h;
     };
     
-    uncheckGroup = function(trigger) {
+    _uncheckGroup = function(trigger) {
         trigger.parents('div.group').find('input.filter:checked').prop('checked', false);
         
         if (trigger.parents('div.group').attr('id') == 'tag') {
@@ -354,7 +354,7 @@ function App() {
             allPolyCounters.parent().addClass('disabled');
         }
         
-        updateFilters(trigger);
+        _updateFilters(trigger);
     };
     
     
