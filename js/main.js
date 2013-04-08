@@ -1,3 +1,8 @@
+/**
+ * @author Alexey Bass @alexey_bass
+ * @copyright 2013
+ */
+
 (function(window, undefined) {
     
 function App() {
