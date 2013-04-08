@@ -6,35 +6,47 @@
     <meta name="description" content="bmwservice - Результаты тестирования моторных масел">
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/main.css?9">
+    <link rel="stylesheet" href="css/main.css?11">
 </head>
 <body>
 
-<table id="left" border="0">
-<tbody valign="top">
-<tr>
-    <td>
-        <div id="brand" class="group"></div>
-    </td>
-    <td>
-        <div id="sae" class="group"></div>
-        <div id="tag" class="group"></div>
-        <div id="notes"></div>
-    </td>
-</tr>
-</tbody>
-</table>
+<div id="warning">
+    <h1>Масл&aacute; &mdash; фильтр</h1>
+    <p>
+        Данный проект подготовлен по материалам Сергея Смирного и его блога <a href="http://bmwservice.livejournal.com/">bmwservice.livejournal.com</a>.<br/>
+        Автор &mdash; <a href="http://about.me/alexey_bass">Алексей Басс</a>.<br/>
+        <br/>
+        В проекте представлены результаты тестирования, протоколы испытания (если таковые имеются) и другие ссылки, связанные с протестированными экземплярами масла. В обязательном порядке рекомендуются к прочтению наиболее важные статьи о масле, а так же большой FAQ (<a href="http://bmwservice.livejournal.com/64890.html">1-я часть</a>, <a href="http://bmwservice.livejournal.com/65459.html">2-я часть</a>).<br/>
+        <br/>
+        <span class="bold">При выборе, помимо вязкости и состава, важный критерий отбора &mdash; <span class="color-tag">полимеризация</span>, поэтому она вынесена в отдельный фильтр.</span><br/>
+        <br/>
+        <button type="button">Я всё понял, поехали &rarr;</button>
+    </p>
+</div>
     
-<div id="main">
-    <div id="results"></div>
+<div id="screen" class="hidden">
+    <table id="left" border="0">
+    <tbody valign="top">
+    <tr>
+        <td>
+            <div id="brand" class="group"></div>
+        </td>
+        <td>
+            <div id="sae" class="group"></div>
+            <div id="tag" class="group"></div>
+            <div id="notes"></div>
+        </td>
+    </tr>
+    </tbody>
+    </table>
+
+    <div id="main">
+        <div id="results"></div>
+    </div>
 </div>
 
-<p id="footer">
-    По материалам публикации <a href="http://bmwservice.livejournal.com/27699.html">Масло VIII. Затмение. Результаты тестирования моторных масел</a>. Автор фильтра <a href="http://about.me/alexey_bass">Алексей Басс</a>
-</p>
-    
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/main.js?9"></script>
+<script src="js/main.js?11"></script>
 
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -8,6 +8,21 @@ function App() {
     
     App.init = function() {
         _loadDb();
+        
+        $('#warning button').bind('click', function() {
+            $('#warning, #screen').hide();
+            $('#screen').removeClass('hidden').fadeIn(1000);
+        });
+        
+        $(window).resize(_updateHeight);
+        _updateHeight();
+    };
+    
+    _updateHeight = function() {
+        var h = $(window).height();
+        if (h > 450) {
+            $('#brand').height(h - 23);
+        }
     };
 
     var db
@@ -70,11 +85,6 @@ function App() {
     _populateDiv = function(id, data) {
         var i, h = '';
         
-//        h+= '<p>';
-//        h+= '<label><input type="radio" name="logic-'+ id +'" checked="checked"> Включить</span><br/>';
-//        h+= '<label><input type="radio" name="logic-'+ id +'"> Исключить</span>';
-//        h+= '</p>';
-        
         h+= '<p class="control">';
         h+= '<span class="link select-none type-'+ id +'" title="Снять все галочки">Очистить</span>';
         h+= '</p>';
@@ -85,7 +95,7 @@ function App() {
             h+= '<li>';
             h+= '<label>';
             h+= '<input type="checkbox" class="filter type-poly" value="">';
-            h+= ' <span class="color-'+ id +'">';
+            h+= ' <span class="bold color-'+ id +'">';
             h+= 'полимеризация';
             h+= '</span>';
             h+= '</label>';
@@ -336,7 +346,7 @@ function App() {
         }
         h+= '</h3>';
         
-        h+= '<p>'+ item.text +'</p>';
+        h+= '<p'+ (item.poly ? ' class="red"' : '') +'>'+ item.text +'</p>';
         
         h+= '<img src="'+ item.img +'" />';
         
