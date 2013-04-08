@@ -1,4 +1,4 @@
 bmwservice-oils
 ===============
 
-Выбор масел по материалам http://bmwservice.livejournal.com
+Отбор масел по материалам http://bmwservice.livejournal.com
