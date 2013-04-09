@@ -12,8 +12,10 @@ function App() {
     var App = {};
     
     App.init = function() {
-        _loadDb();
-        
+        if (document.location.search === '?beta') {
+            _loadDb();
+        }
+                
         $('#warning button').bind('click', function() {
             $('#warning, #screen').hide();
             $('#screen').removeClass('hidden').fadeIn(1000);
