@@ -287,13 +287,15 @@ function App() {
         var i;
         
         allBrandCounters.html('');
+        allBrandCounters.prev().addClass('disabled');
         for (i in filteredCounters['brand']) {
-            allBrandCounters.filter('[value="'+ i +'"]').html(filteredCounters['brand'][i].counter);
+            allBrandCounters.filter('[value="'+ i +'"]').html(filteredCounters['brand'][i].counter).prev().removeClass('disabled');
         }
         
         allSaeCounters.html('');
+        allSaeCounters.prev().addClass('disabled');
         for (i in filteredCounters['sae']) {
-            allSaeCounters.filter('[value="'+ i +'"]').html(filteredCounters['sae'][i].counter);
+            allSaeCounters.filter('[value="'+ i +'"]').html(filteredCounters['sae'][i].counter).prev().removeClass('disabled');
         }
         
         allPolyCounters.filter('[value=poly-1]').html(filteredCounters['poly'][1] || '');

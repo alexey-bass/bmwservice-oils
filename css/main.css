@@ -342,7 +342,7 @@ p, ul {
 }
 
 span.counter, .disabled {
-    color: #999;
+    color: #999 !important;
 }
 
 #main {
