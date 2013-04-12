@@ -33,7 +33,7 @@ function App() {
     var db
     ,   filterBrands = [], filterSaes = []
     ,   filteredDb, filteredCounters
-    ,   allBrandCounters, allSaeCounters, allPolyCounters, allCleanCounters;
+    ,   allBrandCounters, allSaeCounters, allPolyCounters, allCleanCounters, allChemicalCounters;
 
     _loadDb = function() {
         $.ajax({
@@ -76,10 +76,11 @@ function App() {
     };
     
     _postInit = function() {
-        allBrandCounters = $('input.type-brand:checkbox ~ span.counter');
-        allSaeCounters   = $('input.type-sae:checkbox ~ span.counter');
-        allPolyCounters  = $('input.type-poly:radio ~ span.counter');
-        allCleanCounters = $('input.type-clean:radio ~ span.counter');
+        allBrandCounters    = $('input.type-brand:checkbox ~ span.counter');
+        allSaeCounters      = $('input.type-sae:checkbox ~ span.counter');
+        allPolyCounters     = $('input.type-poly:radio ~ span.counter');
+        allCleanCounters    = $('input.type-clean:radio ~ span.counter');
+        allChemicalCounters = $('input.type-chemical:checkbox ~ span.counter');
         
         _makeDbUsingFilters();
         App.updateCounters();
@@ -93,66 +94,76 @@ function App() {
         h+= '</p>';
         
         h+= '<ul>';
-        
-        if (id === 'tag') {
-            h+= '<li>';
-            h+= '<label>';
-            h+= '<input type="checkbox" class="filter type-poly" value="">';
-            h+= ' <span class="color-'+ id +'">полимеризация</span>';
-            h+= '</label>';
-            h+= '</li>';
-            
-            h+= '<li class="color-'+ id +' poly-row">';
-            h+= '<label class="disabled">';
-            h+= '<input type="radio" name="poly" class="filter type-poly" value="1" disabled="disabled"> да';
-            h+= ' <span class="counter" value="poly-1"></span>';
-            h+= '</label>';
-            h+= '&nbsp;&nbsp;';
-            h+= '<label class="disabled">';
-            h+= '<input type="radio" name="poly" class="filter type-poly" value="0"  disabled="disabled"> нет';
-            h+= ' <span class="counter" value="poly-0"></span>';
-            h+= '</label>';
-            h+= '</li>';
-            
-            h+= '<li>';
-            h+= '<label>';
-            h+= '<input type="checkbox" class="filter type-clean" value="">';
-            h+= ' <span class="color-'+ id +'">чисто</span>';
-            h+= '</label>';
-            h+= '</li>';
-            
-            h+= '<li class="color-'+ id +' clean-row">';
-            h+= '<label class="disabled">';
-            h+= '<input type="radio" name="clean" class="filter type-clean" value="1" disabled="disabled"> да';
-            h+= ' <span class="counter" value="clean-1"></span>';
-            h+= '</label>';
-            h+= '&nbsp;&nbsp;';
-            h+= '<label class="disabled">';
-            h+= '<input type="radio" name="clean" class="filter type-clean" value="0"  disabled="disabled"> нет';
-            h+= ' <span class="counter" value="clean-0"></span>';
-            h+= '</label>';
-            h+= '</li>';
-        } else {
-            for (i in data) {
+        switch (id) {
+            case 'tag':
                 h+= '<li>';
                 h+= '<label>';
-                h+= '<input type="checkbox" class="filter type-'+ id +'" value="'+ data[i] +'">';
-                h+= ' <span class="color-'+ id +'">';
-                switch (id) {
-                    case 'sae':
-                        h+= data[i].replace('w', 'w-');
-                        break;
-
-                    case 'brand':
-                        h+= data[i];
-                }
-                h+= '</span>';
-                h+= ' <span class="counter" value="'+ data[i] +'"></span>';
+                h+= '<input type="checkbox" class="filter type-poly" value="">';
+                h+= ' <span class="color-'+ id +'">полимеризация</span>';
                 h+= '</label>';
                 h+= '</li>';
-            }
+
+                h+= '<li class="color-'+ id +' poly-row">';
+                h+= '<label class="disabled">';
+                h+= '<input type="radio" name="poly" class="filter type-poly" value="1" disabled="disabled"> да';
+                h+= ' <span class="counter" value="poly-1"></span>';
+                h+= '</label>';
+                h+= '&nbsp;&nbsp;';
+                h+= '<label class="disabled">';
+                h+= '<input type="radio" name="poly" class="filter type-poly" value="0"  disabled="disabled"> нет';
+                h+= ' <span class="counter" value="poly-0"></span>';
+                h+= '</label>';
+                h+= '</li>';
+
+                h+= '<li>';
+                h+= '<label>';
+                h+= '<input type="checkbox" class="filter type-clean" value="">';
+                h+= ' <span class="color-'+ id +'">чисто</span>';
+                h+= '</label>';
+                h+= '</li>';
+
+                h+= '<li class="color-'+ id +' clean-row">';
+                h+= '<label class="disabled">';
+                h+= '<input type="radio" name="clean" class="filter type-clean" value="1" disabled="disabled"> да';
+                h+= ' <span class="counter" value="clean-1"></span>';
+                h+= '</label>';
+                h+= '&nbsp;&nbsp;';
+                h+= '<label class="disabled">';
+                h+= '<input type="radio" name="clean" class="filter type-clean" value="0"  disabled="disabled"> нет';
+                h+= ' <span class="counter" value="clean-0"></span>';
+                h+= '</label>';
+                h+= '</li>';
+
+                h+= '<li>';
+                h+= '<label>';
+                h+= '<input type="checkbox" class="filter type-chemical" value="">';
+                h+= ' <span class="color-'+ id +'">хим. анализ</span>';
+                h+= ' <span class="counter" value="chemical-1"></span>';
+                h+= '</label>';
+                h+= '</li>';
+                break;
+                
+            default:
+                for (i in data) {
+                    h+= '<li>';
+                    h+= '<label>';
+                    h+= '<input type="checkbox" class="filter type-'+ id +'" value="'+ data[i] +'">';
+                    h+= ' <span class="color-'+ id +'">';
+                    switch (id) {
+                        case 'sae':
+                            h+= data[i].replace('w', 'w-');
+                            break;
+
+                        case 'brand':
+                            h+= data[i];
+                    }
+                    h+= '</span>';
+                    h+= ' <span class="counter" value="'+ data[i] +'"></span>';
+                    h+= '</label>';
+                    h+= '</li>';
+                }
+            break;
         }
-        
         h+= '</ul>';
         
         $('#'+ id).html(h);
@@ -265,7 +276,7 @@ function App() {
     App.rebuildResults = function() {
         
         // nothing selected
-        var isNothing = (!filterBrands.length && !filterSaes.length && !_filterPolyEnabled() && !_filterCleanEnabled()) ? true : false;
+        var isNothing = (!filterBrands.length && !filterSaes.length && !_filterPolyEnabled() && !_filterCleanEnabled() && !_filterChemicalEnabled()) ? true : false;
         
         if (isNothing) {
             $('#results').html('');
@@ -304,14 +315,20 @@ function App() {
         
         allCleanCounters.filter('[value=clean-1]').html(filteredCounters['clean'][1] || '');
         allCleanCounters.filter('[value=clean-0]').html(filteredCounters['clean'][0] || '');
+        
+        allChemicalCounters.html(filteredCounters['chemical'] || '');
     };
     
     _filterPolyEnabled = function() {
-        return $('input.type-poly:checkbox').prop('checked') && $('input[name=poly]:radio:checked').prop('checked');
+        return $('input.type-poly:checkbox').prop('checked')  && $('input[name=poly]:radio:checked').prop('checked');
     };
     
     _filterCleanEnabled = function() {
         return $('input.type-clean:checkbox').prop('checked') && $('input[name=clean]:radio:checked').prop('checked');
+    };
+    
+    _filterChemicalEnabled = function() {
+        return $('input.type-chemical:checkbox').prop('checked');
     };
     
     _makeDbUsingFilters = function() {
@@ -322,12 +339,14 @@ function App() {
         ,   'sae': {}
         ,   'poly': {0: 0, 1: 0}
         ,   'clean': {0: 0, 1: 0}
+        ,   'chemical': 0
         };
         
         var usePoly = _filterPolyEnabled()
         ,   polyValue = parseInt($('input[name=poly]:radio:checked').val())
         ,   useClean = _filterCleanEnabled()
-        ,   cleanValue = parseInt($('input[name=clean]:radio:checked').val());
+        ,   cleanValue = parseInt($('input[name=clean]:radio:checked').val())
+        ,   useChemical = _filterChemicalEnabled();
         
         for (i in db) {
             
@@ -338,6 +357,10 @@ function App() {
             
             // quick filter, so will be first
             if (useClean && (db[i].clean || 0) !== cleanValue) {
+                continue;
+            }
+            
+            if (useChemical && !db[i].chemical) {
                 continue;
             }
             
@@ -355,6 +378,7 @@ function App() {
             filteredCounters['sae'][db[i].sae]     ? filteredCounters['sae'][db[i].sae].counter++     : filteredCounters['sae'][db[i].sae] = {counter: 1};
             filteredCounters['poly'][db[i].poly]++;
             filteredCounters['clean'][db[i].clean || 0]++;
+            db[i].chemical ? filteredCounters['chemical']++ : 0;
         }
         
         $('#notes').html('&nbsp;Нашлось: '+ fDb.length);
