@@ -174,20 +174,21 @@ function App() {
     
     var _chemicalHtmlTemplate = '<html><head>'
         + '<meta charset="utf-8"><title>%TITLE%</title>'
-        + '<link rel="stylesheet" href="css/normalize.css"><style>body{margin:10px;font-size:10pt}</style></head>'
+        + '<link rel="stylesheet" href="css/normalize.css"><style>body{margin:0;padding:0;font-size:10pt}</style></head>'
         + '<body>'
+        + '<div style="padding: 0 10px">'
         + '<p>%TEXT%</p>'
         + '<p style="font-size:7pt">'
         + 'Внимание: для определения щёлочности используется не ASTM-D2896, а более близкий к нашему ГОСТ - ASTM D4739, который дает около 15% занижения щелочного числа. Следовательно, показатели TBN несколько занижены относительно паспортных.'
         + '<br/>Исследование в закрытом тигле обычно производится для легких нефтепродуктов - этот тест пропорционально занижает точку вспышки на величину около 20 градусов.'
         + '<p>'
-        + '<div><img src="%IMG%" /></div>'
-        
+        + '</div>'
+        + '<div><img src="%IMG%" alt="" /></div>'
         + '</body></html>';
     
     _openChemicalWindow = function(trigger) {
         var id = trigger.attr('dbid'), item = _getDbItemById(id)
-        ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=840');
+        ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=820');
         
         var html = _chemicalHtmlTemplate;
         html = html.replace('%TITLE%', item.brand +' '+ item.product +' '+ item.sae.replace('w', 'W-'));
