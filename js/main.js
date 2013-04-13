@@ -89,11 +89,24 @@ function App() {
     _populateDiv = function(id, data) {
         var i, h = '';
         
-        h+= '<p class="control">';
-        h+= '<span class="link select-none type-'+ id +'" title="Снять все галочки">Очистить</span>';
-        h+= '</p>';
+        h+= '<div class="header">';
+        switch (id) {
+            case 'sae':
+                h+= '<span class="title">SAE</span>';
+                break;
+                
+            case 'brand':
+                h+= '<span class="title">Бренд</span>';
+                break;
+                
+            case 'tag':
+                h+= '<span class="title">Фильтры</span>';
+                break;
+        }
+        h+= '<span class="link float-right select-none type-'+ id +'" title="Снять все галочки">Очистить</span>';
+        h+= '</div>';
         
-        h+= '<ul>';
+        h+= '<ul class="clear">';
         switch (id) {
             case 'tag':
                 h+= '<li>';
@@ -392,7 +405,7 @@ function App() {
         h+= '<div class="result-item">';
         
         h+= '<h3>';
-        h+= '<span class="color-brand">'+ item.brand +'</span> '+ item.product +' <span class="color-sae">'+ item.sae.replace('w', 'W-') +'</span>';
+        h+= '<span class="color-brand">'+ item.brand +'</span> '+ item.product +' <span class="color-sae">SAE '+ item.sae.replace('w', 'W-') +'</span>';
         if (item.chemical) {
             h+= '&nbsp;&nbsp;&nbsp;<span class="link blue chemical" dbid="'+ item.id +'">Анализ</span>';
         }

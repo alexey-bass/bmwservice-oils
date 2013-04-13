@@ -332,9 +332,13 @@ p, ul {
 #left .group ul li {
     list-style: none;
 }
-#left .group p.control {
-    font-size: 80%;
+#left .group div.header {
+    font-size: 8pt;
     margin-bottom: 5px;
+}
+#left .group div.header .title {
+    font-size: 9pt;
+    font-weight: bold;
 }
 
 #brand {
@@ -411,4 +415,11 @@ li.poly-row, li.clean-row {
 
 .bold {
     font-weight: bold;
+}
+
+.clear {
+    clear: both;
+}
+.float-right {
+    float: right;
 }
