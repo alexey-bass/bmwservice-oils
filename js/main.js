@@ -121,7 +121,7 @@ function App() {
                 h+= '<input type="radio" name="poly" class="filter type-poly" value="1" disabled="disabled"> да';
                 h+= ' <span class="counter" value="poly-1"></span>';
                 h+= '</label>';
-                h+= '&nbsp;&nbsp;';
+                h+= '<br/>';
                 h+= '<label class="disabled">';
                 h+= '<input type="radio" name="poly" class="filter type-poly" value="0"  disabled="disabled"> нет';
                 h+= ' <span class="counter" value="poly-0"></span>';
@@ -309,22 +309,23 @@ function App() {
     };
     
     App.updateCounters = function() {
-        var i;
+        var i, total;
         
         allBrandCounters.html('');
         allBrandCounters.prev().addClass('disabled');
         for (i in filteredCounters['brand']) {
-            allBrandCounters.filter('[value="'+ i +'"]').html(filteredCounters['brand'][i].counter).prev().removeClass('disabled');
+            allBrandCounters.filter('[value="'+ i +'"]').html(filteredCounters['brand'][i]).prev().removeClass('disabled');
         }
         
         allSaeCounters.html('');
         allSaeCounters.prev().addClass('disabled');
         for (i in filteredCounters['sae']) {
-            allSaeCounters.filter('[value="'+ i +'"]').html(filteredCounters['sae'][i].counter).prev().removeClass('disabled');
+            allSaeCounters.filter('[value="'+ i +'"]').html(filteredCounters['sae'][i]).prev().removeClass('disabled');
         }
         
-        allPolyCounters.filter('[value=poly-1]').html(filteredCounters['poly'][1] || '');
-        allPolyCounters.filter('[value=poly-0]').html(filteredCounters['poly'][0] || '');
+        total = filteredCounters['poly'][0] + filteredCounters['poly'][1];
+        allPolyCounters.filter('[value=poly-1]').html(filteredCounters['poly'][1] ? (filteredCounters['poly'][1] +' ('+ Math.round(filteredCounters['poly'][1]*100/total) +'%)') : '');
+        allPolyCounters.filter('[value=poly-0]').html(filteredCounters['poly'][0] ? (filteredCounters['poly'][0] +' ('+ Math.round(filteredCounters['poly'][0]*100/total) +'%)') : '');
         
         allCleanCounters.filter('[value=clean-1]').html(filteredCounters['clean'][1] || '');
         allCleanCounters.filter('[value=clean-0]').html(filteredCounters['clean'][0] || '');
@@ -387,8 +388,8 @@ function App() {
             
             fDb.push(db[i]);
             
-            filteredCounters['brand'][db[i].brand] ? filteredCounters['brand'][db[i].brand].counter++ : filteredCounters['brand'][db[i].brand] = {counter: 1};
-            filteredCounters['sae'][db[i].sae]     ? filteredCounters['sae'][db[i].sae].counter++     : filteredCounters['sae'][db[i].sae] = {counter: 1};
+            filteredCounters['brand'][db[i].brand] ? filteredCounters['brand'][db[i].brand]++ : filteredCounters['brand'][db[i].brand] = 1;
+            filteredCounters['sae'][db[i].sae]     ? filteredCounters['sae'][db[i].sae]++     : filteredCounters['sae'][db[i].sae] = 1;
             filteredCounters['poly'][db[i].poly]++;
             filteredCounters['clean'][db[i].clean || 0]++;
             db[i].chemical ? filteredCounters['chemical']++ : 0;
