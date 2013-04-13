@@ -96,7 +96,7 @@ function App() {
                 break;
                 
             case 'brand':
-                h+= '<span class="title">Бренд</span>';
+                h+= '<span class="title">Бренды</span>';
                 break;
                 
             case 'tag':
