@@ -215,7 +215,7 @@ function App() {
         ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=820');
         
         var html = _chemicalHtmlTemplate;
-        html = html.replace('%TITLE%', item.brand +' '+ item.product +' '+ item.sae.replace('w', 'W-'));
+        html = html.replace('%TITLE%', item.brand +' '+ item.product +' SAE&nbsp;'+ item.sae.replace('w', 'W-'));
         html = html.replace('%TEXT%',  item.chemical.text);
         html = html.replace('%IMG%',   item.chemical.img);
         
