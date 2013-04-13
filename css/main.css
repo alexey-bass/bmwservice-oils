@@ -344,6 +344,9 @@ p, ul {
 #brand {
     padding-right: 0 !important;
 }
+#brand div.header {
+    padding-right: 5px;
+}
 
 span.counter, .disabled {
     color: #999 !important;
