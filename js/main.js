@@ -7,7 +7,7 @@
     
 function App() {
 
-    var debug = false;
+    var _debug = false;
 
     var App = {};
     
@@ -32,13 +32,14 @@ function App() {
 
     var db
     ,   filterBrands = [], filterSaes = []
-    ,   filteredDb, filteredCounters
-    ,   allBrandCounters, allSaeCounters, allPolyCounters, allCleanCounters, allChemicalCounters;
+    ,   filteredDb = [], filteredCounters
+    ,   allBrandCounters, allSaeCounters, allPolyCounters, allCleanCounters, allChemicalCounters, allSynthCounters;
 
     _loadDb = function() {
         $.ajax({
-            dataType: "json"
-        ,   url: "db.json"
+            dataType: 'json'
+        ,   url: 'db.json'
+        ,   cache : false
         ,   success: function(data) {
                 db = _prepareDb(data);
                 _populateSelectors(data);
@@ -81,6 +82,7 @@ function App() {
         allPolyCounters     = $('input.type-poly:radio ~ span.counter');
         allCleanCounters    = $('input.type-clean:radio ~ span.counter');
         allChemicalCounters = $('input.type-chemical:checkbox ~ span.counter');
+        allSynthCounters    = $('input.type-synth:checkbox ~ span.counter');
         
         _makeDbUsingFilters();
         App.updateCounters();
@@ -115,15 +117,16 @@ function App() {
                 h+= ' <span class="color-'+ id +'">полимеризация</span>';
                 h+= '</label>';
                 h+= '</li>';
-
                 h+= '<li class="color-'+ id +' poly-row">';
                 h+= '<label class="disabled">';
-                h+= '<input type="radio" name="poly" class="filter type-poly" value="1" disabled="disabled"> да';
+                h+= '<input type="radio" name="poly" class="filter type-poly" value="1" disabled="disabled">';
+                h+= ' <span class="label">да</span>';
                 h+= ' <span class="counter" value="poly-1"></span>';
                 h+= '</label>';
                 h+= '<br/>';
                 h+= '<label class="disabled">';
-                h+= '<input type="radio" name="poly" class="filter type-poly" value="0"  disabled="disabled"> нет';
+                h+= '<input type="radio" name="poly" class="filter type-poly" value="0"  disabled="disabled">';
+                h+= ' <span class="label">нет</span>';
                 h+= ' <span class="counter" value="poly-0"></span>';
                 h+= '</label>';
                 h+= '</li>';
@@ -131,18 +134,19 @@ function App() {
                 h+= '<li>';
                 h+= '<label>';
                 h+= '<input type="checkbox" class="filter type-clean" value="">';
-                h+= ' <span class="color-'+ id +'">чисто</span>';
+                h+= ' <span class="color-'+ id +'">чистый результат</span>';
                 h+= '</label>';
                 h+= '</li>';
-
                 h+= '<li class="color-'+ id +' clean-row">';
                 h+= '<label class="disabled">';
-                h+= '<input type="radio" name="clean" class="filter type-clean" value="1" disabled="disabled"> да';
+                h+= '<input type="radio" name="clean" class="filter type-clean" value="1" disabled="disabled">';
+                h+= ' <span class="label">да</span>';
                 h+= ' <span class="counter" value="clean-1"></span>';
                 h+= '</label>';
-                h+= '&nbsp;&nbsp;';
+                h+= '<br/>';
                 h+= '<label class="disabled">';
-                h+= '<input type="radio" name="clean" class="filter type-clean" value="0"  disabled="disabled"> нет';
+                h+= '<input type="radio" name="clean" class="filter type-clean" value="0"  disabled="disabled">';
+                h+= ' <span class="label">нет</span>';
                 h+= ' <span class="counter" value="clean-0"></span>';
                 h+= '</label>';
                 h+= '</li>';
@@ -150,8 +154,16 @@ function App() {
                 h+= '<li>';
                 h+= '<label>';
                 h+= '<input type="checkbox" class="filter type-chemical" value="">';
-                h+= ' <span class="color-'+ id +'">хим. анализ</span>';
+                h+= ' <span class="color-'+ id +'" title="Есть результат из лаборатории">хим. анализ</span>';
                 h+= ' <span class="counter" value="chemical-1"></span>';
+                h+= '</label>';
+                h+= '</li>';
+                
+                h+= '<li>';
+                h+= '<label>';
+                h+= '<input type="checkbox" class="filter type-synth" value="">';
+                h+= ' <span class="color-'+ id +'" title="Показать только синтетику">синтетика</span>';
+                h+= ' <span class="counter" value="synth"></span>';
                 h+= '</label>';
                 h+= '</li>';
                 break;
@@ -161,7 +173,7 @@ function App() {
                     h+= '<li>';
                     h+= '<label>';
                     h+= '<input type="checkbox" class="filter type-'+ id +'" value="'+ data[i] +'">';
-                    h+= ' <span class="color-'+ id +'">';
+                    h+= ' <span class="label color-'+ id +'">';
                     switch (id) {
                         case 'sae':
                             h+= data[i].replace('w', 'w-');
@@ -227,40 +239,49 @@ function App() {
     };
     
     _updateFilters = function(selector) {
-        if (debug) {
+        if (_debug) {
             var timer = (new Date()).getTime();
         }
         
         var isCheckbox = selector.is('input') // can be 'select-none' trigger
         ,   isChecked  = selector.is(':checked')
-        ,   filter; // will hold reference to normal array
+        ,   filter; // will hold reference to original data
         
-        if (       selector.hasClass('type-brand')) {
-            filter = filterBrands;
-        } else if (selector.hasClass('type-sae')) {
-            filter = filterSaes;
-        } else if (selector.hasClass('type-poly')) {
-            if ($('input.type-poly:checkbox').prop('checked')) {
-                $('input[name=poly]:radio').prop('disabled', false);
-                allPolyCounters.parent().removeClass('disabled');
-            } else {
-                $('input[name=poly]:radio').prop('disabled', true);
-                allPolyCounters.parent().addClass('disabled');
-            }
-            filter = [];
-        } else if (selector.hasClass('type-clean')) {
-            if ($('input.type-clean:checkbox').prop('checked')) {
-                $('input[name=clean]:radio').prop('disabled', false);
-                allCleanCounters.parent().removeClass('disabled');
-            } else {
-                $('input[name=clean]:radio').prop('disabled', true);
-                allCleanCounters.parent().addClass('disabled');
-            }
-            filter = [];
-        } else {
-            filter = [];
+        switch (selector.attr('class').match(/type-(\w+)/)[1]) {
+            case 'brand':
+                filter = filterBrands;
+                break;
+                
+            case 'sae':
+                filter = filterSaes;
+                break;
+                
+            case 'poly':
+                if (isCheckbox) {
+                    $('input[name=poly]:radio').prop('disabled', !isChecked);
+                    allPolyCounters.parent()[isChecked ? 'removeClass' : 'addClass']('disabled');
+                }
+                filter = [];
+                break;
+                
+            case 'clean':
+                if (isCheckbox) {
+                    $('input[name=clean]:radio').prop('disabled', !isChecked);
+                    allCleanCounters.parent()[isChecked ? 'removeClass' : 'addClass']('disabled');
+                }
+                filter = [];
+                break;
+                
+            case 'synth':
+                _disableMineralLabels(isChecked);
+                filter = [];
+                break;
+                
+            default:
+                filter = [];
+                break;
         }
-
+        
         if (isCheckbox) {
             if (isChecked) {
                 filter.push(selector.val());
@@ -272,24 +293,23 @@ function App() {
             filter.length = 0;
         }
 
-        if (debug) {
-            console.log(filterBrands);
-            console.log(filterSaes);
-        }
-
         _makeDbUsingFilters();
         App.rebuildResults();
         App.updateCounters();
         
-        if (debug) {
+        if (_debug) {
             console.log(((new Date()).getTime() - timer) +' ms');
         }
+    };
+    
+    _disableMineralLabels = function(action) {
+        allSaeCounters.parent().has('input[value=10w40], input[value=15w40]').children('input').prop('disabled', action);
     };
     
     App.rebuildResults = function() {
         
         // nothing selected
-        var isNothing = (!filterBrands.length && !filterSaes.length && !_filterPolyEnabled() && !_filterCleanEnabled() && !_filterChemicalEnabled()) ? true : false;
+        var isNothing = (!filterBrands.length && !filterSaes.length && !_filterPolyEnabled() && !_filterCleanEnabled() && !_filterChemicalEnabled() && !_filterSynthEnabled()) ? true : false;
         
         if (isNothing) {
             $('#results').html('');
@@ -312,15 +332,15 @@ function App() {
         var i, total;
         
         allBrandCounters.html('');
-        allBrandCounters.prev().addClass('disabled');
+        allBrandCounters.parent().addClass('disabled');
         for (i in filteredCounters['brand']) {
-            allBrandCounters.filter('[value="'+ i +'"]').html(filteredCounters['brand'][i]).prev().removeClass('disabled');
+            allBrandCounters.filter('[value="'+ i +'"]').html(filteredCounters['brand'][i]).parent().removeClass('disabled');
         }
         
         allSaeCounters.html('');
-        allSaeCounters.prev().addClass('disabled');
+        allSaeCounters.parent().addClass('disabled');
         for (i in filteredCounters['sae']) {
-            allSaeCounters.filter('[value="'+ i +'"]').html(filteredCounters['sae'][i]).prev().removeClass('disabled');
+            allSaeCounters.filter('[value="'+ i +'"]').html(filteredCounters['sae'][i]).parent().removeClass('disabled');
         }
         
         total = filteredCounters['poly'][0] + filteredCounters['poly'][1];
@@ -331,6 +351,8 @@ function App() {
         allCleanCounters.filter('[value=clean-0]').html(filteredCounters['clean'][0] || '');
         
         allChemicalCounters.html(filteredCounters['chemical'] || '');
+        
+        allSynthCounters.html(filteredCounters['synth'] || '');
     };
     
     _filterPolyEnabled = function() {
@@ -345,8 +367,15 @@ function App() {
         return $('input.type-chemical:checkbox').prop('checked');
     };
     
+    _filterSynthEnabled = function() {
+        return $('input.type-synth:checkbox').prop('checked');
+    };
+    
     _makeDbUsingFilters = function() {
-        var i, fDb = [];
+        var i;
+        
+        // clean result db
+        filteredDb = [];
         
         filteredCounters = {
             'brand': {}
@@ -354,23 +383,30 @@ function App() {
         ,   'poly': {0: 0, 1: 0}
         ,   'clean': {0: 0, 1: 0}
         ,   'chemical': 0
+        ,   'synth': 0
         };
         
         var usePoly = _filterPolyEnabled()
         ,   polyValue = parseInt($('input[name=poly]:radio:checked').val())
         ,   useClean = _filterCleanEnabled()
         ,   cleanValue = parseInt($('input[name=clean]:radio:checked').val())
-        ,   useChemical = _filterChemicalEnabled();
+        ,   useChemical = _filterChemicalEnabled()
+        ,   useSynth = _filterSynthEnabled();
         
         for (i in db) {
             
-            // quick filter, so will be first
+            // quick filter, keep on top
             if (usePoly && db[i].poly !== polyValue) {
                 continue;
             }
             
-            // quick filter, so will be first
+            // quick filter, keep on top
             if (useClean && (db[i].clean || 0) !== cleanValue) {
+                continue;
+            }
+            
+            // quick filter, keep on top
+            if (useSynth && db[i].base === 0) {
                 continue;
             }
             
@@ -386,18 +422,17 @@ function App() {
                 continue;
             }
             
-            fDb.push(db[i]);
+            filteredDb.push(db[i]);
             
             filteredCounters['brand'][db[i].brand] ? filteredCounters['brand'][db[i].brand]++ : filteredCounters['brand'][db[i].brand] = 1;
             filteredCounters['sae'][db[i].sae]     ? filteredCounters['sae'][db[i].sae]++     : filteredCounters['sae'][db[i].sae] = 1;
             filteredCounters['poly'][db[i].poly]++;
             filteredCounters['clean'][db[i].clean || 0]++;
             db[i].chemical ? filteredCounters['chemical']++ : 0;
+            db[i].base !== 0 ? filteredCounters['synth']++ : 0;
         }
         
-        $('#notes').html('&nbsp;Нашлось: '+ fDb.length);
-        
-        filteredDb = fDb;
+        $('#notes').html('&nbsp;Нашлось: '+ filteredDb.length);
     };
     
     _makeResultItem = function(item) {
@@ -430,11 +465,16 @@ function App() {
         trigger.parents('div.group').find('input.filter:checked').prop('checked', false);
         
         if (trigger.parents('div.group').attr('id') === 'tag') {
+            // restore poly
             $('input[name=poly]:radio').prop('checked', false).prop('disabled', true);
             allPolyCounters.parent().addClass('disabled');
             
+            // restore clean
             $('input[name=clean]:radio').prop('checked', false).prop('disabled', true);
             allCleanCounters.parent().addClass('disabled');
+            
+            // restore mineral
+            _disableMineralLabels(false);
         }
         
         _updateFilters(trigger);

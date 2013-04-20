@@ -348,7 +348,7 @@ p, ul {
     padding-right: 5px;
 }
 
-span.counter, .disabled {
+span.counter, label.disabled span.label {
     color: #999 !important;
 }
 
