@@ -206,6 +206,10 @@ function App() {
         $(document).on('click', 'span.chemical', function() {
             _openChemicalWindow($(this));
         });
+        
+        $(document).on('click', '#show-all', function() {
+            App.rebuildResults(true);
+        });
     };
     
     var _chemicalHtmlTemplate = '<html><head>'
@@ -306,16 +310,16 @@ function App() {
         allSaeCounters.parent().has('input[value=10w40], input[value=15w40]').children('input').prop('disabled', action);
     };
     
-    App.rebuildResults = function() {
+    App.rebuildResults = function(force) {
+        
+        force = force || false;
         
         // nothing selected
-        var isNothing = (!filterBrands.length && !filterSaes.length && !_filterPolyEnabled() && !_filterCleanEnabled()) ? true : false;
+        var isNothing = (!force && !filterBrands.length && !filterSaes.length && !_filterPolyEnabled() && !_filterCleanEnabled()) ? true : false;
         
         if (isNothing) {
             $('#results').html('');
-        }
-        
-        if (isNothing) {
+            $('#show-all').removeClass('hidden');
             return;
         }
         
@@ -326,6 +330,7 @@ function App() {
         }
         
         $('#results').html(h);
+        $('#show-all').addClass('hidden');
     };
     
     App.updateCounters = function() {
@@ -432,7 +437,7 @@ function App() {
             db[i].base !== 0 ? filteredCounters['synth']++ : 0;
         }
         
-        $('#notes').html('&nbsp;Нашлось: '+ filteredDb.length);
+        $('#notes').html('&nbsp;Нашлось: '+ filteredDb.length +'<br/>&nbsp;<span id="show-all" class="link blue hidden">Показать всё</span>');
     };
     
     _makeResultItem = function(item) {
