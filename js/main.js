@@ -162,7 +162,7 @@ function App() {
                 h+= '<li>';
                 h+= '<label>';
                 h+= '<input type="checkbox" class="filter type-synth" value="">';
-                h+= ' <span class="color-'+ id +'" title="Показать только синтетику">синтетика</span>';
+                h+= ' <span class="color-'+ id +'" title="Скрыть минеральные и полусинтетику">синтетика</span>';
                 h+= ' <span class="counter" value="synth"></span>';
                 h+= '</label>';
                 h+= '</li>';
