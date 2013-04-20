@@ -309,7 +309,7 @@ function App() {
     App.rebuildResults = function() {
         
         // nothing selected
-        var isNothing = (!filterBrands.length && !filterSaes.length && !_filterPolyEnabled() && !_filterCleanEnabled() && !_filterChemicalEnabled() && !_filterSynthEnabled()) ? true : false;
+        var isNothing = (!filterBrands.length && !filterSaes.length && !_filterPolyEnabled() && !_filterCleanEnabled()) ? true : false;
         
         if (isNothing) {
             $('#results').html('');
