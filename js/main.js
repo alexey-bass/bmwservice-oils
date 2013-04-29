@@ -437,7 +437,7 @@ function App() {
             db[i].base !== 0 ? filteredCounters['synth']++ : 0;
         }
         
-        $('#notes').html('&nbsp;Нашлось: '+ filteredDb.length +'<br/>&nbsp;<span id="show-all" class="link blue hidden">Показать всё</span>');
+        $('#notes').html('&nbsp;Нашлось: '+ filteredDb.length +'<br/>&nbsp;<span id="show-all" class="link blue hidden">Показать</span>');
     };
     
     _makeResultItem = function(item) {

@@ -60,6 +60,10 @@
       {
         "title": "Масло Bardahl XTC C60 10000 км",
         "href": "//bmwservice.livejournal.com/60549.html"
+      },
+      {
+        "title": "Отзывы",
+        "href": "//bmwservice.livejournal.com/68281.html"
       }
     ]
   },
@@ -722,6 +726,51 @@
     }
   },
   {
+    "brand": "NGN",
+    "product": "Emerald VW 504/507 SM/SF",
+    "base": 1,
+    "sae": "5w30",
+    "img": "//img-fotki.yandex.ru/get/5641/16219540.7/0_9a4db_919a1fb2_orig",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "NGN",
+    "product": "Premium SL/CF",
+    "base": 0,
+    "sae": "10w40",
+    "img": "//img-fotki.yandex.ru/get/6435/16219540.7/0_9a4da_8308984f_orig",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "NGN",
+    "product": "Profi SM/CF",
+    "base": 1,
+    "sae": "5w30",
+    "img": "//img-fotki.yandex.ru/get/4138/16219540.7/0_9a4d9_56d9de7_orig",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "NGN",
+    "product": "Synergy SM/CF",
+    "base": 1,
+    "sae": "0w40",
+    "img": "//img-fotki.yandex.ru/get/6429/16219540.7/0_9a4d8_d1fd2f45_XXL.jpg",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "NGN",
+    "product": "Nord SM/CF",
+    "base": 1,
+    "sae": "5w30",
+    "img": "//img-fotki.yandex.ru/get/4132/16219540.7/0_9a4d7_e8b4bd17_XXL.jpg",
+    "text": "",
+    "poly": 0
+  },
+  {
     "brand": "Pentosin",
     "product": "PENTO SUPER PERFORMANCE III",
     "base": 1,
@@ -995,6 +1044,10 @@
       {
         "title": "Xenum WRX: три замены",
         "href": "//bmwservice.livejournal.com/53692.html"
+      },
+      {
+        "title": "Отзывы",
+        "href": "//bmwservice.livejournal.com/67910.html"
       }
     ]
   },
