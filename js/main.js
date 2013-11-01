@@ -8,13 +8,26 @@
 function App() {
 
     var _debug = false;
+    
+    /**
+     * Timestamp of code init.
+     * @type Number
+     */
+    var _initTime = 0;
 
     var App = {};
     
     App.init = function() {
+        _initTime = new Date().getTime();
         _loadDb();
                 
         $('#warning button').bind('click', function() {
+            var timeSpent = new Date().getTime() - _initTime;
+            if (timeSpent > 0) {
+                _gaq.push(['_trackTiming', 'UX', 'Time before start', timeSpent]);
+            }
+            _gaq.push(['_trackEvent', 'UX', 'Start']);
+        
             $('#warning, #screen').hide();
             $('#screen').removeClass('hidden').fadeIn(1000);
             _updateHeight();
@@ -36,11 +49,16 @@ function App() {
     ,   allBrandCounters, allSaeCounters, allPolyCounters, allCleanCounters, allChemicalCounters, allSynthCounters;
 
     _loadDb = function() {
+        var startTime = new Date().getTime();
         $.ajax({
             dataType: 'json'
         ,   url: 'db.json'
         ,   cache : false
         ,   success: function(data) {
+                var timeSpent = new Date().getTime() - startTime;
+                if (timeSpent > 0) {
+                    _gaq.push(['_trackTiming', 'Resources', 'DB loaded', timeSpent]);
+                }
                 db = _prepareDb(data);
                 _populateSelectors(data);
                 _postInit();
@@ -208,6 +226,7 @@ function App() {
         });
         
         $(document).on('click', '#show-all', function() {
+            _gaq.push(['_trackEvent', 'UX', 'Show all']);
             App.rebuildResults(true);
         });
     };
@@ -230,8 +249,11 @@ function App() {
         var id = trigger.attr('dbid'), item = _getDbItemById(id)
         ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=820');
         
+        var title = item.brand +' '+ item.product +' SAE '+ item.sae.replace('w', 'W-');
+        _gaq.push(['_trackEvent', 'UX', 'Open chemical report', title]);
+        
         var html = _chemicalHtmlTemplate;
-        html = html.replace('%TITLE%', item.brand +' '+ item.product +' SAE&nbsp;'+ item.sae.replace('w', 'W-'));
+        html = html.replace('%TITLE%', title);
         html = html.replace('%TEXT%',  item.chemical.text);
         html = html.replace('%IMG%',   item.chemical.img);
         
@@ -248,20 +270,33 @@ function App() {
         }
         
         var isCheckbox = selector.is('input') // can be 'select-none' trigger
+        ,   isRadio    = selector.is('[type=radio]')
         ,   isChecked  = selector.is(':checked')
         ,   filter; // will hold reference to original data
         
         switch (selector.attr('class').match(/type-(\w+)/)[1]) {
             case 'brand':
+                if (isCheckbox) {
+                    _gaq.push(['_trackEvent', 'UX', (isChecked ? 'S' : 'Uns') +'elect brand', selector.val()]);
+                }
                 filter = filterBrands;
                 break;
                 
             case 'sae':
+                if (isCheckbox) {
+                    _gaq.push(['_trackEvent', 'UX', (isChecked ? 'S' : 'Uns') +'elect SAE', selector.val()]);
+                }
                 filter = filterSaes;
                 break;
                 
             case 'poly':
                 if (isCheckbox) {
+                    if (!isRadio) { // filter
+                        _gaq.push(['_trackEvent', 'UX', 'Filter poly', (isChecked ? 'Enabled' : 'Disabled')]);
+                    } else { // option
+                        _gaq.push(['_trackEvent', 'UX', 'Filter poly', (parseInt(selector.val()) ? 'Yes' : 'No')]);
+                    }
+                    
                     $('input[name=poly]:radio').prop('disabled', !isChecked);
                     allPolyCounters.parent()[isChecked ? 'removeClass' : 'addClass']('disabled');
                 }
@@ -270,6 +305,12 @@ function App() {
                 
             case 'clean':
                 if (isCheckbox) {
+                    if (!isRadio) { // filter
+                        _gaq.push(['_trackEvent', 'UX', 'Filter clean result', (isChecked ? 'Enabled' : 'Disabled')]);
+                    } else { // option
+                        _gaq.push(['_trackEvent', 'UX', 'Filter clean result', (parseInt(selector.val()) ? 'Yes' : 'No')]);
+                    }
+                    
                     $('input[name=clean]:radio').prop('disabled', !isChecked);
                     allCleanCounters.parent()[isChecked ? 'removeClass' : 'addClass']('disabled');
                 }
@@ -277,7 +318,13 @@ function App() {
                 break;
                 
             case 'synth':
+                _gaq.push(['_trackEvent', 'UX', 'Filter synt only', (isChecked ? 'Enabled' : 'Disabled')]);
                 _disableMineralLabels(isChecked);
+                filter = [];
+                break;
+                
+            case 'chemical':
+               _gaq.push(['_trackEvent', 'UX', 'Filter has chemical result', (isChecked ? 'Enabled' : 'Disabled')]);
                 filter = [];
                 break;
                 
@@ -467,9 +514,13 @@ function App() {
     };
     
     _uncheckGroup = function(trigger) {
+        var category = trigger.parents('div.group').attr('id');
+        
+        _gaq.push(['_trackEvent', 'UX', 'Clear all', category]);
+        
         trigger.parents('div.group').find('input.filter:checked').prop('checked', false);
         
-        if (trigger.parents('div.group').attr('id') === 'tag') {
+        if (category === 'tag') {
             // restore poly
             $('input[name=poly]:radio').prop('checked', false).prop('disabled', true);
             allPolyCounters.parent().addClass('disabled');

@@ -10,17 +10,19 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css?18">
     <script type="text/javascript">
-    if (document.location.hostname !== 'localhost') {
+    if (document.location.hostname === 'localhost') {
+        _gaq = {push: function(arg) { console.log("ga:", arg) }};
+    }
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-39610503-1']);
-    _gaq.push(['_setDomainName', 'github.io']); 
+    _gaq.push(['_setDomainName', 'github.io']);
+    _gaq.push(['_setSiteSpeedSampleRate', 100]);
     _gaq.push(['_trackPageview']);
     (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
     ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
-    }
     </script>
 </head>
 <body>
@@ -38,7 +40,7 @@
         <button type="button">Всё понятно, поехали &rarr;</button>
     </p>
 </div>
-    
+
 <div id="screen" class="hidden">
     <table id="left" border="0">
     <tbody valign="top">
@@ -60,10 +62,8 @@
     </div>
 </div>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="js/main.js?21"></script>
-
-
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/main.js?22"></script>
 
 </body>
 </html>
