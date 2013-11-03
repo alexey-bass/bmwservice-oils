@@ -26,8 +26,7 @@ function App() {
             if (timeSpent > 0) {
                 _gaq.push(['_trackTiming', 'UX', 'Time before start', timeSpent]);
             }
-            _gaq.push(['_trackEvent', 'UX', 'Start']);
-        
+
             $('#warning, #screen').hide();
             $('#screen').removeClass('hidden').fadeIn(1000);
             _updateHeight();
