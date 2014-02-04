@@ -426,3 +426,25 @@ li.poly-row, li.clean-row {
 .float-right {
     float: right;
 }
+
+#comments {
+    position: absolute;
+    right: 20px; bottom: 20px;
+    background-color: #fff;
+    border: 1px #999 solid;
+    width: 640px;
+    height-max: 600px;
+    padding: 4px;
+}
+#comments .header {
+    cursor: pointer;
+}
+#comments .hint {
+    color: #999;
+    display: none;
+}
+#comments.opened .header {
+    border-bottom: 1px #999 solid;
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}

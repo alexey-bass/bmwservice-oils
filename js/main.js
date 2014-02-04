@@ -1,6 +1,6 @@
 /**
  * @author Alexey Bass @alexey_bass
- * @copyright 2013
+ * @copyright 2013-2014
  */
 
 (function(window, undefined) {
@@ -16,6 +16,9 @@ function App() {
     var _initTime = 0;
 
     var App = {};
+    
+    var _disqusInitialized = false;
+    var _isCommentsOpened = false;
     
     App.init = function() {
         _initTime = new Date().getTime();
@@ -33,6 +36,26 @@ function App() {
         });
         
         $(window).resize(_updateHeight);
+        
+        $('#comments').on('click', function() {
+            if (!_disqusInitialized) {
+                _disqusInitialized = true;
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + 'bmwservice-oils' + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            }
+            
+            if (_isCommentsOpened) {
+                $('#disqus_thread').slideUp();
+                $('#comments').removeClass('opened');
+                $('#comments .hint').hide();
+            } else {
+                $('#disqus_thread').slideDown();
+                $('#comments').addClass('opened');
+                $('#comments .hint').fadeIn(200);
+            }
+            _isCommentsOpened = !_isCommentsOpened;
+        });
     };
     
     _updateHeight = function() {
