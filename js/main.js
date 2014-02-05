@@ -43,16 +43,19 @@ function App() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                 dsq.src = '//' + 'bmwservice-oils' + '.disqus.com/embed.js';
                 (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                _gaq.push(['_trackTiming', 'UX', 'Comments activated', new Date().getTime() - _initTime]);
             }
             
             if (_isCommentsOpened) {
                 $('#disqus_thread').slideUp();
                 $('#comments').removeClass('opened');
                 $('#comments .hint').hide();
+                _gaq.push(['_trackEvent', 'UX', 'Comments hide']);
             } else {
                 $('#disqus_thread').slideDown();
                 $('#comments').addClass('opened');
                 $('#comments .hint').fadeIn(200);
+                _gaq.push(['_trackEvent', 'UX', 'Comments show']);
             }
             _isCommentsOpened = !_isCommentsOpened;
         });
