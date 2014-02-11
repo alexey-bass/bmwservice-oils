@@ -438,10 +438,13 @@ li.poly-row, li.clean-row {
 }
 #comments .header {
     cursor: pointer;
+    font-size: 12pt;
+    font-weight: bold;
 }
 #comments .hint {
     color: #999;
     display: none;
+    font-weight: normal;
 }
 #comments.opened .header {
     border-bottom: 1px #999 solid;

@@ -37,25 +37,28 @@ function App() {
         
         $(window).resize(_updateHeight);
         
-        $('#comments').on('click', function() {
-            if (!_disqusInitialized) {
-                _disqusInitialized = true;
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + 'bmwservice-oils' + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            }
-            
-            if (_isCommentsOpened) {
-                $('#disqus_thread').slideUp();
-                $('#comments').removeClass('opened');
-                $('#comments .hint').hide();
-            } else {
-                $('#disqus_thread').slideDown();
-                $('#comments').addClass('opened');
-                $('#comments .hint').fadeIn(200);
-            }
-            _isCommentsOpened = !_isCommentsOpened;
-        });
+        // hide from handheld devices
+        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+            $('#comments').on('click', function() {
+                if (!_disqusInitialized) {
+                    _disqusInitialized = true;
+                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                    dsq.src = '//' + 'bmwservice-oils' + '.disqus.com/embed.js';
+                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                }
+
+                if (_isCommentsOpened) {
+                    $('#disqus_thread').slideUp();
+                    $('#comments').removeClass('opened');
+                    $('#comments .hint').hide();
+                } else {
+                    $('#disqus_thread').slideDown();
+                    $('#comments').addClass('opened');
+                    $('#comments .hint').fadeIn(200);
+                }
+                _isCommentsOpened = !_isCommentsOpened;
+            }).hide().removeClass('hidden').delay(1000).fadeIn();
+        }
     };
     
     _updateHeight = function() {
