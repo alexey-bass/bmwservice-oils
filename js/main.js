@@ -20,6 +20,9 @@ function App() {
     var _disqusInitialized = false;
     var _isCommentsOpened = false;
     
+    var imgPrefix = '//img-fotki.yandex.ru/get/'
+    ,   imgSize   = 'XL'; // default
+    
     App.init = function() {
         _initTime = new Date().getTime();
         _loadDb();
@@ -80,7 +83,7 @@ function App() {
         var startTime = new Date().getTime();
         $.ajax({
             dataType: 'json'
-        ,   url: 'db.json'
+        ,   url: 'db.min.json'
         ,   cache : false
         ,   success: function(data) {
                 var timeSpent = new Date().getTime() - startTime;
@@ -118,6 +121,7 @@ function App() {
         _populateDiv('brand', brands);
         _populateDiv('sae',   saes);
         _populateDiv('tag');
+        _populateDiv('size');
         
         _attachHandlers();
     };
@@ -138,20 +142,28 @@ function App() {
         var i, h = '';
         
         h+= '<div class="header">';
+        h+= '<span class="title">';
         switch (id) {
-            case 'sae':
-                h+= '<span class="title">SAE</span>';
+            case 'brand':
+                h+= 'Бренды';
                 break;
                 
-            case 'brand':
-                h+= '<span class="title">Бренды</span>';
+            case 'sae':
+                h+= 'SAE';
                 break;
                 
             case 'tag':
-                h+= '<span class="title">Фильтры</span>';
+                h+= 'Фильтры';
+                break;
+                
+            case 'size':
+                h+= 'Картинки';
                 break;
         }
-        h+= '<span class="link float-right select-none type-'+ id +'" title="Снять все галочки">Очистить</span>';
+        h+= '</span>';
+        if (id !== 'size') {
+            h+= '<span class="link float-right select-none type-'+ id +'" title="Снять все галочки">Очистить</span>';
+        }
         h+= '</div>';
         
         h+= '<ul class="clear">';
@@ -214,6 +226,13 @@ function App() {
                 h+= '</li>';
                 break;
                 
+            case 'size':
+                h+= '<label title="быстро грузятся на смартфоне"><input type="radio" name="image-size" value="M" /> маленькие</label><br/>';
+                h+= '<label><input type="radio" name="image-size" value="L" /> средние</label><br/>';
+                h+= '<label><input type="radio" name="image-size" value="XL" checked="checked" /> большие</label><br/>';
+                h+= '<label title="хороши для просмотра на широкоформатных мониторах"><input type="radio" name="image-size" value="XXL"> ещё больше</label><br/>';
+                break;
+                
             default:
                 for (i in data) {
                     h+= '<li>';
@@ -257,6 +276,16 @@ function App() {
             _gaq.push(['_trackEvent', 'UX', 'Show all']);
             App.rebuildResults(true);
         });
+        
+        $('input[name="image-size"]').on('change', function() {
+            imgSize = _getImageSize();
+            _gaq.push(['_trackTiming', 'UX', 'Image size', imgSize]);
+            App.rebuildResults(true);
+        });
+    };
+    
+    _getImageSize = function() {
+        return $('input[name="image-size"]:checked').val();
     };
     
     var _chemicalHtmlTemplate = '<html><head>'
@@ -283,7 +312,7 @@ function App() {
         var html = _chemicalHtmlTemplate;
         html = html.replace('%TITLE%', title);
         html = html.replace('%TEXT%',  item.chemical.text);
-        html = html.replace('%IMG%',   item.chemical.img);
+        html = html.replace('%IMG%',   imgPrefix + item.chemical.img +'_XXL');
         
         win.document.write(html);
     };
@@ -486,7 +515,7 @@ function App() {
             }
             
             // quick filter, keep on top
-            if (useSynth && db[i].base === 0) {
+            if (useSynth && db[i].sy === 0) {
                 continue;
             }
             
@@ -509,7 +538,7 @@ function App() {
             filteredCounters['poly'][db[i].poly]++;
             filteredCounters['clean'][db[i].clean || 0]++;
             db[i].chemical ? filteredCounters['chemical']++ : 0;
-            db[i].base !== 0 ? filteredCounters['synth']++ : 0;
+            db[i].sy !== 0 ? filteredCounters['synth']++    : 0;
         }
         
         $('#notes').html('&nbsp;Нашлось: '+ filteredDb.length +'<br/>&nbsp;<span id="show-all" class="link blue hidden">Показать</span>');
@@ -534,7 +563,7 @@ function App() {
         
         h+= '<p'+ (item.poly ? ' class="red"' : '') +'>'+ item.text +'</p>';
         
-        h+= '<img src="'+ item.img +'" />';
+        h+= '<img src="'+ imgPrefix + item.img +'_'+ imgSize+ '" />';
         
         h+= '</div>';
         

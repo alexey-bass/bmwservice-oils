@@ -317,11 +317,11 @@ p, ul {
     top: 0px;
 }
 #left .group {
-    border: 1px solid gray;
-    margin: 5px 0;
+/*    border-left: 1px solid gray;
+    border-top: 1px solid gray;*/
+    margin: 5px 0 15px;
     padding: 5px;
     width: 145px;
-    
 }
 #left .group ul {
     overflow: auto;
@@ -335,6 +335,7 @@ p, ul {
 #left .group div.header {
     font-size: 8pt;
     margin-bottom: 5px;
+    background-color: #eee;
 }
 #left .group div.header .title {
     font-size: 9pt;
@@ -408,12 +409,15 @@ span.counter, label.disabled span.label {
 
 li.poly-row, li.clean-row {
     padding-left: 17px;
-    margin-bottom: 10px;
 }
 
 #warning {
     margin: 2em;
     font-size: 12pt;
+}
+#warning table td.title {
+    padding-left: .5em;
+    font-size: 30pt;
 }
 
 .bold {
