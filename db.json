@@ -461,8 +461,8 @@
     "poly": 0
   },
   {
-    "brand": "Honda Genuine",
-    "product": "Motor Oil",
+    "brand": "Honda",
+    "product": "HG Synthetic Blend Motor Oil",
     "sy": 1,
     "sae": "5w30",
     "img": "6603/16219540.2/0_8b74d_127b3e2f",
@@ -1177,5 +1177,50 @@
     "img": "6835/16219540.8/0_aeef9_93128687",
     "text": "",
     "poly": 0
+  },
+  {
+    "brand": "Honda",
+    "product": "HG Ultimate Motor Oil",
+    "sy": 1,
+    "sae": "5w30",
+    "img": "6844/16219540.8/0_af030_4ae9cb6f",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "Honda",
+    "product": "HFS-E",
+    "sy": 1,
+    "sae": "5w30",
+    "img": "6815/16219540.8/0_af02f_9de8f569",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "Elf",
+    "product": "EVOLUTION 900",
+    "sy": 1,
+    "sae": "5w50",
+    "img": "6840/16219540.8/0_af02e_e630cb24",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "Shell",
+    "product": "HELIX ULTRA \"PURE PLUS\" (GTL OIL)",
+    "sy": 1,
+    "sae": "5w40",
+    "img": "6800/16219540.8/0_af033_c9950aec",
+    "text": "",
+    "poly": 1
+  },
+  {
+    "brand": "Mobil 1",
+    "product": "ESP Formula",
+    "sy": 1,
+    "sae": "5w30",
+    "img": "6830/16219540.8/0_af031_5c06e1d",
+    "text": "",
+    "poly": 1
   }
 ]
