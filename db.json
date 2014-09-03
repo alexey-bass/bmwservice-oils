@@ -1222,5 +1222,41 @@
     "img": "6830/16219540.8/0_af031_5c06e1d",
     "text": "",
     "poly": 1
+  },
+  {
+    "brand": "Elf",
+    "product": "EXCELLIUM",
+    "sy": 1,
+    "sae": "5w50",
+    "img": "6831/25703957.0/0_be8f2_dccd4e58",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "Mannol",
+    "product": "ENERGY COMBI LL",
+    "sy": 1,
+    "sae": "5w30",
+    "img": "10/25703957.0/0_be8f3_9496e538",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "Mannol",
+    "product": "LEGEND+ESTER",
+    "sy": 1,
+    "sae": "0w40",
+    "img": "6804/25703957.0/0_be8f4_47e2304b",
+    "text": "",
+    "poly": 0
+  },
+  {
+    "brand": "Motul",
+    "product": "710 2T",
+    "sy": 1,
+    "sae": "---",
+    "img": "10/25703957.0/0_be8f5_b7585701",
+    "text": "",
+    "poly": 0
   }
 ]
