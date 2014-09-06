@@ -17,8 +17,8 @@ function App() {
 
     var App = {};
     
-    var _disqusInitialized = false;
-    var _isCommentsOpened = false;
+//    var _disqusInitialized = false;
+//    var _isCommentsOpened = false;
     
     var imgPrefix = '//img-fotki.yandex.ru/get/'
     ,   imgSize   = 'XL'; // default
@@ -40,31 +40,31 @@ function App() {
         
         $(window).resize(_updateHeight);
         
-        // hide from handheld devices
-        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            $('#comments').on('click', function() {
-                if (!_disqusInitialized) {
-                    _disqusInitialized = true;
-                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                    dsq.src = '//' + 'bmwservice-oils' + '.disqus.com/embed.js';
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                    _gaq.push(['_trackTiming', 'UX', 'Comments activated', new Date().getTime() - _initTime]);
-                }
-
-                if (_isCommentsOpened) {
-                    $('#disqus_thread').slideUp();
-                    $('#comments').removeClass('opened');
-                    $('#comments .hint').hide();
-                    _gaq.push(['_trackEvent', 'UX', 'Comments hide']);
-                } else {
-                    $('#disqus_thread').slideDown();
-                    $('#comments').addClass('opened');
-                    $('#comments .hint').fadeIn(200);
-                    _gaq.push(['_trackEvent', 'UX', 'Comments show']);
-                }
-                _isCommentsOpened = !_isCommentsOpened;
-            }).hide().removeClass('hidden').delay(1000).fadeIn();
-        }
+        // hide from handheld devices and small
+//        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+//            $('#comments').on('click', function() {
+//                if (!_disqusInitialized) {
+//                    _disqusInitialized = true;
+//                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+//                    dsq.src = '//' + 'bmwservice-oils' + '.disqus.com/embed.js';
+//                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+//                    _gaq.push(['_trackTiming', 'UX', 'Comments activated', new Date().getTime() - _initTime]);
+//                }
+//
+//                if (_isCommentsOpened) {
+//                    $('#disqus_thread').slideUp();
+//                    $('#comments').removeClass('opened');
+//                    $('#comments .hint').hide();
+//                    _gaq.push(['_trackEvent', 'UX', 'Comments hide']);
+//                } else {
+//                    $('#disqus_thread').slideDown();
+//                    $('#comments').addClass('opened');
+//                    $('#comments .hint').fadeIn(200);
+//                    _gaq.push(['_trackEvent', 'UX', 'Comments show']);
+//                }
+//                _isCommentsOpened = !_isCommentsOpened;
+//            }).hide().removeClass('hidden').delay(1000).fadeIn();
+//        }
     };
     
     _updateHeight = function() {
@@ -73,6 +73,31 @@ function App() {
             $('#brand ul').height(h - 43);
         }
     };
+    
+    _detectBestImgSize = function() {
+        var max = Math.max($(window).height(), $(window).width());
+        
+        /**
+         * We do not force XXL, only if user wants to. So only 3 options automatically set.
+         * 
+         * Left pane (filters) is 300px wide.
+         * Image sizes:
+         *   M =  300 px
+         *   L =  500
+         *  XL =  800
+         * XXL = 1000
+         */
+        
+        if (max < 700) {
+            imgSize = 'M';
+        } else if (max < 900) {
+            imgSize = 'L';
+        } else {
+            imgSize = 'XL'; // default
+        }
+        
+        $('input[name="image-size"][value='+ imgSize +']').prop('checked', true);
+    };
 
     var db
     ,   filterBrands = [], filterSaes = []
@@ -80,11 +105,16 @@ function App() {
     ,   allBrandCounters, allSaeCounters, allPolyCounters, allCleanCounters, allChemicalCounters, allSynthCounters;
 
     _loadDb = function() {
-        var startTime = new Date().getTime();
+        var startTime = new Date().getTime()
+        ,   mainSrc = $('body script[src*="js/main"]').attr('src');
+        
+        var dateStamp = mainSrc.replace(/^.+\?/, '') // 'js/main.js?140907' > '140907'
+        ,   fileName = (mainSrc.indexOf('.min.') !== -1) ? 'db.min.json' : 'db.json'
+        
         $.ajax({
             dataType: 'json'
-        ,   url: 'db.min.json'
-        ,   cache : false
+        ,   url: fileName +'?'+ dateStamp
+        ,   cache : true
         ,   success: function(data) {
                 var timeSpent = new Date().getTime() - startTime;
                 if (timeSpent > 0) {
@@ -111,7 +141,7 @@ function App() {
         var i, brands = [], saes = [];
         
         for (i in data) {
-            brands.push(data[i].brand);
+            brands.push(data[i].brd);
             saes.push(data[i].sae);
         }
         
@@ -124,6 +154,7 @@ function App() {
         _populateDiv('size');
         
         _attachHandlers();
+        _detectBestImgSize();
     };
     
     _postInit = function() {
@@ -229,7 +260,7 @@ function App() {
             case 'size':
                 h+= '<label title="быстро грузятся на смартфоне"><input type="radio" name="image-size" value="M" /> маленькие</label><br/>';
                 h+= '<label><input type="radio" name="image-size" value="L" /> средние</label><br/>';
-                h+= '<label><input type="radio" name="image-size" value="XL" checked="checked" /> большие</label><br/>';
+                h+= '<label><input type="radio" name="image-size" value="XL" /> большие</label><br/>';
                 h+= '<label title="хороши для просмотра на широкоформатных мониторах"><input type="radio" name="image-size" value="XXL"> ещё больше</label><br/>';
                 break;
                 
@@ -306,13 +337,13 @@ function App() {
         var id = trigger.attr('dbid'), item = _getDbItemById(id)
         ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=820');
         
-        var title = item.brand +' '+ item.product +' SAE '+ item.sae.replace('w', 'W-');
+        var title = item.brd +' '+ item.prd +' SAE '+ item.sae.replace('w', 'W-');
         _gaq.push(['_trackEvent', 'UX', 'Open chemical report', title]);
         
         var html = _chemicalHtmlTemplate;
         html = html.replace('%TITLE%', title);
-        html = html.replace('%TEXT%',  item.chemical.text);
-        html = html.replace('%IMG%',   imgPrefix + item.chemical.img +'_XXL');
+        html = html.replace('%TEXT%',  item.chm.txt);
+        html = html.replace('%IMG%',   imgPrefix + item.chm.img +'_XXL');
         
         win.document.write(html);
     };
@@ -505,7 +536,7 @@ function App() {
         for (i in db) {
             
             // quick filter, keep on top
-            if (usePoly && db[i].poly !== polyValue) {
+            if (usePoly && db[i].ply !== polyValue) {
                 continue;
             }
             
@@ -515,15 +546,15 @@ function App() {
             }
             
             // quick filter, keep on top
-            if (useSynth && db[i].sy === 0) {
+            if (useSynth && db[i].syn === 0) {
                 continue;
             }
             
-            if (useChemical && !db[i].chemical) {
+            if (useChemical && !db[i].chm) {
                 continue;
             }
             
-            if (filterBrands.length && filterBrands.indexOf(db[i].brand) < 0) {
+            if (filterBrands.length && filterBrands.indexOf(db[i].brd) < 0) {
                 continue;
             }
             
@@ -533,12 +564,12 @@ function App() {
             
             filteredDb.push(db[i]);
             
-            filteredCounters['brand'][db[i].brand] ? filteredCounters['brand'][db[i].brand]++ : filteredCounters['brand'][db[i].brand] = 1;
-            filteredCounters['sae'][db[i].sae]     ? filteredCounters['sae'][db[i].sae]++     : filteredCounters['sae'][db[i].sae] = 1;
-            filteredCounters['poly'][db[i].poly]++;
+            filteredCounters['brand'][db[i].brd] ? filteredCounters['brand'][db[i].brd]++ : filteredCounters['brand'][db[i].brd] = 1;
+            filteredCounters['sae'][db[i].sae]   ? filteredCounters['sae'][db[i].sae]++   : filteredCounters['sae'][db[i].sae]   = 1;
+            filteredCounters['poly'][db[i].ply]++;
             filteredCounters['clean'][db[i].clean || 0]++;
-            db[i].chemical ? filteredCounters['chemical']++ : 0;
-            db[i].sy !== 0 ? filteredCounters['synth']++    : 0;
+            db[i].chm       ? filteredCounters['chemical']++ : 0;
+            db[i].syn !== 0 ? filteredCounters['synth']++    : 0;
         }
         
         $('#notes').html('&nbsp;Нашлось: '+ filteredDb.length +'<br/>&nbsp;<span id="show-all" class="link blue hidden">Показать</span>');
@@ -550,18 +581,18 @@ function App() {
         h+= '<div class="result-item">';
         
         h+= '<h3>';
-        h+= '<span class="color-brand">'+ item.brand +'</span> '+ item.product +' <span class="color-sae">SAE '+ item.sae.replace('w', 'W-') +'</span>';
-        if (item.chemical) {
+        h+= '<span class="color-brand">'+ item.brd +'</span> '+ item.prd +' <span class="color-sae">SAE '+ item.sae.replace('w', 'W-') +'</span>';
+        if (item.chm) {
             h+= '&nbsp;&nbsp;&nbsp;<span class="link blue chemical" dbid="'+ item.id +'">Анализ</span>';
         }
         if (item.links) {
             for (var i in item.links) {
-                h+= '&nbsp;&nbsp;&nbsp;<a href="'+ item.links[i].href +'" onclick="window.open(this.href); return false;">'+ item.links[i].title +'</a>';
+                h+= '&nbsp;&nbsp    ;&nbsp;<a href="'+ item.links[i].hrf +'" onclick="window.open(this.href); return false;">'+ item.links[i].ttl +'</a>';
             }
         }
         h+= '</h3>';
         
-        h+= '<p'+ (item.poly ? ' class="red"' : '') +'>'+ item.text +'</p>';
+        h+= '<p'+ (item.ply ? ' class="red"' : '') +'>'+ item.txt +'</p>';
         
         h+= '<img src="'+ imgPrefix + item.img +'_'+ imgSize+ '" />';
         
