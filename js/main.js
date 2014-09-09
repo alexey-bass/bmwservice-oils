@@ -1,4 +1,5 @@
 /**
+ * @preserve
  * @author Alexey Bass @alexey_bass
  * @copyright 2013-2014
  */
@@ -30,11 +31,12 @@ function App() {
         $('#warning button').bind('click', function() {
             var timeSpent = new Date().getTime() - _initTime;
             if (timeSpent > 0) {
-                _gaq.push(['_trackTiming', 'UX', 'Time before start', timeSpent]);
+                ga('send', 'timing', 'UX', 'Time before start', timeSpent);
             }
 
             $('#warning, #screen').hide();
             $('#screen').removeClass('hidden').fadeIn(1000);
+            ga('send', 'screenview', {'screenName': 'Main'});
             _updateHeight();
         });
         
@@ -118,7 +120,7 @@ function App() {
         ,   success: function(data) {
                 var timeSpent = new Date().getTime() - startTime;
                 if (timeSpent > 0) {
-                    _gaq.push(['_trackTiming', 'Resources', 'DB loaded', timeSpent]);
+                    ga('send', 'timing', 'Resources', 'DB loaded', timeSpent);
                 }
                 db = _prepareDb(data);
                 _populateSelectors(data);
@@ -304,13 +306,13 @@ function App() {
         });
         
         $(document).on('click', '#show-all', function() {
-            _gaq.push(['_trackEvent', 'UX', 'Show all']);
+            ga('send', 'event', 'UX', 'Show all');
             App.rebuildResults(true);
         });
         
         $('input[name="image-size"]').on('change', function() {
             imgSize = _getImageSize();
-            _gaq.push(['_trackTiming', 'UX', 'Image size', imgSize]);
+            ga('send', 'event', 'UX', 'Image size', imgSize);
             App.rebuildResults(true);
         });
     };
@@ -338,7 +340,7 @@ function App() {
         ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=820');
         
         var title = item.brd +' '+ item.prd +' SAE '+ item.sae.replace('w', 'W-');
-        _gaq.push(['_trackEvent', 'UX', 'Open chemical report', title]);
+        ga('send', 'event', 'UX', 'Open chemical report', title);
         
         var html = _chemicalHtmlTemplate;
         html = html.replace('%TITLE%', title);
@@ -365,14 +367,14 @@ function App() {
         switch (selector.attr('class').match(/type-(\w+)/)[1]) {
             case 'brand':
                 if (isCheckbox) {
-                    _gaq.push(['_trackEvent', 'UX', (isChecked ? 'S' : 'Uns') +'elect brand', selector.val()]);
+                    ga('send', 'event', 'UX', (isChecked ? 'S' : 'Uns') +'elect brand', selector.val());
                 }
                 filter = filterBrands;
                 break;
                 
             case 'sae':
                 if (isCheckbox) {
-                    _gaq.push(['_trackEvent', 'UX', (isChecked ? 'S' : 'Uns') +'elect SAE', selector.val()]);
+                    ga('send', 'event', 'UX', (isChecked ? 'S' : 'Uns') +'elect SAE', selector.val());
                 }
                 filter = filterSaes;
                 break;
@@ -380,9 +382,9 @@ function App() {
             case 'poly':
                 if (isCheckbox) {
                     if (!isRadio) { // filter
-                        _gaq.push(['_trackEvent', 'UX', 'Filter poly', (isChecked ? 'Enabled' : 'Disabled')]);
+                        ga('send', 'event', 'UX', 'Filter poly', (isChecked ? 'Enabled' : 'Disabled'));
                     } else { // option
-                        _gaq.push(['_trackEvent', 'UX', 'Filter poly', (parseInt(selector.val()) ? 'Yes' : 'No')]);
+                        ga('send', 'event', 'UX', 'Filter poly', (parseInt(selector.val()) ? 'Yes' : 'No'));
                     }
                     
                     $('input[name=poly]:radio').prop('disabled', !isChecked);
@@ -394,9 +396,9 @@ function App() {
             case 'clean':
                 if (isCheckbox) {
                     if (!isRadio) { // filter
-                        _gaq.push(['_trackEvent', 'UX', 'Filter clean result', (isChecked ? 'Enabled' : 'Disabled')]);
+                        ga('send', 'event', 'UX', 'Filter clean result', (isChecked ? 'Enabled' : 'Disabled'));
                     } else { // option
-                        _gaq.push(['_trackEvent', 'UX', 'Filter clean result', (parseInt(selector.val()) ? 'Yes' : 'No')]);
+                        ga('send', 'event', 'UX', 'Filter clean result', (parseInt(selector.val()) ? 'Yes' : 'No'));
                     }
                     
                     $('input[name=clean]:radio').prop('disabled', !isChecked);
@@ -406,13 +408,13 @@ function App() {
                 break;
                 
             case 'synth':
-                _gaq.push(['_trackEvent', 'UX', 'Filter synt only', (isChecked ? 'Enabled' : 'Disabled')]);
+                ga('send', 'event', 'UX', 'Filter synt only', (isChecked ? 'Enabled' : 'Disabled'));
                 _disableMineralLabels(isChecked);
                 filter = [];
                 break;
                 
             case 'chemical':
-               _gaq.push(['_trackEvent', 'UX', 'Filter has chemical result', (isChecked ? 'Enabled' : 'Disabled')]);
+               ga('send', 'event', 'UX', 'Filter has chemical result', (isChecked ? 'Enabled' : 'Disabled'));
                 filter = [];
                 break;
                 
@@ -604,7 +606,7 @@ function App() {
     _uncheckGroup = function(trigger) {
         var category = trigger.parents('div.group').attr('id');
         
-        _gaq.push(['_trackEvent', 'UX', 'Clear all', category]);
+        ga('send', 'event', 'UX', 'Clear all', category);
         
         trigger.parents('div.group').find('input.filter:checked').prop('checked', false);
         
