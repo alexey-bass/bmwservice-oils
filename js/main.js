@@ -589,7 +589,7 @@ function App() {
         }
         if (item.links) {
             for (var i in item.links) {
-                h+= '&nbsp;&nbsp    ;&nbsp;<a href="'+ item.links[i].hrf +'" onclick="window.open(this.href); return false;">'+ item.links[i].ttl +'</a>';
+                h+= '&nbsp;&nbsp;&nbsp;<a href="'+ item.links[i].hrf +'" onclick="window.open(this.href); return false;">'+ item.links[i].ttl +'</a>';
             }
         }
         h+= '</h3>';
