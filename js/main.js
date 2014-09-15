@@ -338,17 +338,19 @@ function App() {
         }
     };
 
+    var _socialSharesCounter = 0;
+
     _addthisHandler = function(e) {
+        var timeSpent = new Date().getTime() - _initTime;
+        
         switch (e.type) {
             case 'addthis.ready':
-                var timeSpent = new Date().getTime() - _initTime;
-                if (timeSpent > 0) {
-                    ga('send', 'timing', 'Resources', 'AddThis ready', timeSpent);
-                }
+                ga('send', 'timing', 'Resources', 'AddThis ready', timeSpent);
                 break;
 
             case 'addthis.menu.share':
-                ga('send', 'event', 'social', 'share', e.data.service);
+                ga('send', 'event', 'social', 'share', e.data.service, ++_socialSharesCounter);
+                ga('send', 'timing', 'UX', 'Time before pressed share', timeSpent, e.data.service);
                 break;
         }
     };
