@@ -576,12 +576,12 @@ function App() {
         for (i in db) {
 
             // quick filter, keep on top
-            if (usePoly && db[i].ply !== polyValue) {
+            if (usePoly && (db[i].ply || 0) !== polyValue) {
                 continue;
             }
 
             // quick filter, keep on top
-            if (useClean && (db[i].clean || 0) !== cleanValue) {
+            if (useClean && (db[i].cln || 0) !== cleanValue) {
                 continue;
             }
 
@@ -606,8 +606,8 @@ function App() {
 
             filteredCounters['brand'][db[i].brd] ? filteredCounters['brand'][db[i].brd]++ : filteredCounters['brand'][db[i].brd] = 1;
             filteredCounters['sae'][db[i].sae]   ? filteredCounters['sae'][db[i].sae]++   : filteredCounters['sae'][db[i].sae]   = 1;
-            filteredCounters['poly'][db[i].ply]++;
-            filteredCounters['clean'][db[i].clean || 0]++;
+            filteredCounters['poly'][(db[i].ply || 0)]++;
+            filteredCounters['clean'][(db[i].cln || 0)]++;
             db[i].chm       ? filteredCounters['chemical']++ : 0;
             db[i].syn !== 0 ? filteredCounters['synth']++    : 0;
         }
@@ -632,7 +632,7 @@ function App() {
         }
         h+= '</h3>';
 
-        h+= '<p'+ (item.ply ? ' class="red"' : '') +'>'+ item.txt +'</p>';
+        h+= '<p>'+ item.txt +'</p>';
 
         h+= '<img src="'+ imgPrefix + item.img +'_'+ imgSize+ '" />';
 
