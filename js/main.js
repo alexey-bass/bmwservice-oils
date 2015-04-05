@@ -185,6 +185,11 @@ function App() {
 
         _makeDbUsingFilters();
         App.updateCounters();
+        
+        // help smartphone users
+        $('#sae .header .title').on('click', function() {
+            $('#sae ul').slideToggle();
+        });
     };
 
     _populateDiv = function(id, data) {
