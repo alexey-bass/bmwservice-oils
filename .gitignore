@@ -1,1 +1,5 @@
-/nbproject/private/
+# NetBeans
+nbproject/
+
+# NodeJS
+node_modules/

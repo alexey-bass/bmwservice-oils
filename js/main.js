@@ -127,7 +127,7 @@ function App() {
         ,   mainSrc = $('body script[src*="js/main"]').attr('src');
 
         var dateStamp = mainSrc.replace(/^.+\?/, '') // 'js/main.js?140907' > '140907'
-        ,   fileName = (mainSrc.indexOf('.min.') !== -1) ? 'db.min.json' : 'db.json'
+        ,   fileName = (mainSrc.indexOf('.min.') !== -1) ? 'db.min.json' : 'db.json';
 
         $.ajax({
             dataType: 'json'
@@ -185,7 +185,7 @@ function App() {
 
         _makeDbUsingFilters();
         App.updateCounters();
-        
+
         // help smartphone users
         $('#sae .header .title').on('click', function() {
             $('#sae ul').slideToggle();
@@ -336,7 +336,7 @@ function App() {
             ga('send', 'event', 'UX', 'Image size', imgSize);
             App.rebuildResults(true);
         });
-        
+
         if (typeof addthis !== 'undefined') {
             addthis.addEventListener('addthis.ready',      _addthisHandler);
             addthis.addEventListener('addthis.menu.share', _addthisHandler);
@@ -347,7 +347,7 @@ function App() {
 
     _addthisHandler = function(e) {
         var timeSpent = new Date().getTime() - _initTime;
-        
+
         switch (e.type) {
             case 'addthis.ready':
                 ga('send', 'timing', 'Resources', 'AddThis ready', timeSpent);
@@ -457,7 +457,7 @@ function App() {
                 break;
 
             case 'chemical':
-               ga('send', 'event', 'UX', 'Filter has chemical result', (isChecked ? 'Enabled' : 'Disabled'));
+                ga('send', 'event', 'UX', 'Filter has chemical result', (isChecked ? 'Enabled' : 'Disabled'));
                 filter = [];
                 break;
 
@@ -737,7 +737,7 @@ function App() {
     }
 
     return App;
-};
+}
 
 window.App = App();
 
