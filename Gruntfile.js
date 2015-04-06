@@ -77,29 +77,27 @@ module.exports = function(grunt) {
         },
         
         'string-replace': {
-            template: {
+            index: {
                 files: {
                     'main.src.html': 'main.src.html'
                 },
                 options: {
-                    replacements: [
-                        {
-                            pattern: /([csj]{2,3})\?[0-9]{6}/ig,
-                            replacement: '$1?<%= grunt.template.today("yymmdd") %>'
-                        }
-                    ]
+                    replacements: [{
+                        pattern: /([csj]{2,3})\?[0-9]{6}/ig,
+                        replacement: '$1?<%= grunt.template.today("yymmdd") %>'
+                    }]
                 }
             }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-string-replace');
     grunt.loadNpmTasks('grunt-contrib-htmlmin');
     grunt.loadNpmTasks('grunt-jsonmin');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-string-replace');
+    grunt.loadNpmTasks('grunt-contrib-uglify');    
 
     grunt.registerTask('default', ['build']);
-    grunt.registerTask('build', ['string-replace', 'htmlmin', 'jsonmin', 'cssmin', 'uglify']);
+    grunt.registerTask('build',   ['string-replace', 'htmlmin', 'jsonmin', 'cssmin', 'uglify']);
 };
