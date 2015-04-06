@@ -402,6 +402,9 @@ span.counter, label.disabled span.label {
 .red {
     color: #cc0000;
 }
+.blue {
+    color: #0000cc;
+}
 
 #footer {
     position: absolute;

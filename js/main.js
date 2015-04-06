@@ -176,12 +176,13 @@ function App() {
     };
 
     _postInit = function() {
-        allBrandCounters    = $('input.type-brand:checkbox ~ span.counter');
-        allSaeCounters      = $('input.type-sae:checkbox ~ span.counter');
-        allPolyCounters     = $('input.type-poly:radio ~ span.counter');
-        allCleanCounters    = $('input.type-clean:radio ~ span.counter');
-        allChemicalCounters = $('input.type-chemical:checkbox ~ span.counter');
-        allSynthCounters    = $('input.type-synth:checkbox ~ span.counter');
+        allBrandCounters      = $('input.type-brand:checkbox ~ span.counter');
+        allSaeCounters        = $('input.type-sae:checkbox ~ span.counter');
+        allPolyCounters       = $('input.type-poly:radio ~ span.counter');
+        allCleanCounters      = $('input.type-clean:radio ~ span.counter');
+        allChemicalCounters   = $('input.type-chemical:checkbox ~ span.counter');
+        allBmwserviceCounters = $('input.type-bmwservice:checkbox ~ span.counter');
+        allSynthCounters      = $('input.type-synth:checkbox ~ span.counter');
 
         _makeDbUsingFilters();
         App.updateCounters();
@@ -276,6 +277,14 @@ function App() {
                 h+= '<input type="checkbox" class="filter type-synth" value="">';
                 h+= ' <span class="color-'+ id +'" title="Скрыть минеральные и полусинтетику">синтетика</span>';
                 h+= ' <span class="counter" value="synth"></span>';
+                h+= '</label>';
+                h+= '</li>';
+
+                h+= '<li>';
+                h+= '<label>';
+                h+= '<input type="checkbox" class="filter type-bmwservice" value="">';
+                h+= ' <span class="color-'+ id +'" title="Рекомендованные моторные масла bmwservice">bmwservice</span>';
+                h+= ' <span class="counter" value="bmwservice"></span>';
                 h+= '</label>';
                 h+= '</li>';
                 break;
@@ -461,6 +470,11 @@ function App() {
                 filter = [];
                 break;
 
+            case 'bmwservice':
+                ga('send', 'event', 'UX', 'Filter bmwservice recommended', (isChecked ? 'Enabled' : 'Disabled'));
+                filter = [];
+                break;
+
             default:
                 filter = [];
                 break;
@@ -537,6 +551,8 @@ function App() {
 
         allChemicalCounters.html(filteredCounters['chemical'] || '');
 
+        allBmwserviceCounters.html(filteredCounters['bmwservice'] || '');
+
         allSynthCounters.html(filteredCounters['synth'] || '');
     };
 
@@ -550,6 +566,10 @@ function App() {
 
     _filterChemicalEnabled = function() {
         return $('input.type-chemical:checkbox').prop('checked');
+    };
+
+    _filterBmwserviceEnabled = function() {
+        return $('input.type-bmwservice:checkbox').prop('checked');
     };
 
     _filterSynthEnabled = function() {
@@ -568,6 +588,7 @@ function App() {
         ,   'poly': {0: 0, 1: 0}
         ,   'clean': {0: 0, 1: 0}
         ,   'chemical': 0
+        ,   'bmwservice': 0
         ,   'synth': 0
         };
 
@@ -576,6 +597,7 @@ function App() {
         ,   useClean = _filterCleanEnabled()
         ,   cleanValue = parseInt($('input[name=clean]:radio:checked').val())
         ,   useChemical = _filterChemicalEnabled()
+        ,   useBmwservice = _filterBmwserviceEnabled()
         ,   useSynth = _filterSynthEnabled();
 
         for (i in db) {
@@ -599,6 +621,10 @@ function App() {
                 continue;
             }
 
+            if (useBmwservice && !db[i].rbs) {
+                continue;
+            }
+
             if (filterBrands.length && filterBrands.indexOf(db[i].brd) < 0) {
                 continue;
             }
@@ -613,8 +639,9 @@ function App() {
             filteredCounters['sae'][db[i].sae]   ? filteredCounters['sae'][db[i].sae]++   : filteredCounters['sae'][db[i].sae]   = 1;
             filteredCounters['poly'][(db[i].ply || 0)]++;
             filteredCounters['clean'][(db[i].cln || 0)]++;
-            db[i].chm       ? filteredCounters['chemical']++ : 0;
-            db[i].syn !== 0 ? filteredCounters['synth']++    : 0;
+            db[i].chm       ? filteredCounters['chemical']++   : 0;
+            db[i].rbs       ? filteredCounters['bmwservice']++ : 0;
+            db[i].syn !== 0 ? filteredCounters['synth']++      : 0;
         }
 
         $('#notes').html('&nbsp;Нашлось: '+ filteredDb.length +'<br/>&nbsp;<span id="show-all" class="link blue hidden">Показать</span>');

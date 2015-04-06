@@ -48,10 +48,15 @@
     "brd": "Bardahl",
     "prd": "XTC C60",
     "syn": 1,
+    "rbs": 1,
     "sae": "5w40",
     "img": "6600/16219540.1/0_8a64a_ddfbf525",
     "txt": "Отложения.",
     "links": [
+      {
+        "ttl": "<span class=\"red\">bmwservice &laquo;рекомендовано&raquo;</span>",
+        "hrf": "//bmwservice.livejournal.com/151086.html"
+      },
       {
         "ttl": "Масло Bardahl XTC C60 10000 км",
         "hrf": "//bmwservice.livejournal.com/60549.html"
@@ -517,9 +522,16 @@
     "brd": "Liqui Moly",
     "prd": "SYNTHOIL HIGH TECH",
     "syn": 1,
+    "rbs": 1,
     "sae": "5w40",
     "img": "6613/16219540.5/0_8ee5e_7ca9a409",
-    "txt": "Отложения."
+    "txt": "Отложения.",
+    "links": [
+      {
+        "ttl": "<span class=\"blue\">bmwservice &laquo;одобрено&raquo;</span>",
+        "hrf": "//bmwservice.livejournal.com/151086.html"
+      }
+    ]
   },
   {
     "brd": "Liqui Moly",
