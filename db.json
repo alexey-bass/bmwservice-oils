@@ -522,16 +522,9 @@
     "brd": "Liqui Moly",
     "prd": "SYNTHOIL HIGH TECH",
     "syn": 1,
-    "rbs": 1,
     "sae": "5w40",
     "img": "6613/16219540.5/0_8ee5e_7ca9a409",
-    "txt": "Отложения.",
-    "links": [
-      {
-        "ttl": "<span class=\"blue\">bmwservice &laquo;одобрено&raquo;</span>",
-        "hrf": "//bmwservice.livejournal.com/151086.html"
-      }
-    ]
+    "txt": "Отложения."
   },
   {
     "brd": "Liqui Moly",
