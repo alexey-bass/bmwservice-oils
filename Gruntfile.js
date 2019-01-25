@@ -115,10 +115,6 @@ module.exports = function(grunt) {
         }
     });
 
-    grunt.registerTask('test', 'Log some stuff.', function() {
-        grunt.log.write('Logging some stuff...').ok();
-    });
-
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-mkdir');
     grunt.loadNpmTasks('grunt-contrib-jshint');
@@ -130,7 +126,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-filesize');
 
     grunt.registerTask('default', ['build']);
-    // grunt.registerTask('build',   ['string-replace', 'htmlmin', 'jsonmin', 'cssmin', 'uglify']);
     grunt.registerTask('build',   [
         'clean', 'mkdir',
         'string-replace', 'htmlmin',
