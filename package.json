@@ -1,28 +1,28 @@
 {
     "name": "bmwservice-oils",
-    "description": "Удобный каталогизатор по материалам теста автомобильных масел.",
-    "version": "1.0.26",
+    "description": "Удобный каталогизатор по материалам теста автомобильных масел",
+    "version": "2.0.0",
     "private": false,
     "main": "Gruntfile.js",
     "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
+        "build": "grunt build"
     },
     "author": "Alexey Bass",
-    "contributors": [
-        {"name": "Alexey Bass"}
-    ],
     "repository": {
         "type": "git",
-        "url" : "https://github.com/alexey-bass/bmwservice-oils"
+        "url": "https://github.com/alexey-bass/bmwservice-oils"
     },
     "license": "Can be linked to this app, no reuse allowed of any part without permission",
     "devDependencies": {
-        "grunt": "~0.4.5",
-        "grunt-contrib-jshint": "~0.11.0",
-        "grunt-contrib-htmlmin": "~0.4.0",
-        "grunt-jsonmin": "~0.2.4",
+        "grunt": "^0.4.5",
+        "grunt-contrib-clean": "^2.0.0",
         "grunt-contrib-cssmin": "~0.12.2",
+        "grunt-contrib-htmlmin": "~0.4.0",
+        "grunt-contrib-jshint": "~0.11.0",
         "grunt-contrib-uglify": "~0.8.0",
+        "grunt-filesize": "0.0.7",
+        "grunt-jsonmin": "~0.2.4",
+        "grunt-mkdir": "^1.0.0",
         "grunt-string-replace": "~1.0.0"
     }
 }
