@@ -31,12 +31,13 @@ function App() {
         $('#warning button').bind('click', function() {
             var timeSpent = new Date().getTime() - _initTime;
             if (timeSpent > 0) {
-                ga('send', 'timing', 'UX', 'Time before start', timeSpent);
+                gtag('event', 'timing_complete', {'name': 'Time before start', 'value': timeSpent, 'event_category': 'UX'});
             }
 
             $('#warning, #screen').hide();
             $('#screen').removeClass('hidden').fadeIn(1000);
             ga('send', 'screenview', {'screenName': 'Main'});
+            gtag('event', 'screen_view', {'app_name': 'bmwservice-oils', 'screen_name' : 'Main'});
             _updateHeight();
         });
 
@@ -136,7 +137,7 @@ function App() {
         ,   success: function(data) {
                 var timeSpent = new Date().getTime() - startTime;
                 if (timeSpent > 0) {
-                    ga('send', 'timing', 'Resources', 'DB loaded', timeSpent);
+                    gtag('event', 'timing_complete', {'name': 'DB loaded', 'value': timeSpent, 'event_category': 'Resources'});
                 }
                 db = _prepareDb(data);
                 _populateSelectors(data);
@@ -357,13 +358,13 @@ function App() {
         });
 
         $(document).on('click', '#show-all', function() {
-            ga('send', 'event', 'UX', 'Show all');
+            gtag('event', 'Show all', {'event_category': 'UX'});
             App.rebuildResults(true);
         });
 
         $('input[name="image-size"]').on('change', function() {
             imgSize = _getImageSize();
-            ga('send', 'event', 'UX', 'Image size', imgSize);
+            gtag('event', 'Image size', {'event_category': 'UX', 'event_label': imgSize});
             App.rebuildResults(true);
         });
 
@@ -380,12 +381,12 @@ function App() {
 
         switch (e.type) {
             case 'addthis.ready':
-                ga('send', 'timing', 'Resources', 'AddThis ready', timeSpent);
+                gtag('event', 'timing_complete', {'name': 'AddThis ready', 'value': timeSpent, 'event_category': 'Resources'});
                 break;
 
             case 'addthis.menu.share':
-                ga('send', 'event', 'social', 'share', e.data.service, ++_socialSharesCounter);
-                ga('send', 'timing', 'UX', 'Time before pressed share', timeSpent, e.data.service);
+                gtag('event', 'share', {'event_category': 'social', 'event_label': e.data.service, 'value': ++_socialSharesCounter});
+                gtag('event', 'timing_complete', {'name': 'Time before pressed share', 'value': timeSpent, 'event_category': 'UX', 'event_label': e.data.service});
                 break;
         }
     };
@@ -413,7 +414,7 @@ function App() {
         ,   win = window.open('', '_blank', 'menubar=no,location=no,resizable=yes,scrollbars=yes,status=no,height=900,width=820');
 
         var title = item.brd +' '+ item.prd +' SAE '+ item.sae.replace('w', 'W-');
-        ga('send', 'event', 'UX', 'Open chemical report', title);
+        gtag('event', 'Open chemical report', {'event_category': 'UX', 'event_label': title});
 
         var html = _chemicalHtmlTemplate;
         html = html.replace('%TITLE%', title);
@@ -440,14 +441,14 @@ function App() {
         switch (selector.attr('class').match(/type-(\w+)/)[1]) {
             case 'brand':
                 if (isCheckbox) {
-                    ga('send', 'event', 'UX', (isChecked ? 'S' : 'Uns') +'elect brand', selector.val());
+                    gtag('event', (isChecked ? 'S' : 'Uns') +'elect brand', {'event_category': 'UX', 'event_label': selector.val()});
                 }
                 filter = filterBrands;
                 break;
 
             case 'sae':
                 if (isCheckbox) {
-                    ga('send', 'event', 'UX', (isChecked ? 'S' : 'Uns') +'elect SAE', selector.val());
+                    gtag('event', (isChecked ? 'S' : 'Uns') +'elect SAE', {'event_category': 'UX', 'event_label': selector.val()});
                 }
                 filter = filterSaes;
                 break;
@@ -455,9 +456,9 @@ function App() {
             case 'poly':
                 if (isCheckbox) {
                     if (!isRadio) { // filter
-                        ga('send', 'event', 'UX', 'Filter poly', (isChecked ? 'Enabled' : 'Disabled'));
+                        gtag('event', 'Filter poly', {'event_category': 'UX', 'event_label': (isChecked ? 'Enabled' : 'Disabled')});
                     } else { // option
-                        ga('send', 'event', 'UX', 'Filter poly', (parseInt(selector.val()) ? 'Yes' : 'No'));
+                        gtag('event', 'Filter poly', {'event_category': 'UX', 'event_label': (parseInt(selector.val()) ? 'Yes' : 'No')});
                     }
 
                     $('input[name=poly]:radio').prop('disabled', !isChecked);
@@ -469,9 +470,9 @@ function App() {
             case 'clean':
                 if (isCheckbox) {
                     if (!isRadio) { // filter
-                        ga('send', 'event', 'UX', 'Filter clean result', (isChecked ? 'Enabled' : 'Disabled'));
+                        gtag('event', 'Filter clean result', {'event_category': 'UX', 'event_label': (isChecked ? 'Enabled' : 'Disabled')});
                     } else { // option
-                        ga('send', 'event', 'UX', 'Filter clean result', (parseInt(selector.val()) ? 'Yes' : 'No'));
+                        gtag('event', 'Filter clean result', {'event_category': 'UX', 'event_label': (parseInt(selector.val()) ? 'Yes' : 'No')});
                     }
 
                     $('input[name=clean]:radio').prop('disabled', !isChecked);
@@ -483,9 +484,9 @@ function App() {
             case 'season':
                 if (isCheckbox) {
                     if (!isRadio) { // filter
-                        ga('send', 'event', 'UX', 'Filter season result', (isChecked ? 'Enabled' : 'Disabled'));
+                        gtag('event', 'Filter season result', {'event_category': 'UX', 'event_label': (isChecked ? 'Enabled' : 'Disabled')});
                     } else { // option
-                        ga('send', 'event', 'UX', 'Filter season result', parseInt(selector.val()));
+                        gtag('event', 'Filter season result', {'event_category': 'UX', 'event_label': parseInt(selector.val())});
                     }
 
                     $('input[name=season]:radio').prop('disabled', !isChecked);
@@ -495,18 +496,18 @@ function App() {
                 break;
 
             case 'synth':
-                ga('send', 'event', 'UX', 'Filter synt only', (isChecked ? 'Enabled' : 'Disabled'));
+                gtag('event', 'Filter synt only', {'event_category': 'UX', 'event_label': (isChecked ? 'Enabled' : 'Disabled')});
                 _disableMineralLabels(isChecked);
                 filter = [];
                 break;
 
             case 'chemical':
-                ga('send', 'event', 'UX', 'Filter has chemical result', (isChecked ? 'Enabled' : 'Disabled'));
+                gtag('event', 'Filter has chemical result', {'event_category': 'UX', 'event_label': (isChecked ? 'Enabled' : 'Disabled')});
                 filter = [];
                 break;
 
             case 'bmwservice':
-                ga('send', 'event', 'UX', 'Filter bmwservice recommended', (isChecked ? 'Enabled' : 'Disabled'));
+                gtag('event', 'Filter bmwservice recommended', {'event_category': 'UX', 'event_label': (isChecked ? 'Enabled' : 'Disabled')});
                 filter = [];
                 break;
 
@@ -729,7 +730,7 @@ function App() {
     _uncheckGroup = function(trigger) {
         var category = trigger.parents('div.group').attr('id');
 
-        ga('send', 'event', 'UX', 'Clear all', category);
+        gtag('event', 'Clear all', {'event_category': 'UX', 'event_label': category});
 
         trigger.parents('div.group').find('input.filter:checked').prop('checked', false);
 
