@@ -1,26 +1,27 @@
 [
   {
-    "brd": "Brand", // @todo brand => Make => mke
-    "prd": "Product",
-    "syn": 1, // Synthetic: 0=(SAE 15W40 | 10W40), 1=OTHERS
-    "sae": "5w40", // 'NO' for others
-    "img": "6513/16219540.4/0_8ee4d_73d71d9b",
-    "txt": "Отложения на фото - результат попытки использования катализаторов - кусочков металла.",
-    "ply": 0, // OPTIONAL Polymerization: 1=YES, 0=NO (DEFAULT)
-    "cln": 0, // OPTIONAL Clean: 1=YES, 0=NO (DEFAULT)
-    "rbs": 0, // OPTIONAL рекомендовано bmwservice: 1=YES, 0=NO (DEFAULT)
-    "chm": { // Chemical report, optional
-      "img": "4608/16219540.0/0_8312e_974bf21e",
-      "txt": "Представитель широко известной в Германии торговой марки. Пользуется спросом в торговой сети как масло с позывным \"масло для Мерседеса AMG\". Завод же давно имеет прямое отношение к \"Бритиш петролеум\" - фактически, сейчас это лишь одна из торговых марок гиганта. В канистре находится комбинированный кальциево-магниевый пакет моющих присадок. Противоизносный пакет стандартен для теста. Щелочное число умеренное, а вот выкипело почти 11% образца. Типичный представитель масел на основе гидроочистки нефти."
+    "brd": (String)  Brand, // @todo brand => Make => mke
+    "prd": (String)  Product,
+    "syn": (Number)  1, // Synthetic: 0=(SAE 15W40 | 10W40), 1=OTHERS
+    "sae": (String)  "5w40", // 'NO' for others
+    "img": (String)  "6513/16219540.4/0_8ee4d_73d71d9b",
+    "ssn": (Number?) 1, // OPTIONAL Season: 1=2013 (DEFAULT), 2=2019
+    "txt": (String)  Text // "Отложения на фото - результат попытки использования катализаторов.",
+    "ply": (Number?) 0, // OPTIONAL Polymerization: 1=YES, 0=NO (DEFAULT)
+    "cln": (Number?) 0, // OPTIONAL Clean: 1=YES, 0=NO (DEFAULT)
+    "rbs": (Number?) 0, // OPTIONAL рекомендовано bmwservice: 1=YES, 0=NO (DEFAULT)
+    "chm": (Object)  { // Chemical report, optional
+      "img": (String) "4608/16219540.0/0_8312e_974bf21e",
+      "txt": (String) "Представитель широко известной в Германии торговой марки."
     },
-    "links": [ // 
+    "links": (Array) [
       {
-        "ttl": "Xenum WRX: три замены",
-        "hrf": "//bmwservice.livejournal.com/53692.html"
+        "ttl": (String) "Xenum WRX: три замены",
+        "hrf": (String) "//bmwservice.livejournal.com/53692.html"
       },
       {
-        "ttl": "Отзывы",
-        "hrf": "//bmwservice.livejournal.com/67910.html"
+        "ttl": (String) "Отзывы",
+        "hrf": (String) "//bmwservice.livejournal.com/67910.html"
       }
     ]
   },
