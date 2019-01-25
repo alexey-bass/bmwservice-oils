@@ -36,7 +36,6 @@ function App() {
 
             $('#warning, #screen').hide();
             $('#screen').removeClass('hidden').fadeIn(1000);
-            ga('send', 'screenview', {'screenName': 'Main'});
             gtag('event', 'screen_view', {'app_name': 'bmwservice-oils', 'screen_name' : 'Main'});
             _updateHeight();
         });
