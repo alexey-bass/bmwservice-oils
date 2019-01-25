@@ -15,7 +15,7 @@ module.exports = function(grunt) {
         mkdir: {
             all: {
                 options: {
-                    mode: 0777,
+                    mode: 0o777,
                     create: ['build']
                 },
             },
