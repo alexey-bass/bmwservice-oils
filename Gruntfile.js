@@ -75,8 +75,14 @@ module.exports = function(grunt) {
 
         copy: {
             main: {
-                src:  'src/favicon.ico',
-                dest: 'build/favicon.ico'
+                expand: true,
+                cwd: 'src/',
+                src:  [
+                    'favicon.ico',
+                    'robots.txt',
+                    'humans.txt'
+                ],
+                dest: 'build/'
             },
         },
 
