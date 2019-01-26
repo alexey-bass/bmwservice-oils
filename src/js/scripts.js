@@ -18,9 +18,6 @@ function App() {
 
     var App = {};
 
-//    var _disqusInitialized = false;
-//    var _isCommentsOpened = false;
-
     var imgPrefix = '//img-fotki.yandex.ru/get/'
     ,   imgSize   = 'XL'; // default
 
@@ -41,49 +38,7 @@ function App() {
         });
 
         $(window).resize(_updateHeight);
-
-        // hide from handheld devices and small
-//        if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-//            $('#comments').on('click', function() {
-//                if (!_disqusInitialized) {
-//                    _disqusInitialized = true;
-//                    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-//                    dsq.src = '//' + 'bmwservice-oils' + '.disqus.com/embed.js';
-//                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-//                    _gaq.push(['_trackTiming', 'UX', 'Comments activated', new Date().getTime() - _initTime]);
-//                }
-//
-//                if (_isCommentsOpened) {
-//                    $('#disqus_thread').slideUp();
-//                    $('#comments').removeClass('opened');
-//                    $('#comments .hint').hide();
-//                    _gaq.push(['_trackEvent', 'UX', 'Comments hide']);
-//                } else {
-//                    $('#disqus_thread').slideDown();
-//                    $('#comments').addClass('opened');
-//                    $('#comments .hint').fadeIn(200);
-//                    _gaq.push(['_trackEvent', 'UX', 'Comments show']);
-//                }
-//                _isCommentsOpened = !_isCommentsOpened;
-//            }).hide().removeClass('hidden').delay(1000).fadeIn();
-//        }
-
-//        _loadSharingWidget();
     };
-
-//    _loadSharingWidget = function() {
-//        if (window.addthis) {
-//            window.addthis = null;
-//        }
-//        var addthis_config = {
-//            pubid: 'ra-53fcf85b50b78671'
-//        };
-//        $.getScript('//s7.addthis.com/js/300/addthis_widget.js#domready=1', function() {
-//            addthis.init();
-//            addthis.addEventListener('addthis.ready',      _addthisHandler);
-//            addthis.addEventListener('addthis.menu.share', _addthisHandler);
-//        });
-//    };
 
     _updateHeight = function() {
         var h = $(window).height();
@@ -120,7 +75,7 @@ function App() {
     var db
     ,   filterBrands = [], filterSaes = []
     ,   filteredDb = [], filteredCounters
-    ,   allBrandCounters, allSaeCounters, allPolyCounters, allCleanCounters, allChemicalCounters, allSynthCounters, allSeasonCounters;
+    ,   allBrandCounters, allSaeCounters, allPolyCounters, allCleanCounters, allChemicalCounters, allSynthCounters, allSeasonCounters, allBmwserviceCounters;
 
     _loadDb = function() {
         var startTime = new Date().getTime()
@@ -549,7 +504,7 @@ function App() {
             && !filterSaes.length
             && !_filterPolyEnabled()
             && !_filterCleanEnabled()
-            && !_filterSeasonEnabled()) ? true : false;
+            && !_filterSeasonEnabled());
 
         if (isNothing) {
             $('#results').html('');
@@ -585,6 +540,9 @@ function App() {
         total = filteredCounters['poly'][0] + filteredCounters['poly'][1];
         allPolyCounters.filter('[value=poly-1]').html(filteredCounters['poly'][1] ? (filteredCounters['poly'][1] +' ('+ Math.round(filteredCounters['poly'][1]*100/total) +'%)') : '');
         allPolyCounters.filter('[value=poly-0]').html(filteredCounters['poly'][0] ? (filteredCounters['poly'][0] +' ('+ Math.round(filteredCounters['poly'][0]*100/total) +'%)') : '');
+
+        allCleanCounters.filter('[value=clean-1]').html(filteredCounters['clean'][1] || '')
+        allCleanCounters.filter('[value=clean-0]').html(filteredCounters['clean'][0] || '')
 
         allSeasonCounters.filter('[value=season-1]').html(filteredCounters['season'][1] || '');
         allSeasonCounters.filter('[value=season-2]').html(filteredCounters['season'][2] || '');
