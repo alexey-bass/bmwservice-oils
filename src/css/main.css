@@ -316,7 +316,8 @@ p, ul {
     width: 145px;
 }
 #left .group ul {
-    overflow: auto;
+    overflow-y: auto;
+    max-height: calc(100vh - 43px);
 }
 #left .group.short {
     width: 125px;
@@ -453,4 +454,9 @@ li.poly-row, li.clean-row, li.season-row {
     border-bottom: 1px #999 solid;
     padding-bottom: 4px;
     margin-bottom: 4px;
+}
+
+.scroll-y {
+    overflow-y: auto;
+    max-height: 100vh;
 }

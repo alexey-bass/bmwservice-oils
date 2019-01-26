@@ -4,7 +4,7 @@
  * @copyright 2013-2019
  */
 
-(function(window, undefined) {
+(function(window, $, undefined) {
 
 function App() {
 
@@ -34,17 +34,7 @@ function App() {
             $('#warning, #screen').hide();
             $('#screen').removeClass('hidden').fadeIn(1000);
             gtag('event', 'screen_view', {'app_name': 'bmwservice-oils', 'screen_name' : 'Main'});
-            _updateHeight();
         });
-
-        $(window).resize(_updateHeight);
-    };
-
-    _updateHeight = function() {
-        var h = $(window).height();
-        if (h > 450) {
-            $('#brand ul').height(h - 43);
-        }
     };
 
     _detectBestImgSize = function() {
@@ -269,7 +259,7 @@ function App() {
                 h+= '<label title="быстро грузятся на смартфоне"><input type="radio" name="image-size" value="M" /> маленькие</label><br/>';
                 h+= '<label><input type="radio" name="image-size" value="L" /> средние</label><br/>';
                 h+= '<label><input type="radio" name="image-size" value="XL" /> большие</label><br/>';
-                h+= '<label title="хороши для просмотра на широкоформатных мониторах"><input type="radio" name="image-size" value="XXL"> ещё больше</label><br/>';
+                h+= '<label title="хороши для просмотра на широкоформатных мониторах"><input type="radio" name="image-size" value="XXL"> огромные</label><br/>';
                 break;
 
             default:
@@ -660,9 +650,7 @@ function App() {
 
     _makeResultItem = function(item) {
         var h = '';
-
         h+= '<div class="result-item">';
-
         h+= '<h3>';
         h+= '<span class="color-brand">'+ item.brd +'</span> '+ item.prd +' <span class="color-sae">SAE '+ item.sae.replace('w', 'W-') +'</span>';
         if (item.chm) {
@@ -674,11 +662,8 @@ function App() {
             }
         }
         h+= '</h3>';
-
         h+= '<p>'+ item.txt +'</p>';
-
         h+= '<img src="'+ imgPrefix + item.img +'_'+ imgSize+ '" />';
-
         h+= '</div>';
 
         return h;
@@ -783,7 +768,7 @@ function App() {
 
 window.App = App();
 
-}(window));
+}(window, window.jQuery));
 
 $(document).ready(function() {
     App.init();
