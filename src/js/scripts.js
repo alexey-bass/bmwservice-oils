@@ -349,7 +349,7 @@ function App() {
         return $('input[name="image-size"]:checked').val();
     };
 
-    var _chemicalHtmlTemplate = '<html><head>'
+    var _chemicalHtmlTemplate = '<html lang="ru"><head>'
         + '<meta charset="utf-8"><title>%TITLE%</title>'
         + '<link rel="stylesheet" href="css/normalize.css"><style>body{margin:0;padding:0;font-size:10pt}</style></head>'
         + '<body>'
@@ -541,8 +541,8 @@ function App() {
         allPolyCounters.filter('[value=poly-1]').html(filteredCounters['poly'][1] ? (filteredCounters['poly'][1] +' ('+ Math.round(filteredCounters['poly'][1]*100/total) +'%)') : '');
         allPolyCounters.filter('[value=poly-0]').html(filteredCounters['poly'][0] ? (filteredCounters['poly'][0] +' ('+ Math.round(filteredCounters['poly'][0]*100/total) +'%)') : '');
 
-        allCleanCounters.filter('[value=clean-1]').html(filteredCounters['clean'][1] || '')
-        allCleanCounters.filter('[value=clean-0]').html(filteredCounters['clean'][0] || '')
+        allCleanCounters.filter('[value=clean-1]').html(filteredCounters['clean'][1] || '');
+        allCleanCounters.filter('[value=clean-0]').html(filteredCounters['clean'][0] || '');
 
         allSeasonCounters.filter('[value=season-1]').html(filteredCounters['season'][1] || '');
         allSeasonCounters.filter('[value=season-2]').html(filteredCounters['season'][2] || '');
