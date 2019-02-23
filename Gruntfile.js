@@ -78,9 +78,11 @@ module.exports = function(grunt) {
                 expand: true,
                 cwd: 'src/',
                 src:  [
-                    'favicon.ico',
-                    'robots.txt',
-                    'humans.txt'
+                    '*.ico',
+                    '*.png',
+                    '*.txt',
+                    'manifest.json',
+                    'img/**'
                 ],
                 dest: 'build/'
             },
