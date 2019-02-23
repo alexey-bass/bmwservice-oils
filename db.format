@@ -2,7 +2,7 @@
   {
     "brd": (String)  Brand, // @todo brand => Make => mke
     "prd": (String)  Product,
-    "syn": (Number)  1, // Synthetic: 0=(SAE 15W40 | 10W40), 1=OTHERS
+    "syn": (Number?) 1, // OPTIONAL Synthetic: 0=(SAE 15W40 | 10W40), 1=OTHERS (DEFAULT)
     "sae": (String)  "5w40", // 'NO' for others
     "img": (String)  "6513/16219540.4/0_8ee4d_73d71d9b",
     "ssn": (Number?) 1, // OPTIONAL Season: 1=2013 (DEFAULT), 2=2019

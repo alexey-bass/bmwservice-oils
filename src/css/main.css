@@ -390,7 +390,7 @@ span.counter, label.disabled span.label {
 .color-sae {
     color: #006400;
 }
-.color-tag {
+.color-tag, .color-season, .color-api {
     color: #cc0000;
 }
 

@@ -2,7 +2,6 @@
   {
     "brd": "Aimol",
     "prd": "STREET LINE",
-    "syn": 1,
     "sae": "5w40",
     "img": "6513/16219540.4/0_8ee4d_73d71d9b",
     "txt": "Отложения на фото - результат попытки использования катализаторов - кусочков металла.",
@@ -11,7 +10,6 @@
   {
     "brd": "Amalie",
     "prd": "Elixir",
-    "syn": 1,
     "sae": "0w20",
     "img": "6410/16219540.4/0_8ee4e_b2cd92f2",
     "txt": "Отложения.",
@@ -20,7 +18,6 @@
   {
     "brd": "Amalie",
     "prd": "PRO High Performance SYNTHETIC",
-    "syn": 1,
     "sae": "5w40",
     "img": "6607/16219540.3/0_8c844_816ba70f",
     "txt": "Отложения.",
@@ -29,7 +26,6 @@
   {
     "brd": "Aral",
     "prd": "HIGH TRONIC",
-    "syn": 1,
     "sae": "5w40",
     "img": "6600/16219540.1/0_8a7c8_42c95b94",
     "txt": "Отложения. Загущение.",
@@ -42,7 +38,6 @@
   {
     "brd": "Aral",
     "prd": "SUPER TRONIC",
-    "syn": 1,
     "sae": "0w40",
     "img": "6503/16219540.2/0_8b50d_eda1da78",
     "txt": "Полимеризация. Сравните с VISCO 7000 - предположительно, одно и то же масло.",
@@ -52,11 +47,10 @@
   {
     "brd": "Bardahl",
     "prd": "XTC C60",
-    "syn": 1,
-    "rbs": 1,
     "sae": "5w40",
     "img": "6600/16219540.1/0_8a64a_ddfbf525",
     "txt": "Отложения.",
+    "rbs": 1,
     "links": [
       {
         "ttl": "<span class=\"red\">bmwservice &laquo;рекомендовано&raquo;</span>",
@@ -78,7 +72,6 @@
   {
     "brd": "Bardahl",
     "prd": "XTC",
-    "syn": 1,
     "sae": "5w40",
     "img": "6406/16219540.3/0_8c845_507ee83a",
     "txt": "Отложения.",
@@ -87,7 +80,6 @@
   {
     "brd": "BMW",
     "prd": "High Performance Full Synthetic MOTOR OIL",
-    "syn": 1,
     "sae": "5w30",
     "img": "6608/16219540.3/0_8c846_53bbc1a0",
     "txt": "Полимеризация.",
@@ -97,7 +89,6 @@
   {
     "brd": "BMW",
     "prd": "Quality Longlife LL-01",
-    "syn": 1,
     "sae": "5w30",
     "img": "6508/16219540.3/0_8c847_c123a5aa",
     "txt": "Отложения, загущение.",
@@ -106,7 +97,6 @@
   {
     "brd": "BMW",
     "prd": "Quality Longlife LL-04",
-    "syn": 1,
     "sae": "0w40",
     "img": "6404/16219540.1/0_8a7c9_30bc8c98",
     "txt": "Полимеризация.",
@@ -116,7 +106,6 @@
   {
     "brd": "BMW",
     "prd": "Quality Longlife LL-01",
-    "syn": 1,
     "sae": "0w40",
     "img": "6603/16219540.1/0_8a633_979100a9",
     "txt": "Отложения.",
@@ -129,7 +118,6 @@
   {
     "brd": "BMW",
     "prd": "Quality Longlife LL-01FE",
-    "syn": 1,
     "sae": "0w30",
     "img": "6405/16219540.1/0_8a630_888d2188",
     "txt": "Отложения.",
@@ -138,7 +126,6 @@
   {
     "brd": "BMW",
     "prd": "Quality Longlife LL-04",
-    "syn": 1,
     "sae": "5w30",
     "img": "6603/16219540.1/0_8a632_57095ff5",
     "txt": "Полимеризация.",
@@ -148,7 +135,6 @@
   {
     "brd": "BMW",
     "prd": "SuperPower Oil",
-    "syn": 1,
     "sae": "5w40",
     "img": "6509/16219540.3/0_8c848_e9a95e5e",
     "txt": "",
@@ -156,7 +142,7 @@
     "ssn": 1
   },
   {
-    "brd": "Bp",
+    "brd": "BP",
     "prd": "VISCO 2000",
     "syn": 0,
     "sae": "15w40",
@@ -165,7 +151,7 @@
     "ssn": 1
   },
   {
-    "brd": "Bp",
+    "brd": "BP",
     "prd": "VISCO 3000",
     "syn": 0,
     "sae": "10w40",
@@ -178,18 +164,16 @@
     "ssn": 1
   },
   {
-    "brd": "Bp",
+    "brd": "BP",
     "prd": "VISCO 5000",
-    "syn": 1,
     "sae": "5w40",
     "img": "6403/16219540.1/0_8a64f_bd9b156f",
     "txt": "Отложения.",
     "ssn": 1
   },
   {
-    "brd": "Bp",
+    "brd": "BP",
     "prd": "VISCO 7000",
-    "syn": 1,
     "sae": "0w40",
     "img": "6402/16219540.1/0_8a650_7ac2b28a",
     "txt": "Полимеризация.",
@@ -199,7 +183,6 @@
   {
     "brd": "Castrol",
     "prd": "EDGE (USA)",
-    "syn": 1,
     "sae": "5w30",
     "img": "6603/16219540.1/0_8a7cb_bd2a02c3",
     "txt": "Отложения.",
@@ -212,7 +195,6 @@
   {
     "brd": "Castrol",
     "prd": "EDGE Professional 0E",
-    "syn": 1,
     "sae": "0w30",
     "img": "6403/16219540.1/0_8a7ca_af8a87f0",
     "txt": "Полимеризация.",
@@ -222,7 +204,6 @@
   {
     "brd": "Castrol",
     "prd": "EDGE Professional 0E",
-    "syn": 1,
     "sae": "5w30",
     "img": "6602/16219540.1/0_8a637_d67bf3a3",
     "txt": "Полимеризация.",
@@ -236,7 +217,6 @@
   {
     "brd": "Castrol",
     "prd": "EDGE Professional BMW LL01",
-    "syn": 1,
     "sae": "5w30",
     "img": "6507/16219540.3/0_8c84a_e395874",
     "txt": "Полимеризация.",
@@ -246,7 +226,6 @@
   {
     "brd": "Castrol",
     "prd": "EDGE Professional LL-III",
-    "syn": 1,
     "sae": "5w30",
     "img": "6607/16219540.3/0_8cb6f_488622af",
     "txt": "Отложения, загущение.",
@@ -255,7 +234,6 @@
   {
     "brd": "Castrol",
     "prd": "EDGE Sport",
-    "syn": 1,
     "sae": "10w60",
     "img": "6503/16219540.1/0_8a639_a97eadf6",
     "txt": " Отложения. Загущение. Сравните с Pentosin Pento Super.",
@@ -268,7 +246,6 @@
   {
     "brd": "Castrol",
     "prd": "EDGE FST",
-    "syn": 1,
     "sae": "0w40",
     "img": "6405/16219540.1/0_8a636_99d130d8",
     "txt": "Отложения.",
@@ -278,7 +255,6 @@
   {
     "brd": "Castrol",
     "prd": "Magnatec A1 \"For Ford Engines\"",
-    "syn": 1,
     "sae": "5w30",
     "img": "6405/16219540.1/0_8a642_af32caa4",
     "txt": "Отложения, загущение.",
@@ -301,7 +277,6 @@
   {
     "brd": "Castrol",
     "prd": "Magnatec A3/B4",
-    "syn": 1,
     "sae": "5w30",
     "img": "6413/16219540.4/0_8ee51_3fa8f4f3",
     "txt": "Отложения.",
@@ -310,7 +285,6 @@
   {
     "brd": "Castrol",
     "prd": "Magnatec C3",
-    "syn": 1,
     "sae": "5w30",
     "img": "6513/16219540.5/0_8ee53_f4502307",
     "txt": "Полимеризация.",
@@ -324,7 +298,6 @@
   {
     "brd": "Castrol",
     "prd": "SLX Professional Longtec",
-    "syn": 1,
     "sae": "0w30",
     "img": "6508/16219540.3/0_8c85d_3e9e42a6",
     "txt": "Отложения.",
@@ -333,7 +306,6 @@
   {
     "brd": "Elf",
     "prd": "EVOLUTION CRV",
-    "syn": 1,
     "sae": "0w30",
     "img": "6407/16219540.3/0_8c84b_4bea47b8",
     "txt": "Зола, загущение.",
@@ -342,7 +314,6 @@
   {
     "brd": "Elf",
     "prd": "EVOLUTION SXR",
-    "syn": 1,
     "sae": "5w40",
     "img": "6601/16219540.2/0_8b509_7e74a7a0",
     "txt": "Полимеризация.",
@@ -352,7 +323,6 @@
   {
     "brd": "Eneos",
     "prd": "GRAN-TOURING",
-    "syn": 1,
     "sae": "5w40",
     "img": "6405/16219540.1/0_8a63b_6b2a21ae",
     "txt": "Отложения.",
@@ -361,7 +331,6 @@
   {
     "brd": "Eni Agip",
     "prd": "i-Sint",
-    "syn": 1,
     "sae": "5w40",
     "img": "6400/16219540.1/0_8a62e_d69eb4b2",
     "txt": "Полимеризация.",
@@ -380,7 +349,6 @@
   {
     "brd": "Erg",
     "prd": "Olikron Formula SINTETICO",
-    "syn": 1,
     "sae": "5w50",
     "img": "6600/16219540.2/0_8b50e_af20b5ac",
     "txt": "Отложения.",
@@ -389,7 +357,6 @@
   {
     "brd": "Erg",
     "prd": "Olikron SINTETICO",
-    "syn": 1,
     "sae": "5w40",
     "img": "6608/16219540.3/0_8cb71_9f8724fa",
     "txt": "Отложения.",
@@ -398,7 +365,6 @@
   {
     "brd": "Erg",
     "prd": "Super One SINTETICO",
-    "syn": 1,
     "sae": "5w30",
     "img": "6509/16219540.3/0_8c84c_fedf0d2e",
     "txt": "Отложения, загущение.",
@@ -407,7 +373,6 @@
   {
     "brd": "Esso",
     "prd": "Ultron",
-    "syn": 1,
     "sae": "5w40",
     "img": "6407/16219540.2/0_8c830_cb37434b",
     "txt": "Полимеризация.",
@@ -417,7 +382,6 @@
   {
     "brd": "Fuchs",
     "prd": "TITAN GT1 PRO С-3",
-    "syn": 1,
     "sae": "5w30",
     "img": "6610/16219540.5/0_8ee5b_e04e781d",
     "txt": "",
@@ -427,7 +391,6 @@
   {
     "brd": "Fuchs",
     "prd": "TITAN GT1",
-    "syn": 1,
     "sae": "0w20",
     "img": "6613/16219540.5/0_8ee5a_fb4db2f4",
     "txt": "",
@@ -437,7 +400,6 @@
   {
     "brd": "Fuchs",
     "prd": "TITAN GT1",
-    "syn": 1,
     "sae": "5w40",
     "img": "6613/16219540.5/0_8ee5c_23b2fd67",
     "txt": "Полимеризация.",
@@ -447,7 +409,6 @@
   {
     "brd": "G-Energy",
     "prd": "F-SYNTH",
-    "syn": 1,
     "sae": "0w40",
     "img": "6501/16219540.2/0_8b50b_13d8152f",
     "txt": "Полимеризация",
@@ -457,7 +418,6 @@
   {
     "brd": "GM",
     "prd": "dexos2 Motor Oil",
-    "syn": 1,
     "sae": "5w30",
     "img": "6604/16219540.3/0_8c849_518f9fa9",
     "txt": "Загущение.",
@@ -466,7 +426,6 @@
   {
     "brd": "GM",
     "prd": "Motor Oil",
-    "syn": 1,
     "sae": "5w30",
     "img": "6502/16219540.2/0_8b74a_c40a3f58",
     "txt": "Отложения.",
@@ -475,7 +434,6 @@
   {
     "brd": "Gulf",
     "prd": "Formula G",
-    "syn": 1,
     "sae": "5w40",
     "img": "6508/16219540.3/0_8c84e_7f1bd6c4",
     "txt": "Отложения.",
@@ -484,7 +442,6 @@
   {
     "brd": "Honda",
     "prd": "HG Synthetic Blend Motor Oil",
-    "syn": 1,
     "sae": "5w30",
     "img": "6603/16219540.2/0_8b74d_127b3e2f",
     "txt": "Отложения.",
@@ -497,7 +454,6 @@
   {
     "brd": "Havoline",
     "prd": "Synthetic",
-    "syn": 1,
     "sae": "5w40",
     "img": "6503/16219540.1/0_8a63d_2d1f9310",
     "txt": "Полимеризация.",
@@ -507,7 +463,6 @@
   {
     "brd": "Idemitsu",
     "prd": "EXTREME TOURING",
-    "syn": 1,
     "sae": "5w40",
     "img": "6608/16219540.3/0_8c850_50ac9bc3",
     "txt": "Отложения.",
@@ -516,7 +471,6 @@
   {
     "brd": "Jaytec",
     "prd": "ECO RIDER",
-    "syn": 1,
     "sae": "5w20",
     "img": "6503/16219540.2/0_8b751_60f5010b",
     "txt": "Отложения.",
@@ -525,7 +479,6 @@
   {
     "brd": "Kendall",
     "prd": "GT-1",
-    "syn": 1,
     "sae": "0w20",
     "img": "6604/16219540.3/0_8c851_312b706d",
     "txt": "Отложения",
@@ -534,7 +487,6 @@
   {
     "brd": "Kixx",
     "prd": "Neo",
-    "syn": 1,
     "sae": "0w30",
     "img": "6600/16219540.1/0_8a63f_df3f4696",
     "txt": "Отложения.",
@@ -547,16 +499,15 @@
   {
     "brd": "Kixx",
     "prd": "PAO1",
-    "syn": 1,
     "sae": "0w40",
     "img": "6504/16219540.3/0_8c852_13ab2f13",
     "txt": "Отложения",
-    "ssn": 1
+    "ssn": 1,
+    "rbs": 1
   },
   {
     "brd": "Liqui Moly",
     "prd": "MOLYGEN",
-    "syn": 1,
     "sae": "5w50",
     "img": "6602/16219540.1/0_8a640_40e44473",
     "txt": "Отложения, загущение \"наполнителя\". Сравните с Xenum WRX, X1.",
@@ -565,7 +516,6 @@
   {
     "brd": "Liqui Moly",
     "prd": "SYNTHOIL ENERGY",
-    "syn": 1,
     "sae": "0w40",
     "img": "6404/16219540.1/0_8a641_a7deae4",
     "txt": "Отложения.",
@@ -578,7 +528,6 @@
   {
     "brd": "Liqui Moly",
     "prd": "SYNTHOIL HIGH TECH",
-    "syn": 1,
     "sae": "5w40",
     "img": "6613/16219540.5/0_8ee5e_7ca9a409",
     "txt": "Отложения.",
@@ -587,7 +536,6 @@
   {
     "brd": "Liqui Moly",
     "prd": "SYNTHOIL LONGTIME",
-    "syn": 1,
     "sae": "0w30",
     "img": "6411/16219540.5/0_8ee5d_bbdd5c02",
     "txt": "Отложения.",
@@ -596,16 +544,15 @@
   {
     "brd": "Marly Zenox",
     "prd": "The Ultimate Motor Oil",
-    "syn": 1,
     "sae": "0w40",
     "img": "6604/16219540.3/0_8cb70_657a3877",
     "txt": "Отложения. Органолептика практически полностью аналогична XENUM WRX (что совсем неудивительно, учитывая одни корни обоих продуктов), за исключением того факта, что более жидкий ZENOX (0W40) стекает на дно колбы практически мгновенно и колба на фото \"чистая\" и прозрачная. Более густые масла при повороте колбы всегда оставляют пленку (см. результаты масел 10W60, 5W50). Изначально этот нюанс не учитывался при фотографировании, полного истечения масла никто не дожидался, лучше уточнять по каждому конкретному случаю. В прочем, изначально ориентиры были на полимеризацию, а не на визуальные артефакты. К слову говоря, масло заявлено как LowSAPS, с веером допусков.",
-    "ssn": 1
+    "ssn": 1,
+    "rbs": 1
   },
   {
     "brd": "Mazda",
     "prd": "ULTRA",
-    "syn": 1,
     "sae": "5w30",
     "img": "6505/16219540.3/0_8c855_c3e7614d",
     "txt": "Полимеризация.",
@@ -615,7 +562,6 @@
   {
     "brd": "Motul",
     "prd": "300V POWER ESTER Core",
-    "syn": 1,
     "sae": "5w40",
     "img": "6503/16219540.2/0_8b506_7e90b311",
     "txt": "Отложения, загущение. Сравните с Castrol 10W60, Pentosin Pento Super. Требует отдельного тестирования с дефлегматором - возвращающиеся в колбу капли провоцируют взрывы - вся колба в мелкой пыли по этой причине.",
@@ -624,7 +570,6 @@
   {
     "brd": "Motul",
     "prd": "300V POWER",
-    "syn": 1,
     "sae": "5w40",
     "img": "6404/16219540.1/0_8a62d_daad6be8",
     "txt": "Отложения, загущение. Сравните с Xenum, Liqui Moly Molygen.",
@@ -637,7 +582,6 @@
   {
     "brd": "Motul",
     "prd": "8100 X-cess",
-    "syn": 1,
     "sae": "5w40",
     "img": "6603/16219540.1/0_8a63a_ede3fcef",
     "txt": "Полимеризация.",
@@ -651,7 +595,6 @@
   {
     "brd": "Motul",
     "prd": "8100 X-clean C3",
-    "syn": 1,
     "sae": "5w40",
     "img": "6400/16219540.1/0_8a651_85d63ff8",
     "txt": "Полимеризация.",
@@ -665,7 +608,6 @@
   {
     "brd": "Motul",
     "prd": "Specific LL-04",
-    "syn": 1,
     "sae": "5w40",
     "img": "6500/16219540.1/0_8a649_beede5be",
     "txt": "Полимеризация.",
@@ -679,7 +621,6 @@
   {
     "brd": "Mercedes Benz",
     "prd": "229.5",
-    "syn": 1,
     "sae": "5w30",
     "img": "6403/16219540.1/0_8a643_9ef3524a",
     "txt": "Полимеризация.",
@@ -689,7 +630,6 @@
   {
     "brd": "Mobil 1",
     "prd": "(USA)",
-    "syn": 1,
     "sae": "0w30",
     "img": "6403/16219540.1/0_8a647_a56af106",
     "txt": "Отложения.",
@@ -702,16 +642,15 @@
   {
     "brd": "Mobil 1",
     "prd": "(USA)",
-    "syn": 1,
     "sae": "0w40",
     "img": "6403/16219540.1/0_8a645_78cbc5b6",
     "txt": "Отложения.",
-    "ssn": 1
+    "ssn": 1,
+    "rbs": 1
   },
   {
     "brd": "Mobil 1",
     "prd": "Extended Life",
-    "syn": 1,
     "sae": "10w60",
     "img": "6506/16219540.3/0_8c856_ed8cef53",
     "txt": "Отложения, загущение.",
@@ -720,7 +659,6 @@
   {
     "brd": "Mobil 1",
     "prd": "New Life",
-    "syn": 1,
     "sae": "0w40",
     "img": "6502/16219540.1/0_8a646_404323e6",
     "txt": "Отложения.",
@@ -742,7 +680,6 @@
   {
     "brd": "Mobil",
     "prd": "Super 3000 X1",
-    "syn": 1,
     "sae": "5w40",
     "img": "6401/16219540.1/0_8a648_e9363aeb",
     "txt": "Полимеризация.",
@@ -756,7 +693,6 @@
   {
     "brd": "NGN",
     "prd": "Emerald VW 504/507 SM/SF",
-    "syn": 1,
     "sae": "5w30",
     "img": "5641/16219540.7/0_9a4db_919a1fb2",
     "txt": "",
@@ -775,7 +711,6 @@
   {
     "brd": "NGN",
     "prd": "Profi SM/CF",
-    "syn": 1,
     "sae": "5w30",
     "img": "4138/16219540.7/0_9a4d9_56d9de7",
     "txt": "",
@@ -784,17 +719,16 @@
   {
     "brd": "NGN",
     "prd": "Synergy SM/CF",
-    "syn": 1,
     "sae": "0w40",
     "img": "6429/16219540.7/0_9a4d8_d1fd2f45",
     "txt": "",
     "cln": 1,
-    "ssn": 1
+    "ssn": 1,
+    "rbs": 1
   },
   {
     "brd": "NGN",
     "prd": "Nord SM/CF",
-    "syn": 1,
     "sae": "5w30",
     "img": "4132/16219540.7/0_9a4d7_e8b4bd17",
     "txt": "",
@@ -803,7 +737,6 @@
   {
     "brd": "Pentosin",
     "prd": "PENTO SUPER PERFORMANCE III",
-    "syn": 1,
     "sae": "5w30",
     "img": "6401/16219540.1/0_8a64d_9e6a8ce1",
     "txt": "Отложения, загущение. Сравните с Castrol EDGE 10W60.",
@@ -816,7 +749,6 @@
   {
     "brd": "Petro-Canada",
     "prd": "SUPREME SYNTHETIC",
-    "syn": 1,
     "sae": "0w30",
     "img": "6504/16219540.3/0_8c857_e891b353",
     "txt": "Отложения.",
@@ -825,7 +757,6 @@
   {
     "brd": "Petro-Canada",
     "prd": "Synthetic",
-    "syn": 1,
     "sae": "5w40",
     "img": "6404/16219540.1/0_8a64c_93f51ab3",
     "txt": "Полимеризация.",
@@ -835,7 +766,6 @@
   {
     "brd": "Ravenol",
     "prd": "SSL",
-    "syn": 1,
     "sae": "0w40",
     "img": "6601/16219540.2/0_8b750_26d93582",
     "txt": "Отложения.",
@@ -844,7 +774,6 @@
   {
     "brd": "Red Line",
     "prd": "50WT",
-    "syn": 1,
     "sae": "50",
     "img": "6604/16219540.3/0_8c859_22c78bf1",
     "txt": "Заявлено как \"масло на одну гонку\". Полимеризация.",
@@ -854,7 +783,6 @@
   {
     "brd": "Red Line",
     "prd": "HIGH PERFORMANCE MOTOR OIL",
-    "syn": 1,
     "sae": "5w40",
     "img": "6506/16219540.3/0_8cb73_5cab842d",
     "txt": "Отложения, зола. Масло для \"повседневного использования\". Противоокислительные способности заявлены как \"превосходные\", сравните с \"очень хорошими\" у \"гоночного\" масла для одноразового использования - выше.",
@@ -863,7 +791,6 @@
   {
     "brd": "Rheinoil",
     "prd": "Primus VS",
-    "syn": 1,
     "sae": "0w40",
     "img": "6607/16219540.3/0_8cb74_8b2411d0",
     "txt": "Отложения, зола.",
@@ -872,7 +799,6 @@
   {
     "brd": "Selenia",
     "prd": "StAR ALFA ROMEO",
-    "syn": 1,
     "sae": "5w40",
     "img": "6504/16219540.3/0_8c85a_d04bba54",
     "txt": "Загущение.",
@@ -881,7 +807,6 @@
   {
     "brd": "Shell",
     "prd": "HELIX ULTRA AV-L",
-    "syn": 1,
     "sae": "5w30",
     "img": "6608/16219540.3/0_8c84f_5546666a",
     "txt": "Отложения, загущение.",
@@ -890,7 +815,6 @@
   {
     "brd": "Shell",
     "prd": "HELIX ULTRA EXTRA",
-    "syn": 1,
     "sae": "5w30",
     "img": "6411/16219540.4/0_8ee50_95e9ef52",
     "txt": "Отложения. Загущение.",
@@ -899,7 +823,6 @@
   {
     "brd": "Shell",
     "prd": "HELIX ULTRA RACING",
-    "syn": 1,
     "sae": "10w60",
     "img": "6502/16219540.2/0_8b74c_ed194c7",
     "txt": "Полимеризация.",
@@ -909,7 +832,6 @@
   {
     "brd": "Shell",
     "prd": "HELIX ULTRA",
-    "syn": 1,
     "sae": "0w40",
     "img": "6507/16219540.3/0_8c85b_c35c6789",
     "txt": "Полимеризация.",
@@ -919,7 +841,6 @@
   {
     "brd": "Shell",
     "prd": "HELIX ULTRA",
-    "syn": 1,
     "sae": "5w40",
     "img": "6400/16219540.1/0_8a63e_e7fcfbea",
     "txt": "Полимеризация.",
@@ -931,28 +852,28 @@
     "ssn": 1
   },
   {
-    "brd": "Tatneft",
+    "brd": "TatNeft",
     "prd": "ЛЮКС-2",
-    "syn": 1,
     "sae": "5w40",
     "img": "6606/16219540.3/0_8c853_e1a727ae",
     "txt": "Отложения, загущение.",
-    "ssn": 1
+    "ssn": 1,
+    "rbs": 1
   },
   {
-    "brd": "Tatneft",
+    "brd": "TatNeft",
     "prd": "Люкс-3 ПАО",
     "syn": 0,
     "sae": "10w40",
     "img": "6604/16219540.3/0_8c854_5ea1a7c2",
     "txt": "",
     "cln": 1,
-    "ssn": 1
+    "ssn": 1,
+    "rbs": 1
   },
   {
     "brd": "Toyota",
     "prd": "MOTOR OIL",
-    "syn": 1,
     "sae": "5w30",
     "img": "6503/16219540.2/0_8b752_de4d03be",
     "txt": "Отложения.",
@@ -961,7 +882,6 @@
   {
     "brd": "Toyota",
     "prd": "Motor Oil",
-    "syn": 1,
     "sae": "5w30",
     "img": "6606/16219540.3/0_8c85e_afbb7dc2",
     "txt": "Отложения, загущение.",
@@ -980,7 +900,6 @@
   {
     "brd": "Total",
     "prd": "QUARTZ 9000 ENERGY",
-    "syn": 1,
     "sae": "0w30",
     "img": "6609/16219540.3/0_8cb72_9a0dcf8",
     "txt": "Полимеризация.",
@@ -990,7 +909,6 @@
   {
     "brd": "Total",
     "prd": "QUARTZ 9000",
-    "syn": 1,
     "sae": "5w40",
     "img": "6602/16219540.2/0_8b510_b38cb76a",
     "txt": "Полимеризация.",
@@ -1004,7 +922,6 @@
   {
     "brd": "Total",
     "prd": "QUARTZ INEO ECS",
-    "syn": 1,
     "sae": "5w30",
     "img": "6600/16219540.5/0_8f76e_44a6cbe8",
     "txt": "Загущение. Отложения на фото - результат попытки использования катализаторов/мест концентрации отложений - кусочков металла.",
@@ -1022,7 +939,6 @@
   {
     "brd": "Valvoline",
     "prd": "SynPower",
-    "syn": 1,
     "sae": "5w30",
     "img": "6404/16219540.1/0_8a63c_f4a52903",
     "txt": "Отложения.",
@@ -1031,7 +947,6 @@
   {
     "brd": "Xenum",
     "prd": "GM DEXOS 2",
-    "syn": 1,
     "sae": "5w30",
     "img": "6612/16219540.5/0_8ee55_3196212f",
     "txt": "Отложения. Загущение.",
@@ -1040,16 +955,15 @@
   {
     "brd": "Xenum",
     "prd": "GPX",
-    "syn": 1,
     "sae": "5w40",
     "img": "6603/16219540.2/0_8b74b_6073cc9",
     "txt": "Отложения, загущение. Сравните LM Molygen, Xenum WRX.",
-    "ssn": 1
+    "ssn": 1,
+    "rbs": 1
   },
   {
     "brd": "Xenum",
     "prd": "RUNNER",
-    "syn": 1,
     "sae": "5w30",
     "img": "6511/16219540.5/0_8ee56_aa8b438f",
     "txt": "",
@@ -1059,7 +973,6 @@
   {
     "brd": "Xenum",
     "prd": "VW LL-03",
-    "syn": 1,
     "sae": "5w30",
     "img": "6410/16219540.4/0_8ee4c_45a8830a",
     "txt": "Отложения.",
@@ -1068,8 +981,6 @@
   {
     "brd": "Xenum",
     "prd": "WRX",
-    "syn": 1,
-    "rbs": 1,
     "sae": "7.5w40",
     "img": "6501/16219540.1/0_8a7cc_aec5d47c",
     "txt": "Отложения. Коллоидный раствор загустился. Сравните с LM Molygen.",
@@ -1099,7 +1010,6 @@
   {
     "brd": "Xenum",
     "prd": "X1",
-    "syn": 1,
     "sae": "5w40",
     "img": "6611/16219540.5/0_8ee57_aa5ae797",
     "txt": "Отложения.",
@@ -1108,7 +1018,6 @@
   {
     "brd": "Zic",
     "prd": "XQ",
-    "syn": 1,
     "sae": "5w40",
     "img": "6501/16219540.2/0_8b749_773c8b57",
     "txt": "Отложения.",
@@ -1126,7 +1035,6 @@
   {
     "brd": "Волга Ойл",
     "prd": "М-8В",
-    "syn": 1,
     "sae": "20",
     "img": "6509/16219540.3/0_8c85f_67ac56c7",
     "txt": "",
@@ -1136,7 +1044,6 @@
   {
     "brd": "Лукойл",
     "prd": "ЛЮКС",
-    "syn": 1,
     "sae": "5w40",
     "img": "6600/16219540.2/0_8b74e_13c17e36",
     "txt": "Полимеризация.",
@@ -1164,7 +1071,6 @@
   {
     "brd": "ТНК",
     "prd": "Magnum ULTRATEC",
-    "syn": 1,
     "sae": "5w40",
     "img": "6603/16219540.2/0_8b761_c7f368d1",
     "txt": "Отложения.",
@@ -1173,7 +1079,6 @@
   {
     "brd": "Хадо",
     "prd": "",
-    "syn": 1,
     "sae": "5w40",
     "img": "6503/16219540.2/0_8b755_fad076d1",
     "txt": "Отложения.",
@@ -1182,7 +1087,6 @@
   {
     "brd": "Yacco",
     "prd": "VX 1600 ACEA A3/B4",
-    "syn": 1,
     "sae": "0w30",
     "img": "6831/16219540.8/0_aeefd_b44ebba3",
     "txt": "",
@@ -1191,7 +1095,6 @@
   {
     "brd": "Yacco",
     "prd": "VX 1500 ACEA A5/B5",
-    "syn": 1,
     "sae": "0w30",
     "img": "6742/16219540.8/0_aeefc_a1050ee7",
     "txt": "",
@@ -1209,7 +1112,6 @@
   {
     "brd": "Yacco",
     "prd": "VX 1000 ACEA A3/B4",
-    "syn": 1,
     "sae": "0w40",
     "img": "6832/16219540.8/0_aeefa_fc16a397",
     "txt": "",
@@ -1219,7 +1121,6 @@
   {
     "brd": "Yacco",
     "prd": "GALAXIE PAO/ESTERS",
-    "syn": 1,
     "sae": "15w50",
     "img": "6835/16219540.8/0_aeef9_93128687",
     "txt": "",
@@ -1228,7 +1129,6 @@
   {
     "brd": "Honda",
     "prd": "HG Ultimate Motor Oil",
-    "syn": 1,
     "sae": "5w30",
     "img": "6844/16219540.8/0_af030_4ae9cb6f",
     "txt": "",
@@ -1237,7 +1137,6 @@
   {
     "brd": "Honda",
     "prd": "HFS-E",
-    "syn": 1,
     "sae": "5w30",
     "img": "6815/16219540.8/0_af02f_9de8f569",
     "txt": "",
@@ -1246,7 +1145,6 @@
   {
     "brd": "Elf",
     "prd": "EVOLUTION 900",
-    "syn": 1,
     "sae": "5w50",
     "img": "6840/16219540.8/0_af02e_e630cb24",
     "txt": "",
@@ -1255,7 +1153,6 @@
   {
     "brd": "Shell",
     "prd": "HELIX ULTRA \"PURE PLUS\" (GTL OIL)",
-    "syn": 1,
     "sae": "5w40",
     "img": "6800/16219540.8/0_af033_c9950aec",
     "txt": "",
@@ -1265,7 +1162,6 @@
   {
     "brd": "Mobil 1",
     "prd": "ESP Formula",
-    "syn": 1,
     "sae": "5w30",
     "img": "6830/16219540.8/0_af031_5c06e1d",
     "txt": "",
@@ -1275,7 +1171,6 @@
   {
     "brd": "Elf",
     "prd": "EXCELLIUM",
-    "syn": 1,
     "sae": "5w50",
     "img": "6831/25703957.0/0_be8f2_dccd4e58",
     "txt": "",
@@ -1284,7 +1179,6 @@
   {
     "brd": "Mannol",
     "prd": "ENERGY COMBI LL",
-    "syn": 1,
     "sae": "5w30",
     "img": "10/25703957.0/0_be8f3_9496e538",
     "txt": "",
@@ -1293,7 +1187,6 @@
   {
     "brd": "Mannol",
     "prd": "LEGEND+ESTER",
-    "syn": 1,
     "sae": "0w40",
     "img": "6804/25703957.0/0_be8f4_47e2304b",
     "txt": "",
@@ -1302,7 +1195,6 @@
   {
     "brd": "Motul",
     "prd": "710 2T",
-    "syn": 1,
     "sae": "NO",
     "img": "10/25703957.0/0_be8f5_b7585701",
     "txt": "",
@@ -1311,7 +1203,6 @@
   {
     "brd": "Ravenol",
     "prd": "VMO",
-    "syn": 1,
     "sae": "5w40",
     "img": "6838/16219540.8/0_afd97_efcd9b28",
     "txt": "",
@@ -1321,7 +1212,6 @@
   {
     "brd": "Total",
     "prd": "Quartz Racing",
-    "syn": 1,
     "sae": "10w50",
     "img": "6804/16219540.8/0_afd99_d76c2bfc",
     "txt": "",
@@ -1331,7 +1221,6 @@
   {
     "brd": "Ravenol",
     "prd": "VST",
-    "syn": 1,
     "sae": "5w40",
     "img": "4803/16219540.8/0_afd98_4d2ae307",
     "txt": "",
@@ -1340,7 +1229,6 @@
   {
     "brd": "Ravenol",
     "prd": "VPD",
-    "syn": 1,
     "sae": "5w40",
     "img": "5103/16219540.8/0_afd96_fe379e3a",
     "txt": "",
@@ -1349,7 +1237,6 @@
   {
     "brd": "Ravenol",
     "prd": "VDL",
-    "syn": 1,
     "sae": "5w40",
     "img": "5106/16219540.8/0_afd95_e273ec22",
     "txt": "",
@@ -1358,10 +1245,441 @@
   {
     "brd": "Ravenol",
     "prd": "HCS",
-    "syn": 1,
     "sae": "5w40",
     "img": "4113/16219540.8/0_afd94_5364748a",
     "txt": "",
     "ssn": 1
+  },
+  {
+    "brd": "Xenum",
+    "prd": "Runner",
+    "syn": 0,
+    "sae": "10w40",
+    "img": "01_xenum-runner",
+    "ssn": 2,
+    "api": "SJ/CF"
+  },
+  {
+    "brd": "Liqui Moly",
+    "prd": "Optimal Diesel",
+    "syn": 0,
+    "sae": "10w40",
+    "img": "03_LM-optimal-diesel",
+    "ssn": 2,
+    "api": "CF"
+  },
+  {
+    "brd": "Liqui Moly",
+    "prd": "Molygen New Generation",
+    "sae": "5w40",
+    "img": "04_LM-moly-5w40",
+    "ssn": 2,
+    "api": "SN",
+    "rbs": 1
+  },
+  {
+    "brd": "BMW",
+    "prd": "M Twin Power Turbo",
+    "sae": "0w40",
+    "img": "05_BMW-M-0w40",
+    "ssn": 2
+  },
+  {
+    "brd": "NGN",
+    "prd": "Synergy",
+    "sae": "0w40",
+    "img": "07_ngn-0w40",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "Liqui Moly",
+    "prd": "Molygen New Generation DPF",
+    "sae": "5w30",
+    "img": "08_LM-Moly-dpf",
+    "ssn": 2
+  },
+  {
+    "brd": "Liqui Moly",
+    "prd": "Molygen New Generation",
+    "sae": "5w30",
+    "img": "09_LM-Moly-5w30",
+    "ssn": 2
+  },
+  {
+    "brd": "Mannol",
+    "prd": "Molibden Benzin",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "10_mannol-diesel-moly-10W40",
+    "ssn": 2,
+    "rbs": 1,
+    "recheck": true
+  },
+  {
+    "brd": "Areca",
+    "prd": "F 6003",
+    "sae": "5w40",
+    "img": "11_areca-6003",
+    "ssn": 2
+  },
+  {
+    "brd": "Areca",
+    "prd": "S 3000",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "12_areca-3000",
+    "ssn": 2
+  },
+  {
+    "brd": "Idemitsu",
+    "prd": "Zepro",
+    "sae": "5w40",
+    "img": "13_zepro-5W40",
+    "ssn": 2
+  },
+  {
+    "brd": "Liqui Moly",
+    "prd": "Special Tec Dexos",
+    "sae": "5w30",
+    "img": "14_LM-Stec-dexos",
+    "ssn": 2
+  },
+  {
+    "brd": "Motul",
+    "prd": "4100 Turbolight",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "15_motul-4100",
+    "ssn": 2
+  },
+  {
+    "brd": "Areca",
+    "prd": "F 4500",
+    "sae": "5w40",
+    "img": "16_areca-4500",
+    "ssn": 2
+  },
+  {
+    "brd": "TatNeft",
+    "prd": "Luxe",
+    "sae": "5w30",
+    "img": "17_tat-5W30",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "Areca",
+    "prd": "F 5000",
+    "sae": "5w30",
+    "img": "19_areca-5000",
+    "ssn": 2
+  },
+  {
+    "brd": "Xenum",
+    "prd": "VRX",
+    "sae": "5w40",
+    "img": "22_xenum-vrx",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "NGN",
+    "prd": "Premium",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "23_ngn-10w40",
+    "ssn": 2
+  },
+  {
+    "brd": "Pentosin",
+    "prd": "Superoil",
+    "sae": "0w40",
+    "img": "25_pentosin-0w40",
+    "ssn": 2
+  },
+  {
+    "brd": "Autobacs",
+    "prd": "Engine Oil",
+    "sae": "5w40",
+    "img": "27_autobacs",
+    "ssn": 2
+  },
+  {
+    "brd": "Каждый День",
+    "prd": "Моторное Масло (минеральное)",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "28_KD-mineral",
+    "ssn": 2
+  },
+  {
+    "brd": "Xenum",
+    "prd": "XPG",
+    "sae": "5w40",
+    "img": "29_xenum-XPG",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "Mobil 1",
+    "prd": "Advanced Full Synthetic",
+    "sae": "5w50",
+    "img": "30_mobil1-5w50",
+    "ssn": 2
+  },
+  {
+    "brd": "Bardahl",
+    "prd": "XTC",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "31_bardahl-10w40",
+    "ssn": 2
+  },
+  {
+    "brd": "Neste",
+    "prd": "Premium+",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "32_neste-10w40",
+    "ssn": 2
+  },
+  {
+    "brd": "Liqui Moly",
+    "prd": "Top Tec 4200 Diesel",
+    "sae": "5w30",
+    "img": "33_LM-4200-diesel",
+    "ssn": 2
+  },
+  {
+    "brd": "Petro-Canada",
+    "prd": "Supreme Dexos",
+    "sae": "5w30",
+    "img": "34_pcanada-dexos",
+    "ssn": 2
+  },
+  {
+    "brd": "Xenum",
+    "prd": "XPG",
+    "sae": "5w30",
+    "img": "35_xenum-xpg5w30",
+    "ssn": 2
+  },
+  {
+    "brd": "Лукойл",
+    "prd": "Супер",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "37_lukoil-5w40",
+    "ssn": 2,
+    "recheck": true
+  },
+  {
+    "brd": "Лукойл",
+    "prd": "Люкс",
+    "sae": "5w30",
+    "img": "38_lukoil-5w30",
+    "ssn": 2
+  },
+  {
+    "brd": "Idemitsu",
+    "prd": "Zepro",
+    "sae": "0w20",
+    "img": "39_zepro-0w20",
+    "ssn": 2
+  },
+  {
+    "brd": "Neste",
+    "prd": "City Pro C4",
+    "sae": "5w30",
+    "img": "40_neste-c4pro",
+    "ssn": 2
+  },
+  {
+    "brd": "Pentosin",
+    "prd": "Pento Speed",
+    "sae": "0w40",
+    "img": "41_pentosin-0w30",
+    "ssn": 2
+  },
+  {
+    "brd": "Petro-Canada",
+    "prd": "Duron UHP",
+    "sae": "5w40",
+    "img": "42_pcanada-duron",
+    "ssn": 2
+  },
+  {
+    "brd": "Total",
+    "prd": "Quartz 7000 Diesel",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "43_total-7000-10w40",
+    "ssn": 2
+  },
+  {
+    "brd": "Liqui Moly",
+    "prd": "Optimal",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "44_LM-optimal-10W40",
+    "ssn": 2
+  },
+  {
+    "brd": "Mobil 1",
+    "prd": "Advanced Full Synthetic",
+    "sae": "0w40",
+    "img": "45_mobil1-0w40",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "Mobil 1",
+    "prd": "ESP Dexos",
+    "sae": "0w40",
+    "img": "46_mobil1-dexos",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "Castrol",
+    "prd": "GTX Ultraclean",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "48_castrol-ultraclean",
+    "ssn": 2
+  },
+  {
+    "brd": "Каждый День",
+    "prd": "Моторное Масло",
+    "sae": "5w40",
+    "img": "49_KD-5w40",
+    "ssn": 2
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix HX7",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "50_shell-HX7",
+    "ssn": 2
+  },
+  {
+    "brd": "Areca",
+    "prd": "F 7012",
+    "sae": "5w30",
+    "img": "51_areca-7012",
+    "ssn": 2
+  },
+  {
+    "brd": "Тотек",
+    "prd": "Астра Робот HR City Edition",
+    "sae": "5w40",
+    "img": "52_totek-AR-HR-5W40",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "TatNeft",
+    "prd": "Профи",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "53_tat-profi",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "Kroon Oil",
+    "prd": "Emperol",
+    "sae": "5w40",
+    "img": "54_kroon-emperol",
+    "ssn": 2
+  },
+  {
+    "brd": "Liqui Moly",
+    "prd": "MOS2 Leichtlauf",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "55_LM-mos2",
+    "ssn": 2,
+    "rbs": 1
+  },
+  {
+    "brd": "BMW",
+    "prd": "Twin PowerTurbo",
+    "sae": "0w30",
+    "img": "57_bmw-0W30",
+    "ssn": 2
+  },
+  {
+    "brd": "Castrol",
+    "prd": "Edge Professional Titanium FST",
+    "sae": "0w30",
+    "img": "60_castrol-0W30-LL01-FST",
+    "ssn": 2
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix HX8",
+    "sae": "5w30",
+    "img": "61_shell-5W30-HX8",
+    "ssn": 2
+  },
+  {
+    "brd": "Ford",
+    "prd": "Formula F",
+    "sae": "5w30",
+    "img": "66_ford-F",
+    "ssn": 2
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix HX8",
+    "sae": "5w40",
+    "img": "67_shell-5W40-HX8",
+    "ssn": 2
+  },
+  {
+    "brd": "VW",
+    "prd": "G 055 167 Special C",
+    "sae": "?",
+    "img": "69_VW-055167",
+    "ssn": 2
+  },
+  {
+    "brd": "BMW",
+    "prd": "Twin Power Turbo",
+    "sae": "0w30",
+    "img": "72_bmw-0W30-LL12FE",
+    "ssn": 2
+  },
+  {
+    "brd": "Volvo",
+    "prd": "",
+    "sae": "5w30",
+    "img": "73_volvo",
+    "ssn": 2
+  },
+  {
+    "brd": "VW",
+    "prd": "G 052 183 LongLife II",
+    "sae": "?",
+    "img": "74_VW-052183",
+    "ssn": 2
+  },
+  {
+    "brd": "VW",
+    "prd": "G 052 195 LongLife III",
+    "sae": "?",
+    "img": "75_VW-052195",
+    "ssn": 2
+  },
+  {
+    "brd": "Каждый День",
+    "prd": "Моторное Масло (полусинтетика)",
+    "sae": "10w40",
+    "syn": 0,
+    "img": "76(28)_KD-10w40",
+    "ssn": 2
   }
 ]

@@ -221,7 +221,7 @@ function App() {
                 h+= '<li>';
                 h+= '<label>';
                 h+= '<input type="checkbox" class="filter type-synth" value="">';
-                h+= ' <span class="color-'+ id +'" title="Скрыть минеральные и полусинтетику">синтетика</span>';
+                h+= ' <span class="color-'+ id +'" title="Только синтетика, скрыть минеральные и полусинтетику">синтетика</span>';
                 h+= ' <span class="counter" value="synth"></span>';
                 h+= '</label>';
                 h+= '</li>';
@@ -243,13 +243,13 @@ function App() {
                 h+= '<li class="color-'+ id +' season-row">';
                     h+= '<label class="disabled">';
                         h+= '<input type="radio" name="season" class="filter type-season" value="1" disabled="disabled">';
-                        h+= ' <span class="label" >1 (2013)</span>';
+                        h+= ' <span class="label" >S1 (2013)</span>';
                         h+= ' <span class="counter" value="season-1"></span>';
                     h+= '</label>';
                     h+= '<br/>';
                     h+= '<label class="disabled">';
                         h+= '<input type="radio" name="season" class="filter type-season" value="2"  disabled="disabled">';
-                        h+= ' <span class="label">2 (2019, скоро!)</span>';
+                        h+= ' <span class="label">S2 (2019)</span>';
                         h+= ' <span class="counter" value="season-2"></span>';
                     h+= '</label>';
                 h+= '</li>';
@@ -651,22 +651,40 @@ function App() {
     _makeResultItem = function(item) {
         var h = '';
         h+= '<div class="result-item">';
-        h+= '<h3>';
-        h+= '<span class="color-brand">'+ item.brd +'</span> '+ item.prd +' <span class="color-sae">SAE '+ item.sae.replace('w', 'W-') +'</span>';
-        if (item.chm) {
-            h+= '&nbsp;&nbsp;&nbsp;<span class="link blue chemical" dbid="'+ item.id +'">Анализ</span>';
-        }
-        if (item.links) {
-            for (var i in item.links) {
-                h+= '&nbsp;&nbsp;&nbsp;<a href="'+ item.links[i].hrf +'" onclick="window.open(this.href); return false;">'+ item.links[i].ttl +'</a>';
+            h+= '<h3>';
+                h+= '<span class="color-season">S'+ item.ssn +'</span>';
+                h+= ' <span class="color-brand">'+ item.brd +'</span>';
+                h+= ' '+ item.prd;
+                h+= ' <span class="color-sae">SAE '+ item.sae.replace('w', 'W-') +'</span>';
+                if (item.api) {
+                    h += ' <span class="color-api">API ' + item.api + '</span>';
+                }
+                if (item.chm) {
+                    h+= '&nbsp;&nbsp;&nbsp;<span class="link blue chemical" dbid="'+ item.id +'">Анализ</span>';
+                }
+                if (item.links) {
+                    for (var i in item.links) {
+                        h+= '&nbsp;&nbsp;&nbsp;<a href="'+ item.links[i].hrf +'" onclick="window.open(this.href); return false;">'+ item.links[i].ttl +'</a>';
+                    }
+                }
+            h+= '</h3>';
+            if (item.txt) {
+                h+= '<p>'+ item.txt +'</p>';
             }
-        }
-        h+= '</h3>';
-        h+= '<p>'+ item.txt +'</p>';
-        h+= '<img src="'+ imgPrefix + item.img +'_'+ imgSize+ '" />';
+            h+= '<img src="'+ _makeImageUrl(item, imgSize) +'" />';
         h+= '</div>';
 
         return h;
+    };
+
+    _makeImageUrl = function(item, imgSize) {
+        switch (item.ssn) {
+            case 1:
+                return '//img-fotki.yandex.ru/get/' + item.img +'_'+ imgSize;
+
+            case 2:
+                return 'img/s2/'+ item.img +'_'+ imgSize +'.jpg';
+        }
     };
 
     _uncheckGroup = function(trigger) {
