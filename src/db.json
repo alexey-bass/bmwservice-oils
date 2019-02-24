@@ -1195,7 +1195,7 @@
   {
     "brd": "Motul",
     "prd": "710 2T",
-    "sae": "NO",
+    "sae": "?",
     "img": "10/25703957.0/0_be8f5_b7585701",
     "txt": "",
     "ssn": 1
@@ -1279,7 +1279,7 @@
   },
   {
     "brd": "BMW",
-    "prd": "M Twin Power Turbo",
+    "prd": "M Twin Power Turbo LL-01",
     "sae": "0w40",
     "img": "05_BMW-M-0w40",
     "ssn": 2
@@ -1606,7 +1606,7 @@
   },
   {
     "brd": "BMW",
-    "prd": "Twin PowerTurbo",
+    "prd": "Twin Power Turbo LL-04",
     "sae": "0w30",
     "img": "57_bmw-0W30",
     "ssn": 2
@@ -1648,7 +1648,7 @@
   },
   {
     "brd": "BMW",
-    "prd": "Twin Power Turbo",
+    "prd": "Twin Power Turbo LL-12FE",
     "sae": "0w30",
     "img": "72_bmw-0W30-LL12FE",
     "ssn": 2
@@ -1681,5 +1681,149 @@
     "syn": 0,
     "img": "76(28)_KD-10w40",
     "ssn": 2
+  },
+  {
+    "brd": "Motul",
+    "prd": "300V Power",
+    "sae": "5w40",
+    "img": "02_motul-300V-5W40",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Hyundai",
+    "prd": "Super Extra Gasoline",
+    "sae": "5w20",
+    "img": "06_huuyiuyyndai-5w20",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "BMW",
+    "prd": "Twin Power Turbo LL-04",
+    "sae": "5w40",
+    "img": "18_BMW-5W30-ll04",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Mobil 1",
+    "prd": "Dexos",
+    "sae": "5w30",
+    "img": "20_mobil1-dexos",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "BMW",
+    "prd": "Twin Power Turbo LL-01",
+    "sae": "5w30",
+    "img": "21_BMW-5W30-ll01",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "BMW",
+    "prd": "Quality LL-04",
+    "sae": "0w40",
+    "img": "24_BMW-0w40-ll04",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Aral",
+    "prd": "High Tronic",
+    "sae": "5w40",
+    "img": "26_aral-5w40",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Castrol",
+    "prd": "Edge Titanium FST",
+    "sae": "5w30",
+    "img": "36_castrol-FST-5w30",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Лукойл",
+    "prd": "Genesis Armortech",
+    "sae": "5w30",
+    "img": "47_lukoil-gen-5w30",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix Ultra PurePlus",
+    "sae": "0w30",
+    "img": "58_shell-0W30-PPlus",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix Ultra Professional PurePlus",
+    "sae": "5w30",
+    "img": "59_shell-5W30-PPlus",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix Ultra Diesel PurePlus",
+    "sae": "5w40",
+    "img": "62_shell-5W40-diesel-PPlus",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix HX8 ECT",
+    "sae": "5w30",
+    "img": "63_shell-5W30-HX8-ECT",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix Ultra PurePlus",
+    "sae": "0w40",
+    "img": "64_shell-0W40-PPlus",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Shell",
+    "prd": "Helix Ultra ECT PurePlus",
+    "sae": "0w30",
+    "img": "65_shell-0W30-PPlus",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Castrol",
+    "prd": "Edge Professional Dexos",
+    "sae": "0w30",
+    "img": "68_castrol-0W30-dexos",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Castrol",
+    "prd": "Edge Professional LL04",
+    "sae": "0w30",
+    "img": "70_castrol-edge-0w30-LL04",
+    "ssn": 2,
+    "ply": 1
+  },
+  {
+    "brd": "Castrol",
+    "prd": "Magnatec Stop-Start Dexos",
+    "sae": "5w30",
+    "img": "71_castrol-magna-dexos-C3",
+    "ssn": 2,
+    "ply": 1
   }
 ]
